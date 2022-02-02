@@ -1,0 +1,14 @@
+// Historique:
+//    cree le 22/01/2022
+
+class C1{
+    int methode (int a) {
+
+    }
+}
+
+class C2 extends C1 {
+    void methode(int a) {
+        
+    }
+}

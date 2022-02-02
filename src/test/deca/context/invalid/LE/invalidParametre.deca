@@ -1,0 +1,10 @@
+// Historique:
+//    cree le 19/01/2022
+
+class A {
+    int x;
+
+    int ajoute(invalid x){
+        return x+1;
+    }
+}

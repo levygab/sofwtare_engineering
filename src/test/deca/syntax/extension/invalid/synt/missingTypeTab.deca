@@ -1,0 +1,11 @@
+// Description:
+//    Programme qui doit renvoyer une erreur
+//
+// Resultats:
+//    
+//
+// Historique:
+//    cree le 21/01/2022
+{
+    int[] tab = new [3];
+}

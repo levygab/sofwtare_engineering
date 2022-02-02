@@ -1,0 +1,48 @@
+//test pour les classes
+
+class Methode {
+    int b ;
+    protected float a ; 
+
+    void Methode (int r , float valeur) {
+        b = r ;
+        a = valeur ;
+    }
+
+    void premiere_methode (int valeur) {
+        if (valeur > 3) {
+            b = valeur ;
+        }
+
+        else {
+            a = valeur ;
+        }
+    }
+
+    float getA () {
+        return a ;
+    }
+}
+
+    {
+        Methode premiere ;
+        premiere.Methode (10 , 10 ) ;
+
+        premiere.premiere_methode( 2 );
+        if ( premiere.getA() == 2 ) {
+            println ("test_reussi") ;
+        }
+        else {
+            println ("test rate") ;
+        }
+
+        premiere.premiere_methode( 5 );
+        if (premiere.b == 5) {
+            println ("test_reussi") ;
+        }
+        else {
+            println ("test rate") ;
+        }
+
+    }
+

@@ -1,0 +1,13 @@
+// Description:
+//    Test complet pour vérifier la lecture
+//
+// Resultats:
+//    
+//
+// Historique:
+//    cree le 12/01/2022
+
+{
+    int a = readInt();
+    println(a);
+}

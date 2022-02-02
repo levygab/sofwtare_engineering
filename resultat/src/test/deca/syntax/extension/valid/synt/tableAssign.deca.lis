@@ -1,0 +1,21 @@
+`> [1, 0] Program
+   +> ListDeclClass [List with 0 elements]
+   `> [1, 0] Main
+      +> ListDeclVar [List with 2 elements]
+      |  []> [2, 10] DeclVar
+      |  ||  +> [2, 4] Identifier (oui[])
+      |  ||  +> [2, 10] Identifier (table)
+      |  ||  `> [2, 18] Initialization
+      |  ||     `> [2, 18] Table
+      |  ||        +> ListExpr [List with 2 elements]
+      |  ||        |  []> [2, 19] Float (3.0)
+      |  ||        |  []> [2, 24] Float (2.5)
+      |  ||        `> Int (2)
+      |  []> [3, 10] DeclVar
+      |      +> [3, 4] Identifier (non[])
+      |      +> [3, 10] Identifier (table2)
+      |      `> NoInitialization
+      `> ListInst [List with 1 elements]
+         []> [4, 11] Assign
+             +> [4, 4] Identifier (table2)
+             `> [4, 13] Identifier (table)

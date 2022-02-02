@@ -1,0 +1,14 @@
+class A{
+    int x;
+    int ajoute(boolean a){
+        return 2;
+    }
+}
+
+{
+    boolean c = true; 
+    boolean b = false;
+    A a = new A();
+    int x = a.ajoute(c&&b);
+    println(x);
+}

@@ -1,0 +1,10 @@
+//Test pour les methodes en assembleur
+
+class Constructeur {
+    protected int a; 
+
+    void Constructeur (int valeur) asm ("Multi
+    Line
+    String"
+    );
+}

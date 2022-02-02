@@ -1,0 +1,15 @@
+// Description:
+//    Programme vérifiant l'appartenance au lexique.
+//
+// Resultats:
+//    
+//
+// Historique:
+//    cree le 12/01/2022
+
+{
+    int x = 2;
+    float y = x;
+    String Xxx_34 = "34";
+    z = 12;
+}

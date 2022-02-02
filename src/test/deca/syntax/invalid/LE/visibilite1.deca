@@ -1,0 +1,6 @@
+//test invalide
+//classe declarant les attributs avec une mauvaise visibilite
+
+class C1 {
+    bisule int a ;
+}

@@ -1,0 +1,86 @@
+; start main program
+	TSTO #1
+	BOV pile_pleine
+	BRA DebutMain
+code.Object.equals:
+init.Object:
+	RTS
+	LOAD #null, R0
+	STORE R0, 1(GB)
+	LOAD code.Object.equals, R0
+	STORE R0, 2(GB)
+; Main program
+DebutMain:
+; Beginning of main declarations
+	LOAD #4, R3
+	STORE R3, 1(LB)
+	ADDSP #1
+; Beginning of main instructions:
+	BRA while_condition0
+while_inst0:
+	WSTR "valide"
+	WNL
+	LOAD #3, R4
+	STORE R4, 1(LB)
+while_condition0:
+	LOAD 1(LB), R4
+	LOAD #4, R5
+	CMP R5, R4
+	BNE True1
+	BEQ False1
+True1:
+	LOAD #1, R4
+	BRA Fin1
+False1:
+	LOAD #0, R4
+	BRA Fin1
+Fin1:
+	LOAD #1, R3
+	SUB R4, R3
+	LOAD #1, R0
+	CMP R0, R3
+	BEQ while_inst0
+while_fin0:
+	LOAD 1(LB), R3
+	LOAD #4, R4
+	CMP R4, R3
+	BNE else2
+	WSTR "Probleme"
+	WNL
+	BRA if_fin2
+else2:
+if_fin2:
+	HALT
+; end main program
+io_error:
+	WSTR "Error: Input/Output error"
+	WNL
+	ERROR
+io_error_div_O:
+	WSTR "Division par 0 interdite"
+	WNL
+	ERROR
+io_debordement_valeur:
+	WSTR "Error: Debordement flottant nombre trop grand"
+	WNL
+	ERROR
+pile_pleine:
+	WSTR "Erreur : la pile est pleine"
+	WNL
+	ERROR
+tas_plein:
+	WSTR "Erreur : le tas est plein"
+	WNL
+	ERROR
+Deferencement_de_null:
+	WSTR "L'identifier est null"
+	WNL
+	ERROR
+io_error_index_out_of_range:
+	WSTR "Erreur : Index out of range"
+	WNL
+	ERROR
+io_incorrect_sizes:
+	WSTR "Erreur : Les tableaux passées en paramètres doivent être de bonnes tailles"
+	WNL
+	ERROR

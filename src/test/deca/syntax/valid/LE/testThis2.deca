@@ -1,0 +1,15 @@
+//test pour les classes
+//test du this.
+
+class C1 {
+    int a ;
+
+    void c1 (int a) {
+        this.a = a ;
+    }
+}
+
+{
+    C1 var ;
+    var.c1(3) ;
+}

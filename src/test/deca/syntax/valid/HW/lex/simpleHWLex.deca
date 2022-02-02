@@ -1,0 +1,17 @@
+// Description:
+//    Programme minimaliste utilisant print.
+//
+// Resultats:
+//    Hello
+//
+// Historique:
+//    cree le 06/01/2022
+
+{
+print
+println
+(
+)
+;
+"Hi"
+}

@@ -1,0 +1,13 @@
+// Description:
+//    Programme pour vérifier les erreurs en cas d'inversion de déclaration et instructions
+//
+// Resultats:
+//    
+//
+// Historique:
+//    cree le 10/01/2022
+{
+    boolean a;
+    int b = 2.3;
+    boolean c = a < b;
+}

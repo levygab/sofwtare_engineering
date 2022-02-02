@@ -1,0 +1,86 @@
+`> [3, 0] Program
+   +> ListDeclClass [List with 3 elements]
+   |  []> [3, 0] DeclClass
+   |  ||  +> [3, 6] Identifier (Maman)
+   |  ||  +> Identifier (Object)
+   |  ||  |  definition: type (builtin), type=Object
+   |  ||  +> ListDeclField [List with 2 elements]
+   |  ||  |  []> [4, 8] [visibility = PUBLIC] DeclField
+   |  ||  |  ||  +> [4, 4] Identifier (int)
+   |  ||  |  ||  +> [4, 8] Identifier (nb_eleves)
+   |  ||  |  ||  `> NoInitialization
+   |  ||  |  []> [5, 10] [visibility = PUBLIC] DeclField
+   |  ||  |      +> [5, 4] Identifier (float)
+   |  ||  |      +> [5, 10] Identifier (moyenne_totale)
+   |  ||  |      `> NoInitialization
+   |  ||  `> ListDeclMethod [List with 1 elements]
+   |  ||     []> [7, 4] Method
+   |  ||         +> [7, 4] Identifier (void)
+   |  ||         +> [7, 9] Identifier (Maman)
+   |  ||         +> ListParams [List with 1 elements]
+   |  ||         |  []> [7, 16] Params
+   |  ||         |      +> [7, 16] Identifier (int)
+   |  ||         |      `> [7, 20] Identifier (nb)
+   |  ||         +> ListDeclVar [List with 0 elements]
+   |  ||         `> ListInst [List with 2 elements]
+   |  ||            []> [8, 18] Assign
+   |  ||            ||  +> [8, 8] Identifier (nb_eleves)
+   |  ||            ||  `> [8, 20] Identifier (nb)
+   |  ||            []> [9, 23] Assign
+   |  ||                +> [9, 8] Identifier (moyenne_totale)
+   |  ||                `> [9, 25] Int (0)
+   |  []> [15, 0] DeclClass
+   |  ||  +> [15, 6] Identifier (Enfant)
+   |  ||  +> [15, 13] Identifier (Maman)
+   |  ||  +> ListDeclField [List with 1 elements]
+   |  ||  |  []> [16, 8] [visibility = PUBLIC] DeclField
+   |  ||  |      +> [16, 4] Identifier (int)
+   |  ||  |      +> [16, 8] Identifier (moyenne)
+   |  ||  |      `> NoInitialization
+   |  ||  `> ListDeclMethod [List with 1 elements]
+   |  ||     []> [18, 4] Method
+   |  ||         +> [18, 4] Identifier (void)
+   |  ||         +> [18, 9] Identifier (Enfant)
+   |  ||         +> ListParams [List with 2 elements]
+   |  ||         |  []> [18, 17] Params
+   |  ||         |  ||  +> [18, 17] Identifier (int)
+   |  ||         |  ||  `> [18, 21] Identifier (nb)
+   |  ||         |  []> [18, 26] Params
+   |  ||         |      +> [18, 26] Identifier (int)
+   |  ||         |      `> [18, 30] Identifier (moyenne_a)
+   |  ||         +> ListDeclVar [List with 0 elements]
+   |  ||         `> ListInst [List with 2 elements]
+   |  ||            []> [19, 18] Assign
+   |  ||            ||  +> [19, 8] Identifier (nb_eleves)
+   |  ||            ||  `> [19, 20] Identifier (nb)
+   |  ||            []> [20, 16] Assign
+   |  ||                +> [20, 8] Identifier (moyenne)
+   |  ||                `> [20, 18] Identifier (moyenne_a)
+   |  []> [25, 0] DeclClass
+   |      +> [25, 6] Identifier (PetitFils)
+   |      +> [25, 16] Identifier (Enfant)
+   |      +> ListDeclField [List with 1 elements]
+   |      |  []> [26, 10] [visibility = PUBLIC] DeclField
+   |      |      +> [26, 4] Identifier (float)
+   |      |      +> [26, 10] Identifier (age)
+   |      |      `> NoInitialization
+   |      `> ListDeclMethod [List with 1 elements]
+   |         []> [28, 4] Method
+   |             +> [28, 4] Identifier (void)
+   |             +> [28, 9] Identifier (PetitFils)
+   |             +> ListParams [List with 0 elements]
+   |             +> ListDeclVar [List with 0 elements]
+   |             `> ListInst [List with 4 elements]
+   |                []> [29, 18] Assign
+   |                ||  +> [29, 8] Identifier (nb_eleves)
+   |                ||  `> [29, 20] Int (25)
+   |                []> [30, 23] Assign
+   |                ||  +> [30, 8] Identifier (moyenne_totale)
+   |                ||  `> [30, 25] Int (10)
+   |                []> [31, 16] Assign
+   |                ||  +> [31, 8] Identifier (moyenne)
+   |                ||  `> [31, 18] Int (11)
+   |                []> [32, 12] Assign
+   |                    +> [32, 8] Identifier (age)
+   |                    `> [32, 14] Int (3)
+   `> EmptyMain

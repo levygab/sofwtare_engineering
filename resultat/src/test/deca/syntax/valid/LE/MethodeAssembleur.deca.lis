@@ -1,0 +1,23 @@
+`> [3, 0] Program
+   +> ListDeclClass [List with 1 elements]
+   |  []> [3, 0] DeclClass
+   |      +> [3, 6] Identifier (Constructeur)
+   |      +> Identifier (Object)
+   |      |  definition: type (builtin), type=Object
+   |      +> ListDeclField [List with 1 elements]
+   |      |  []> [4, 18] [visibility = PROTECTED] DeclField
+   |      |      +> [4, 14] Identifier (int)
+   |      |      +> [4, 18] Identifier (a)
+   |      |      `> NoInitialization
+   |      `> ListDeclMethod [List with 1 elements]
+   |         []> [6, 35] AssemblyMethod
+   |             +> [6, 4] Identifier (void)
+   |             +> [6, 9] Identifier (Constructeur)
+   |             +> ListParams [List with 1 elements]
+   |             |  []> [6, 23] Params
+   |             |      +> [6, 23] Identifier (int)
+   |             |      `> [6, 27] Identifier (valeur)
+   |             `> StringLiteral ("Multi
+    Line
+    String")
+   `> EmptyMain

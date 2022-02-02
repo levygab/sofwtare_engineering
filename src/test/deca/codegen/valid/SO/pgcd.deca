@@ -1,0 +1,21 @@
+// Description:
+//    Test pour vérifier la sémantique : calcul du pgcd de deux nombres
+//
+// Resultats:
+//    4
+//
+// Historique:
+//    cree le 14/01/2022
+
+{
+    int a = 28;
+    int b = 8;
+    while (a != b) {
+        if(a > b) {
+            a = a - b;
+        } else {
+            b = b - a;
+        }
+    }
+    println("Le pgcd de 28 et 8 est: ", b);
+}

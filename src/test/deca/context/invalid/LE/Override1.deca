@@ -1,0 +1,23 @@
+// Description:
+//    test un Override interdits (changement signature)
+//
+// Resultats:
+//    
+//
+// Historique:
+//    cree le 20/01/2022
+
+class C1 {
+    int a ;
+    void Constructeur (int valeur) {
+        this.a = valeur ;
+    }
+}
+
+class C2 extends C1 {
+    int b ;
+    void Constructeur (int v1, int v2) {
+        this.a = v1 ;
+        this.b = v2 ;
+    }
+}

@@ -1,0 +1,38 @@
+`> [10, 0] Program
+   +> ListDeclClass [List with 0 elements]
+   `> [10, 0] Main
+      +> ListDeclVar [List with 4 elements]
+      |  []> [11, 11] DeclVar
+      |  ||  +> [11, 4] Identifier (or_and)
+      |  ||  +> [11, 11] Identifier ($e4)
+      |  ||  `> [11, 17] Initialization
+      |  ||     `> [11, 23] Assign
+      |  ||        +> [11, 17] Identifier (oerl_)
+      |  ||        `> [11, 25] Identifier (ju3)
+      |  []> [12, 9] DeclVar
+      |  ||  +> [12, 4] Identifier (bool)
+      |  ||  +> [12, 9] Identifier (le_0)
+      |  ||  `> [12, 16] Initialization
+      |  ||     `> [12, 21] Or
+      |  ||        +> [12, 16] BooleanLiteral (true)
+      |  ||        `> [12, 24] BooleanLiteral (false)
+      |  []> [13, 9] DeclVar
+      |  ||  +> [13, 4] Identifier (bool)
+      |  ||  +> [13, 9] Identifier (le_0)
+      |  ||  `> [13, 16] Initialization
+      |  ||     `> [13, 21] And
+      |  ||        +> [13, 16] BooleanLiteral (true)
+      |  ||        `> [13, 24] Int (5)
+      |  []> [14, 9] DeclVar
+      |      +> [14, 4] Identifier (bool)
+      |      +> [14, 9] Identifier (le_0)
+      |      `> [14, 16] Initialization
+      |         `> [14, 35] Or
+      |            +> [14, 30] And
+      |            |  +> [14, 22] And
+      |            |  |  +> [14, 16] BooleanLiteral (false)
+      |            |  |  `> [14, 25] BooleanLiteral (true)
+      |            |  `> [14, 33] Int (5)
+      |            `> [14, 38] Identifier (los_6)
+      `> ListInst [List with 1 elements]
+         []> [15, 4] NoOperation

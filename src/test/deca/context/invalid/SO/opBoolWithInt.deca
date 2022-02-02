@@ -1,0 +1,15 @@
+// Description:
+//    Initialisation avec rvalue de type différent de la lvalue
+//
+// Resultats:
+//    ligne 14 : Erreur, on ne peut pas faire or entre un entier et un booleen
+//
+// Historique:
+//    cree le 01/01/2022
+
+{
+    boolean b = true;
+    int x = 1;
+    boolean c;
+    c = b || x;
+}

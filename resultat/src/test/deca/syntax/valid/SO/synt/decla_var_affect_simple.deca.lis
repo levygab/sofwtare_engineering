@@ -1,0 +1,45 @@
+`> [10, 0] Program
+   +> ListDeclClass [List with 0 elements]
+   `> [10, 0] Main
+      +> ListDeclVar [List with 8 elements]
+      |  []> [11, 9] DeclVar
+      |  ||  +> [11, 4] Identifier (test)
+      |  ||  +> [11, 9] Identifier ($1)
+      |  ||  `> [11, 14] Initialization
+      |  ||     `> [11, 14] Int (2)
+      |  []> [11, 17] DeclVar
+      |  ||  +> [11, 4] Identifier (test)
+      |  ||  +> [11, 17] Identifier (_3)
+      |  ||  `> [11, 22] Initialization
+      |  ||     `> [11, 22] Float (2.5)
+      |  []> [11, 27] DeclVar
+      |  ||  +> [11, 4] Identifier (test)
+      |  ||  +> [11, 27] Identifier (fe)
+      |  ||  `> [11, 32] Initialization
+      |  ||     `> [11, 32] StringLiteral (Je suis un test)
+      |  []> [12, 9] DeclVar
+      |  ||  +> [12, 4] Identifier (bool)
+      |  ||  +> [12, 9] Identifier (je)
+      |  ||  `> [12, 14] Initialization
+      |  ||     `> [12, 14] BooleanLiteral (true)
+      |  []> [13, 10] DeclVar
+      |  ||  +> [13, 4] Identifier (gu7_e)
+      |  ||  +> [13, 10] Identifier (kp)
+      |  ||  `> [13, 15] Initialization
+      |  ||     `> [13, 15] BooleanLiteral (false)
+      |  []> [14, 10] DeclVar
+      |  ||  +> [14, 4] Identifier (gu7_e)
+      |  ||  +> [14, 10] Identifier (kp)
+      |  ||  `> [14, 15] Initialization
+      |  ||     `> [14, 16] Int (86)
+      |  []> [15, 9] DeclVar
+      |  ||  +> [15, 4] Identifier (jf_8)
+      |  ||  +> [15, 9] Identifier (leP)
+      |  ||  `> [15, 15] Initialization
+      |  ||     `> [15, 15] ReadInt
+      |  []> [16, 9] DeclVar
+      |      +> [16, 4] Identifier (jf_8)
+      |      +> [16, 9] Identifier (leP)
+      |      `> [16, 15] Initialization
+      |         `> [16, 15] ReadFloat
+      `> ListInst [List with 0 elements]

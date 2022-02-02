@@ -1,0 +1,8 @@
+//test invalide
+//attribut sans type 
+
+class C1 {
+    int a ;
+    b ;
+
+}

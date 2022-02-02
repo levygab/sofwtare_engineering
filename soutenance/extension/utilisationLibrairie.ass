@@ -1,0 +1,1910 @@
+; start main program
+	TSTO #15
+	BOV pile_pleine
+	BRA DebutMain
+code.Object.equals:
+init.Object:
+	RTS
+	LOAD #null, R0
+	STORE R0, 1(GB)
+	LOAD code.Object.equals, R0
+	STORE R0, 2(GB)
+	LEA 1(GB), R0
+	STORE R0, 3(GB)
+	LOAD code.Object.equals, R0
+	STORE R0, 4(GB)
+	LOAD code.MathArray.oppositeFloatMatrix, R0
+	STORE R0, 5(GB)
+	LOAD code.MathArray.oppositeIntTable, R0
+	STORE R0, 6(GB)
+	LOAD code.MathArray.addFloatMatrix, R0
+	STORE R0, 7(GB)
+	LOAD code.MathArray.oppositeIntMatrix, R0
+	STORE R0, 8(GB)
+	LOAD code.MathArray.addIntTable, R0
+	STORE R0, 9(GB)
+	LOAD code.MathArray.addIntMatrix, R0
+	STORE R0, 10(GB)
+	LOAD code.MathArray.transposeIntMatrix, R0
+	STORE R0, 11(GB)
+	LOAD code.MathArray.oppositeFloatTable, R0
+	STORE R0, 12(GB)
+	LOAD code.MathArray.transposeFloatMatrix, R0
+	STORE R0, 13(GB)
+	LOAD code.MathArray.assem, R0
+	STORE R0, 14(GB)
+	LOAD code.MathArray.multiplyInt, R0
+	STORE R0, 15(GB)
+	LOAD code.MathArray.multiplyFloat, R0
+	STORE R0, 16(GB)
+	LOAD code.MathArray.addFloatTable, R0
+	STORE R0, 17(GB)
+init.MathArray:
+	LOAD -2(LB), R1
+	PUSH R1
+	BSR init.Object
+	SUBSP #1
+	LOAD -2(LB), R1
+	RTS
+code.MathArray.assem:
+	PUSH R3
+; Beginning of method declarations
+; Beginning of method instructions:
+ BRA io_incorrect_sizes 
+code.MathArray.oppositeIntTable:
+	PUSH R3
+; Beginning of method declarations
+	LOAD -3(LB), R3
+	LOAD 0(R3), R3
+	STORE R3, 1(LB)
+	ADDSP #1
+	LOAD #0, R3
+	STORE R3, 2(LB)
+	ADDSP #1
+	LOAD 1(LB), R4
+	LOAD #1, R3
+	ADD R4, R3
+	NEW R3, R3
+	STORE R4, 0(R3)
+	LOAD #1, R6
+	BRA while_cond_init_tableau0
+while_instruction_tableau1:
+	LOAD #0, R5
+	STORE R5, 0(R3, R6)
+	ADD #1, R6
+while_cond_init_tableau0:
+	CMP 0(R3), R6
+	BLE while_instruction_tableau1
+	STORE R3, 3(LB)
+	ADDSP #1
+; Beginning of method instructions:
+	LOAD -2(LB), R3
+	BRA while_condition2
+while_inst2:
+	LOAD -3(LB), R6
+	LOAD 2(LB), R7
+	CMP #0, R7
+	BLT io_error_index_out_of_range
+	CMP 0(R6), R7
+	BGE io_error_index_out_of_range
+	ADD #1, R7
+	LOAD 0(R6, R7), R6
+	LOAD #0, R5
+	SUB R6, R5
+	LOAD 3(LB), R7
+	LOAD 2(LB), R6
+	CMP #0, R6
+	BLT io_error_index_out_of_range
+	CMP 0(R7), R6
+	BGE io_error_index_out_of_range
+	ADD #1, R6
+	STORE R5, 0(R7, R6)
+	LOAD 2(LB), R6
+	LOAD #1, R5
+	ADD R6, R5
+	STORE R5, 2(LB)
+while_condition2:
+	LOAD 2(LB), R4
+	LOAD 1(LB), R5
+	CMP R5, R4
+	BLT while_inst2
+while_fin2:
+	LOAD 3(LB), R4
+	BRA fin.MathArray.oppositeIntTable
+	WSTR "Erreur : sortie de la methodeMathArray.oppositeIntTablesans return"
+	WNL
+	ERROR
+fin.MathArray.oppositeIntTable:
+	POP R3
+	RTS
+code.MathArray.oppositeFloatTable:
+	PUSH R3
+; Beginning of method declarations
+	LOAD -3(LB), R3
+	LOAD 0(R3), R3
+	STORE R3, 1(LB)
+	ADDSP #1
+	LOAD #0, R3
+	STORE R3, 2(LB)
+	ADDSP #1
+	LOAD 1(LB), R4
+	LOAD #1, R3
+	ADD R4, R3
+	NEW R3, R3
+	STORE R4, 0(R3)
+	LOAD #1, R6
+	BRA while_cond_init_tableau3
+while_instruction_tableau4:
+	LOAD #0, R5
+	STORE R5, 0(R3, R6)
+	ADD #1, R6
+while_cond_init_tableau3:
+	CMP 0(R3), R6
+	BLE while_instruction_tableau4
+	STORE R3, 3(LB)
+	ADDSP #1
+; Beginning of method instructions:
+	LOAD -2(LB), R3
+	BRA while_condition5
+while_inst5:
+	LOAD -3(LB), R6
+	LOAD 2(LB), R7
+	CMP #0, R7
+	BLT io_error_index_out_of_range
+	CMP 0(R6), R7
+	BGE io_error_index_out_of_range
+	ADD #1, R7
+	LOAD 0(R6, R7), R6
+	LOAD #0x0.0p0, R5
+	SUB R6, R5
+	LOAD 3(LB), R7
+	LOAD 2(LB), R6
+	CMP #0, R6
+	BLT io_error_index_out_of_range
+	CMP 0(R7), R6
+	BGE io_error_index_out_of_range
+	ADD #1, R6
+	STORE R5, 0(R7, R6)
+	LOAD 2(LB), R6
+	LOAD #1, R5
+	ADD R6, R5
+	STORE R5, 2(LB)
+while_condition5:
+	LOAD 2(LB), R4
+	LOAD 1(LB), R5
+	CMP R5, R4
+	BLT while_inst5
+while_fin5:
+	LOAD 3(LB), R4
+	BRA fin.MathArray.oppositeFloatTable
+	WSTR "Erreur : sortie de la methodeMathArray.oppositeFloatTablesans return"
+	WNL
+	ERROR
+fin.MathArray.oppositeFloatTable:
+	POP R3
+	RTS
+code.MathArray.oppositeIntMatrix:
+	PUSH R3
+; Beginning of method declarations
+	LOAD -3(LB), R3
+	LOAD 0(R3), R3
+	STORE R3, 1(LB)
+	ADDSP #1
+	LOAD -3(LB), R3
+	LOAD #0, R4
+	CMP #0, R4
+	BLT io_error_index_out_of_range
+	CMP 0(R3), R4
+	BGE io_error_index_out_of_range
+	ADD #1, R4
+	LOAD 0(R3, R4), R3
+	LOAD 0(R3), R3
+	STORE R3, 2(LB)
+	ADDSP #1
+	LOAD #0, R3
+	STORE R3, 3(LB)
+	ADDSP #1
+	LOAD #0, R3
+	STORE R3, 4(LB)
+	ADDSP #1
+	LOAD 1(LB), R4
+	LOAD #1, R3
+	ADD R4, R3
+	NEW R3, R3
+	STORE R4, 0(R3)
+	LOAD #1, R6
+	BRA while_cond_init_tableau6
+while_instruction_tableau7:
+	LOAD #0, R5
+	STORE R5, 0(R3, R6)
+	ADD #1, R6
+while_cond_init_tableau6:
+	CMP 0(R3), R6
+	BLE while_instruction_tableau7
+	STORE R3, 5(LB)
+	ADDSP #1
+; Beginning of method instructions:
+	LOAD -2(LB), R3
+	BRA while_condition8
+while_inst8:
+	LOAD 2(LB), R6
+	LOAD #1, R5
+	ADD R6, R5
+	NEW R5, R5
+	STORE R6, 0(R5)
+	LOAD #1, R8
+	BRA while_cond_init_tableau9
+while_instruction_tableau10:
+	LOAD #0, R7
+	STORE R7, 0(R5, R8)
+	ADD #1, R8
+while_cond_init_tableau9:
+	CMP 0(R5), R8
+	BLE while_instruction_tableau10
+	LOAD 5(LB), R7
+	LOAD 3(LB), R6
+	CMP #0, R6
+	BLT io_error_index_out_of_range
+	CMP 0(R7), R6
+	BGE io_error_index_out_of_range
+	ADD #1, R6
+	STORE R5, 0(R7, R6)
+	LOAD #0, R5
+	STORE R5, 4(LB)
+	BRA while_condition11
+while_inst11:
+	LOAD -3(LB), R7
+	LOAD 3(LB), R9
+	CMP #0, R9
+	BLT io_error_index_out_of_range
+	CMP 0(R7), R9
+	BGE io_error_index_out_of_range
+	ADD #1, R9
+	LOAD 0(R7, R9), R7
+	LOAD 4(LB), R8
+	CMP #0, R8
+	BLT io_error_index_out_of_range
+	CMP 0(R7), R8
+	BGE io_error_index_out_of_range
+	ADD #1, R8
+	LOAD 0(R7, R8), R7
+	LOAD #0, R6
+	SUB R7, R6
+	LOAD 5(LB), R8
+	LOAD 3(LB), R9
+	CMP #0, R9
+	BLT io_error_index_out_of_range
+	CMP 0(R8), R9
+	BGE io_error_index_out_of_range
+	ADD #1, R9
+	LOAD 0(R8, R9), R8
+	LOAD 4(LB), R7
+	CMP #0, R7
+	BLT io_error_index_out_of_range
+	CMP 0(R8), R7
+	BGE io_error_index_out_of_range
+	ADD #1, R7
+	STORE R6, 0(R8, R7)
+	LOAD 4(LB), R7
+	LOAD #1, R6
+	ADD R7, R6
+	STORE R6, 4(LB)
+while_condition11:
+	LOAD 4(LB), R5
+	LOAD 2(LB), R6
+	CMP R6, R5
+	BLT while_inst11
+while_fin11:
+	LOAD 3(LB), R6
+	LOAD #1, R5
+	ADD R6, R5
+	STORE R5, 3(LB)
+while_condition8:
+	LOAD 3(LB), R4
+	LOAD 1(LB), R5
+	CMP R5, R4
+	BLT while_inst8
+while_fin8:
+	LOAD 5(LB), R4
+	BRA fin.MathArray.oppositeIntMatrix
+	WSTR "Erreur : sortie de la methodeMathArray.oppositeIntMatrixsans return"
+	WNL
+	ERROR
+fin.MathArray.oppositeIntMatrix:
+	POP R3
+	RTS
+code.MathArray.oppositeFloatMatrix:
+	PUSH R3
+; Beginning of method declarations
+	LOAD -3(LB), R3
+	LOAD 0(R3), R3
+	STORE R3, 1(LB)
+	ADDSP #1
+	LOAD -3(LB), R3
+	LOAD #0, R4
+	CMP #0, R4
+	BLT io_error_index_out_of_range
+	CMP 0(R3), R4
+	BGE io_error_index_out_of_range
+	ADD #1, R4
+	LOAD 0(R3, R4), R3
+	LOAD 0(R3), R3
+	STORE R3, 2(LB)
+	ADDSP #1
+	LOAD #0, R3
+	STORE R3, 3(LB)
+	ADDSP #1
+	LOAD #0, R3
+	STORE R3, 4(LB)
+	ADDSP #1
+	LOAD 1(LB), R4
+	LOAD #1, R3
+	ADD R4, R3
+	NEW R3, R3
+	STORE R4, 0(R3)
+	LOAD #1, R6
+	BRA while_cond_init_tableau12
+while_instruction_tableau13:
+	LOAD #0, R5
+	STORE R5, 0(R3, R6)
+	ADD #1, R6
+while_cond_init_tableau12:
+	CMP 0(R3), R6
+	BLE while_instruction_tableau13
+	STORE R3, 5(LB)
+	ADDSP #1
+; Beginning of method instructions:
+	LOAD -2(LB), R3
+	BRA while_condition14
+while_inst14:
+	LOAD 2(LB), R6
+	LOAD #1, R5
+	ADD R6, R5
+	NEW R5, R5
+	STORE R6, 0(R5)
+	LOAD #1, R8
+	BRA while_cond_init_tableau15
+while_instruction_tableau16:
+	LOAD #0, R7
+	STORE R7, 0(R5, R8)
+	ADD #1, R8
+while_cond_init_tableau15:
+	CMP 0(R5), R8
+	BLE while_instruction_tableau16
+	LOAD 5(LB), R7
+	LOAD 3(LB), R6
+	CMP #0, R6
+	BLT io_error_index_out_of_range
+	CMP 0(R7), R6
+	BGE io_error_index_out_of_range
+	ADD #1, R6
+	STORE R5, 0(R7, R6)
+	LOAD #0, R5
+	STORE R5, 4(LB)
+	BRA while_condition17
+while_inst17:
+	LOAD -3(LB), R7
+	LOAD 3(LB), R9
+	CMP #0, R9
+	BLT io_error_index_out_of_range
+	CMP 0(R7), R9
+	BGE io_error_index_out_of_range
+	ADD #1, R9
+	LOAD 0(R7, R9), R7
+	LOAD 4(LB), R8
+	CMP #0, R8
+	BLT io_error_index_out_of_range
+	CMP 0(R7), R8
+	BGE io_error_index_out_of_range
+	ADD #1, R8
+	LOAD 0(R7, R8), R7
+	LOAD #0x0.0p0, R6
+	SUB R7, R6
+	LOAD 5(LB), R8
+	LOAD 3(LB), R9
+	CMP #0, R9
+	BLT io_error_index_out_of_range
+	CMP 0(R8), R9
+	BGE io_error_index_out_of_range
+	ADD #1, R9
+	LOAD 0(R8, R9), R8
+	LOAD 4(LB), R7
+	CMP #0, R7
+	BLT io_error_index_out_of_range
+	CMP 0(R8), R7
+	BGE io_error_index_out_of_range
+	ADD #1, R7
+	STORE R6, 0(R8, R7)
+	LOAD 4(LB), R7
+	LOAD #1, R6
+	ADD R7, R6
+	STORE R6, 4(LB)
+while_condition17:
+	LOAD 4(LB), R5
+	LOAD 2(LB), R6
+	CMP R6, R5
+	BLT while_inst17
+while_fin17:
+	LOAD 3(LB), R6
+	LOAD #1, R5
+	ADD R6, R5
+	STORE R5, 3(LB)
+while_condition14:
+	LOAD 3(LB), R4
+	LOAD 1(LB), R5
+	CMP R5, R4
+	BLT while_inst14
+while_fin14:
+	LOAD 5(LB), R4
+	BRA fin.MathArray.oppositeFloatMatrix
+	WSTR "Erreur : sortie de la methodeMathArray.oppositeFloatMatrixsans return"
+	WNL
+	ERROR
+fin.MathArray.oppositeFloatMatrix:
+	POP R3
+	RTS
+code.MathArray.transposeIntMatrix:
+	PUSH R3
+; Beginning of method declarations
+	LOAD -3(LB), R3
+	LOAD 0(R3), R3
+	STORE R3, 1(LB)
+	ADDSP #1
+	LOAD -3(LB), R3
+	LOAD #0, R4
+	CMP #0, R4
+	BLT io_error_index_out_of_range
+	CMP 0(R3), R4
+	BGE io_error_index_out_of_range
+	ADD #1, R4
+	LOAD 0(R3, R4), R3
+	LOAD 0(R3), R3
+	STORE R3, 2(LB)
+	ADDSP #1
+	LOAD #0, R3
+	STORE R3, 3(LB)
+	ADDSP #1
+	LOAD #0, R3
+	STORE R3, 4(LB)
+	ADDSP #1
+	LOAD 1(LB), R4
+	LOAD #1, R3
+	ADD R4, R3
+	NEW R3, R3
+	STORE R4, 0(R3)
+	LOAD #1, R6
+	BRA while_cond_init_tableau18
+while_instruction_tableau19:
+	LOAD #0, R5
+	STORE R5, 0(R3, R6)
+	ADD #1, R6
+while_cond_init_tableau18:
+	CMP 0(R3), R6
+	BLE while_instruction_tableau19
+	STORE R3, 5(LB)
+	ADDSP #1
+; Beginning of method instructions:
+	LOAD -2(LB), R3
+	BRA while_condition20
+while_inst20:
+	LOAD 2(LB), R6
+	LOAD #1, R5
+	ADD R6, R5
+	NEW R5, R5
+	STORE R6, 0(R5)
+	LOAD #1, R8
+	BRA while_cond_init_tableau21
+while_instruction_tableau22:
+	LOAD #0, R7
+	STORE R7, 0(R5, R8)
+	ADD #1, R8
+while_cond_init_tableau21:
+	CMP 0(R5), R8
+	BLE while_instruction_tableau22
+	LOAD 5(LB), R7
+	LOAD 3(LB), R6
+	CMP #0, R6
+	BLT io_error_index_out_of_range
+	CMP 0(R7), R6
+	BGE io_error_index_out_of_range
+	ADD #1, R6
+	STORE R5, 0(R7, R6)
+	LOAD #0, R5
+	STORE R5, 4(LB)
+	BRA while_condition23
+while_inst23:
+	LOAD -3(LB), R6
+	LOAD 4(LB), R8
+	CMP #0, R8
+	BLT io_error_index_out_of_range
+	CMP 0(R6), R8
+	BGE io_error_index_out_of_range
+	ADD #1, R8
+	LOAD 0(R6, R8), R6
+	LOAD 3(LB), R7
+	CMP #0, R7
+	BLT io_error_index_out_of_range
+	CMP 0(R6), R7
+	BGE io_error_index_out_of_range
+	ADD #1, R7
+	LOAD 0(R6, R7), R6
+	LOAD 5(LB), R8
+	LOAD 3(LB), R9
+	CMP #0, R9
+	BLT io_error_index_out_of_range
+	CMP 0(R8), R9
+	BGE io_error_index_out_of_range
+	ADD #1, R9
+	LOAD 0(R8, R9), R8
+	LOAD 4(LB), R7
+	CMP #0, R7
+	BLT io_error_index_out_of_range
+	CMP 0(R8), R7
+	BGE io_error_index_out_of_range
+	ADD #1, R7
+	STORE R6, 0(R8, R7)
+	LOAD 4(LB), R7
+	LOAD #1, R6
+	ADD R7, R6
+	STORE R6, 4(LB)
+while_condition23:
+	LOAD 4(LB), R5
+	LOAD 2(LB), R6
+	CMP R6, R5
+	BLT while_inst23
+while_fin23:
+	LOAD 3(LB), R6
+	LOAD #1, R5
+	ADD R6, R5
+	STORE R5, 3(LB)
+while_condition20:
+	LOAD 3(LB), R4
+	LOAD 1(LB), R5
+	CMP R5, R4
+	BLT while_inst20
+while_fin20:
+	LOAD 5(LB), R4
+	BRA fin.MathArray.transposeIntMatrix
+	WSTR "Erreur : sortie de la methodeMathArray.transposeIntMatrixsans return"
+	WNL
+	ERROR
+fin.MathArray.transposeIntMatrix:
+	POP R3
+	RTS
+code.MathArray.transposeFloatMatrix:
+	PUSH R3
+; Beginning of method declarations
+	LOAD -3(LB), R3
+	LOAD 0(R3), R3
+	STORE R3, 1(LB)
+	ADDSP #1
+	LOAD -3(LB), R3
+	LOAD #0, R4
+	CMP #0, R4
+	BLT io_error_index_out_of_range
+	CMP 0(R3), R4
+	BGE io_error_index_out_of_range
+	ADD #1, R4
+	LOAD 0(R3, R4), R3
+	LOAD 0(R3), R3
+	STORE R3, 2(LB)
+	ADDSP #1
+	LOAD #0, R3
+	STORE R3, 3(LB)
+	ADDSP #1
+	LOAD #0, R3
+	STORE R3, 4(LB)
+	ADDSP #1
+	LOAD 1(LB), R4
+	LOAD #1, R3
+	ADD R4, R3
+	NEW R3, R3
+	STORE R4, 0(R3)
+	LOAD #1, R6
+	BRA while_cond_init_tableau24
+while_instruction_tableau25:
+	LOAD #0, R5
+	STORE R5, 0(R3, R6)
+	ADD #1, R6
+while_cond_init_tableau24:
+	CMP 0(R3), R6
+	BLE while_instruction_tableau25
+	STORE R3, 5(LB)
+	ADDSP #1
+; Beginning of method instructions:
+	LOAD -2(LB), R3
+	BRA while_condition26
+while_inst26:
+	LOAD 2(LB), R6
+	LOAD #1, R5
+	ADD R6, R5
+	NEW R5, R5
+	STORE R6, 0(R5)
+	LOAD #1, R8
+	BRA while_cond_init_tableau27
+while_instruction_tableau28:
+	LOAD #0, R7
+	STORE R7, 0(R5, R8)
+	ADD #1, R8
+while_cond_init_tableau27:
+	CMP 0(R5), R8
+	BLE while_instruction_tableau28
+	LOAD 5(LB), R7
+	LOAD 3(LB), R6
+	CMP #0, R6
+	BLT io_error_index_out_of_range
+	CMP 0(R7), R6
+	BGE io_error_index_out_of_range
+	ADD #1, R6
+	STORE R5, 0(R7, R6)
+	LOAD #0, R5
+	STORE R5, 4(LB)
+	BRA while_condition29
+while_inst29:
+	LOAD -3(LB), R6
+	LOAD 4(LB), R8
+	CMP #0, R8
+	BLT io_error_index_out_of_range
+	CMP 0(R6), R8
+	BGE io_error_index_out_of_range
+	ADD #1, R8
+	LOAD 0(R6, R8), R6
+	LOAD 3(LB), R7
+	CMP #0, R7
+	BLT io_error_index_out_of_range
+	CMP 0(R6), R7
+	BGE io_error_index_out_of_range
+	ADD #1, R7
+	LOAD 0(R6, R7), R6
+	LOAD 5(LB), R8
+	LOAD 3(LB), R9
+	CMP #0, R9
+	BLT io_error_index_out_of_range
+	CMP 0(R8), R9
+	BGE io_error_index_out_of_range
+	ADD #1, R9
+	LOAD 0(R8, R9), R8
+	LOAD 4(LB), R7
+	CMP #0, R7
+	BLT io_error_index_out_of_range
+	CMP 0(R8), R7
+	BGE io_error_index_out_of_range
+	ADD #1, R7
+	STORE R6, 0(R8, R7)
+	LOAD 4(LB), R7
+	LOAD #1, R6
+	ADD R7, R6
+	STORE R6, 4(LB)
+while_condition29:
+	LOAD 4(LB), R5
+	LOAD 2(LB), R6
+	CMP R6, R5
+	BLT while_inst29
+while_fin29:
+	LOAD 3(LB), R6
+	LOAD #1, R5
+	ADD R6, R5
+	STORE R5, 3(LB)
+while_condition26:
+	LOAD 3(LB), R4
+	LOAD 1(LB), R5
+	CMP R5, R4
+	BLT while_inst26
+while_fin26:
+	LOAD 5(LB), R4
+	BRA fin.MathArray.transposeFloatMatrix
+	WSTR "Erreur : sortie de la methodeMathArray.transposeFloatMatrixsans return"
+	WNL
+	ERROR
+fin.MathArray.transposeFloatMatrix:
+	POP R3
+	RTS
+code.MathArray.addIntTable:
+	PUSH R3
+; Beginning of method declarations
+	LOAD -3(LB), R3
+	LOAD 0(R3), R3
+	STORE R3, 1(LB)
+	ADDSP #1
+	LOAD -4(LB), R3
+	LOAD 0(R3), R3
+	STORE R3, 2(LB)
+	ADDSP #1
+	LOAD #0, R3
+	STORE R3, 4(LB)
+	ADDSP #1
+; Beginning of method instructions:
+	LOAD -2(LB), R3
+	LOAD 1(LB), R4
+	LOAD 2(LB), R5
+	CMP R5, R4
+	BEQ else30
+	ADDSP #1
+	LOAD R3, R2
+	STORE R2, 0(SP)
+	LOAD 0(SP), R2
+	CMP #null, R2
+	BEQ Deferencement_de_null
+	BSR code.MathArray.assem
+	LOAD R4, R5
+	SUBSP #1
+	BRA if_fin30
+else30:
+if_fin30:
+	LOAD 1(LB), R5
+	LOAD #1, R4
+	ADD R5, R4
+	NEW R4, R4
+	STORE R5, 0(R4)
+	LOAD #1, R7
+	BRA while_cond_init_tableau31
+while_instruction_tableau32:
+	LOAD #0, R6
+	STORE R6, 0(R4, R7)
+	ADD #1, R7
+while_cond_init_tableau31:
+	CMP 0(R4), R7
+	BLE while_instruction_tableau32
+	STORE R4, 3(LB)
+	BRA while_condition33
+while_inst33:
+	LOAD -3(LB), R6
+	LOAD 4(LB), R7
+	CMP #0, R7
+	BLT io_error_index_out_of_range
+	CMP 0(R6), R7
+	BGE io_error_index_out_of_range
+	ADD #1, R7
+	LOAD 0(R6, R7), R6
+	LOAD -4(LB), R5
+	LOAD 4(LB), R7
+	CMP #0, R7
+	BLT io_error_index_out_of_range
+	CMP 0(R5), R7
+	BGE io_error_index_out_of_range
+	ADD #1, R7
+	LOAD 0(R5, R7), R5
+	ADD R6, R5
+	LOAD 3(LB), R7
+	LOAD 4(LB), R6
+	CMP #0, R6
+	BLT io_error_index_out_of_range
+	CMP 0(R7), R6
+	BGE io_error_index_out_of_range
+	ADD #1, R6
+	STORE R5, 0(R7, R6)
+	LOAD 4(LB), R6
+	LOAD #1, R5
+	ADD R6, R5
+	STORE R5, 4(LB)
+while_condition33:
+	LOAD 4(LB), R4
+	LOAD 1(LB), R5
+	CMP R5, R4
+	BLT while_inst33
+while_fin33:
+	LOAD 3(LB), R4
+	BRA fin.MathArray.addIntTable
+	WSTR "Erreur : sortie de la methodeMathArray.addIntTablesans return"
+	WNL
+	ERROR
+fin.MathArray.addIntTable:
+	POP R3
+	RTS
+code.MathArray.addFloatTable:
+	PUSH R3
+; Beginning of method declarations
+	LOAD -3(LB), R3
+	LOAD 0(R3), R3
+	STORE R3, 1(LB)
+	ADDSP #1
+	LOAD -4(LB), R3
+	LOAD 0(R3), R3
+	STORE R3, 2(LB)
+	ADDSP #1
+	LOAD #0, R3
+	STORE R3, 4(LB)
+	ADDSP #1
+; Beginning of method instructions:
+	LOAD -2(LB), R3
+	LOAD 1(LB), R4
+	LOAD 2(LB), R5
+	CMP R5, R4
+	BEQ else34
+	ADDSP #1
+	LOAD R3, R2
+	STORE R2, 0(SP)
+	LOAD 0(SP), R2
+	CMP #null, R2
+	BEQ Deferencement_de_null
+	BSR code.MathArray.assem
+	LOAD R4, R5
+	SUBSP #1
+	BRA if_fin34
+else34:
+if_fin34:
+	LOAD 1(LB), R5
+	LOAD #1, R4
+	ADD R5, R4
+	NEW R4, R4
+	STORE R5, 0(R4)
+	LOAD #1, R7
+	BRA while_cond_init_tableau35
+while_instruction_tableau36:
+	LOAD #0, R6
+	STORE R6, 0(R4, R7)
+	ADD #1, R7
+while_cond_init_tableau35:
+	CMP 0(R4), R7
+	BLE while_instruction_tableau36
+	STORE R4, 3(LB)
+	BRA while_condition37
+while_inst37:
+	LOAD -3(LB), R6
+	LOAD 4(LB), R7
+	CMP #0, R7
+	BLT io_error_index_out_of_range
+	CMP 0(R6), R7
+	BGE io_error_index_out_of_range
+	ADD #1, R7
+	LOAD 0(R6, R7), R6
+	LOAD -4(LB), R5
+	LOAD 4(LB), R7
+	CMP #0, R7
+	BLT io_error_index_out_of_range
+	CMP 0(R5), R7
+	BGE io_error_index_out_of_range
+	ADD #1, R7
+	LOAD 0(R5, R7), R5
+	ADD R6, R5
+	BOV io_debordement_valeur
+	LOAD 3(LB), R7
+	LOAD 4(LB), R6
+	CMP #0, R6
+	BLT io_error_index_out_of_range
+	CMP 0(R7), R6
+	BGE io_error_index_out_of_range
+	ADD #1, R6
+	STORE R5, 0(R7, R6)
+	LOAD 4(LB), R6
+	LOAD #1, R5
+	ADD R6, R5
+	STORE R5, 4(LB)
+while_condition37:
+	LOAD 4(LB), R4
+	LOAD 1(LB), R5
+	CMP R5, R4
+	BLT while_inst37
+while_fin37:
+	LOAD 3(LB), R4
+	BRA fin.MathArray.addFloatTable
+	WSTR "Erreur : sortie de la methodeMathArray.addFloatTablesans return"
+	WNL
+	ERROR
+fin.MathArray.addFloatTable:
+	POP R3
+	RTS
+code.MathArray.addIntMatrix:
+	PUSH R3
+; Beginning of method declarations
+	LOAD -3(LB), R3
+	LOAD 0(R3), R3
+	STORE R3, 1(LB)
+	ADDSP #1
+	LOAD -3(LB), R3
+	LOAD #0, R4
+	CMP #0, R4
+	BLT io_error_index_out_of_range
+	CMP 0(R3), R4
+	BGE io_error_index_out_of_range
+	ADD #1, R4
+	LOAD 0(R3, R4), R3
+	LOAD 0(R3), R3
+	STORE R3, 2(LB)
+	ADDSP #1
+	LOAD -4(LB), R3
+	LOAD 0(R3), R3
+	STORE R3, 3(LB)
+	ADDSP #1
+	LOAD -4(LB), R3
+	LOAD #0, R4
+	CMP #0, R4
+	BLT io_error_index_out_of_range
+	CMP 0(R3), R4
+	BGE io_error_index_out_of_range
+	ADD #1, R4
+	LOAD 0(R3, R4), R3
+	LOAD 0(R3), R3
+	STORE R3, 4(LB)
+	ADDSP #1
+	LOAD #0, R3
+	STORE R3, 5(LB)
+	ADDSP #1
+	LOAD #0, R3
+	STORE R3, 6(LB)
+	ADDSP #1
+	LOAD #0, R3
+	STORE R3, 7(LB)
+	ADDSP #1
+	LOAD 1(LB), R4
+	LOAD #1, R3
+	ADD R4, R3
+	NEW R3, R3
+	STORE R4, 0(R3)
+	LOAD #1, R6
+	BRA while_cond_init_tableau38
+while_instruction_tableau39:
+	LOAD #0, R5
+	STORE R5, 0(R3, R6)
+	ADD #1, R6
+while_cond_init_tableau38:
+	CMP 0(R3), R6
+	BLE while_instruction_tableau39
+	STORE R3, 8(LB)
+	ADDSP #1
+; Beginning of method instructions:
+	LOAD -2(LB), R3
+	LOAD 2(LB), R4
+	LOAD 3(LB), R5
+	CMP R5, R4
+	BEQ else40
+	ADDSP #1
+	LOAD R3, R2
+	STORE R2, 0(SP)
+	LOAD 0(SP), R2
+	CMP #null, R2
+	BEQ Deferencement_de_null
+	BSR code.MathArray.assem
+	LOAD R4, R5
+	SUBSP #1
+	BRA if_fin40
+else40:
+if_fin40:
+	BRA while_condition41
+while_inst41:
+	LOAD 4(LB), R6
+	LOAD #1, R5
+	ADD R6, R5
+	NEW R5, R5
+	STORE R6, 0(R5)
+	LOAD #1, R8
+	BRA while_cond_init_tableau42
+while_instruction_tableau43:
+	LOAD #0, R7
+	STORE R7, 0(R5, R8)
+	ADD #1, R8
+while_cond_init_tableau42:
+	CMP 0(R5), R8
+	BLE while_instruction_tableau43
+	LOAD 8(LB), R7
+	LOAD 5(LB), R6
+	CMP #0, R6
+	BLT io_error_index_out_of_range
+	CMP 0(R7), R6
+	BGE io_error_index_out_of_range
+	ADD #1, R6
+	STORE R5, 0(R7, R6)
+	LOAD #0, R5
+	STORE R5, 6(LB)
+	BRA while_condition44
+while_inst44:
+	LOAD -3(LB), R7
+	LOAD 5(LB), R9
+	CMP #0, R9
+	BLT io_error_index_out_of_range
+	CMP 0(R7), R9
+	BGE io_error_index_out_of_range
+	ADD #1, R9
+	LOAD 0(R7, R9), R7
+	LOAD 6(LB), R8
+	CMP #0, R8
+	BLT io_error_index_out_of_range
+	CMP 0(R7), R8
+	BGE io_error_index_out_of_range
+	ADD #1, R8
+	LOAD 0(R7, R8), R7
+	LOAD -4(LB), R6
+	LOAD 5(LB), R9
+	CMP #0, R9
+	BLT io_error_index_out_of_range
+	CMP 0(R6), R9
+	BGE io_error_index_out_of_range
+	ADD #1, R9
+	LOAD 0(R6, R9), R6
+	LOAD 6(LB), R8
+	CMP #0, R8
+	BLT io_error_index_out_of_range
+	CMP 0(R6), R8
+	BGE io_error_index_out_of_range
+	ADD #1, R8
+	LOAD 0(R6, R8), R6
+	ADD R7, R6
+	LOAD 8(LB), R8
+	LOAD 5(LB), R9
+	CMP #0, R9
+	BLT io_error_index_out_of_range
+	CMP 0(R8), R9
+	BGE io_error_index_out_of_range
+	ADD #1, R9
+	LOAD 0(R8, R9), R8
+	LOAD 6(LB), R7
+	CMP #0, R7
+	BLT io_error_index_out_of_range
+	CMP 0(R8), R7
+	BGE io_error_index_out_of_range
+	ADD #1, R7
+	STORE R6, 0(R8, R7)
+	LOAD 6(LB), R7
+	LOAD #1, R6
+	ADD R7, R6
+	STORE R6, 6(LB)
+while_condition44:
+	LOAD 6(LB), R5
+	LOAD 4(LB), R6
+	CMP R6, R5
+	BLT while_inst44
+while_fin44:
+	LOAD 5(LB), R6
+	LOAD #1, R5
+	ADD R6, R5
+	STORE R5, 5(LB)
+while_condition41:
+	LOAD 5(LB), R4
+	LOAD 1(LB), R5
+	CMP R5, R4
+	BLT while_inst41
+while_fin41:
+	WSTR "Erreur : sortie de la methodeMathArray.addIntMatrixsans return"
+	WNL
+	ERROR
+fin.MathArray.addIntMatrix:
+	POP R3
+	RTS
+code.MathArray.addFloatMatrix:
+	PUSH R3
+; Beginning of method declarations
+	LOAD -3(LB), R3
+	LOAD 0(R3), R3
+	STORE R3, 1(LB)
+	ADDSP #1
+	LOAD -3(LB), R3
+	LOAD #0, R4
+	CMP #0, R4
+	BLT io_error_index_out_of_range
+	CMP 0(R3), R4
+	BGE io_error_index_out_of_range
+	ADD #1, R4
+	LOAD 0(R3, R4), R3
+	LOAD 0(R3), R3
+	STORE R3, 2(LB)
+	ADDSP #1
+	LOAD -4(LB), R3
+	LOAD 0(R3), R3
+	STORE R3, 3(LB)
+	ADDSP #1
+	LOAD -4(LB), R3
+	LOAD #0, R4
+	CMP #0, R4
+	BLT io_error_index_out_of_range
+	CMP 0(R3), R4
+	BGE io_error_index_out_of_range
+	ADD #1, R4
+	LOAD 0(R3, R4), R3
+	LOAD 0(R3), R3
+	STORE R3, 4(LB)
+	ADDSP #1
+	LOAD #0, R3
+	STORE R3, 5(LB)
+	ADDSP #1
+	LOAD #0, R3
+	STORE R3, 6(LB)
+	ADDSP #1
+	LOAD #0, R3
+	STORE R3, 7(LB)
+	ADDSP #1
+	LOAD 1(LB), R4
+	LOAD #1, R3
+	ADD R4, R3
+	NEW R3, R3
+	STORE R4, 0(R3)
+	LOAD #1, R6
+	BRA while_cond_init_tableau45
+while_instruction_tableau46:
+	LOAD #0, R5
+	STORE R5, 0(R3, R6)
+	ADD #1, R6
+while_cond_init_tableau45:
+	CMP 0(R3), R6
+	BLE while_instruction_tableau46
+	STORE R3, 8(LB)
+	ADDSP #1
+; Beginning of method instructions:
+	LOAD -2(LB), R3
+	LOAD 2(LB), R4
+	LOAD 3(LB), R5
+	CMP R5, R4
+	BEQ else47
+	ADDSP #1
+	LOAD R3, R2
+	STORE R2, 0(SP)
+	LOAD 0(SP), R2
+	CMP #null, R2
+	BEQ Deferencement_de_null
+	BSR code.MathArray.assem
+	LOAD R4, R5
+	SUBSP #1
+	BRA if_fin47
+else47:
+if_fin47:
+	BRA while_condition48
+while_inst48:
+	LOAD 4(LB), R6
+	LOAD #1, R5
+	ADD R6, R5
+	NEW R5, R5
+	STORE R6, 0(R5)
+	LOAD #1, R8
+	BRA while_cond_init_tableau49
+while_instruction_tableau50:
+	LOAD #0, R7
+	STORE R7, 0(R5, R8)
+	ADD #1, R8
+while_cond_init_tableau49:
+	CMP 0(R5), R8
+	BLE while_instruction_tableau50
+	LOAD 8(LB), R7
+	LOAD 5(LB), R6
+	CMP #0, R6
+	BLT io_error_index_out_of_range
+	CMP 0(R7), R6
+	BGE io_error_index_out_of_range
+	ADD #1, R6
+	STORE R5, 0(R7, R6)
+	LOAD #0, R5
+	STORE R5, 6(LB)
+	BRA while_condition51
+while_inst51:
+	LOAD -3(LB), R7
+	LOAD 5(LB), R9
+	CMP #0, R9
+	BLT io_error_index_out_of_range
+	CMP 0(R7), R9
+	BGE io_error_index_out_of_range
+	ADD #1, R9
+	LOAD 0(R7, R9), R7
+	LOAD 6(LB), R8
+	CMP #0, R8
+	BLT io_error_index_out_of_range
+	CMP 0(R7), R8
+	BGE io_error_index_out_of_range
+	ADD #1, R8
+	LOAD 0(R7, R8), R7
+	LOAD -4(LB), R6
+	LOAD 5(LB), R9
+	CMP #0, R9
+	BLT io_error_index_out_of_range
+	CMP 0(R6), R9
+	BGE io_error_index_out_of_range
+	ADD #1, R9
+	LOAD 0(R6, R9), R6
+	LOAD 6(LB), R8
+	CMP #0, R8
+	BLT io_error_index_out_of_range
+	CMP 0(R6), R8
+	BGE io_error_index_out_of_range
+	ADD #1, R8
+	LOAD 0(R6, R8), R6
+	ADD R7, R6
+	BOV io_debordement_valeur
+	LOAD 8(LB), R8
+	LOAD 5(LB), R9
+	CMP #0, R9
+	BLT io_error_index_out_of_range
+	CMP 0(R8), R9
+	BGE io_error_index_out_of_range
+	ADD #1, R9
+	LOAD 0(R8, R9), R8
+	LOAD 6(LB), R7
+	CMP #0, R7
+	BLT io_error_index_out_of_range
+	CMP 0(R8), R7
+	BGE io_error_index_out_of_range
+	ADD #1, R7
+	STORE R6, 0(R8, R7)
+	LOAD 6(LB), R7
+	LOAD #1, R6
+	ADD R7, R6
+	STORE R6, 6(LB)
+while_condition51:
+	LOAD 6(LB), R5
+	LOAD 4(LB), R6
+	CMP R6, R5
+	BLT while_inst51
+while_fin51:
+	LOAD 5(LB), R6
+	LOAD #1, R5
+	ADD R6, R5
+	STORE R5, 5(LB)
+while_condition48:
+	LOAD 5(LB), R4
+	LOAD 1(LB), R5
+	CMP R5, R4
+	BLT while_inst48
+while_fin48:
+	WSTR "Erreur : sortie de la methodeMathArray.addFloatMatrixsans return"
+	WNL
+	ERROR
+fin.MathArray.addFloatMatrix:
+	POP R3
+	RTS
+code.MathArray.multiplyInt:
+	PUSH R3
+; Beginning of method declarations
+	LOAD -3(LB), R3
+	LOAD 0(R3), R3
+	STORE R3, 1(LB)
+	ADDSP #1
+	LOAD -3(LB), R3
+	LOAD #0, R4
+	CMP #0, R4
+	BLT io_error_index_out_of_range
+	CMP 0(R3), R4
+	BGE io_error_index_out_of_range
+	ADD #1, R4
+	LOAD 0(R3, R4), R3
+	LOAD 0(R3), R3
+	STORE R3, 2(LB)
+	ADDSP #1
+	LOAD -4(LB), R3
+	LOAD 0(R3), R3
+	STORE R3, 3(LB)
+	ADDSP #1
+	LOAD -4(LB), R3
+	LOAD #0, R4
+	CMP #0, R4
+	BLT io_error_index_out_of_range
+	CMP 0(R3), R4
+	BGE io_error_index_out_of_range
+	ADD #1, R4
+	LOAD 0(R3, R4), R3
+	LOAD 0(R3), R3
+	STORE R3, 4(LB)
+	ADDSP #1
+	LOAD #0, R3
+	STORE R3, 5(LB)
+	ADDSP #1
+	LOAD #0, R3
+	STORE R3, 6(LB)
+	ADDSP #1
+	LOAD #0, R3
+	STORE R3, 7(LB)
+	ADDSP #1
+	LOAD 1(LB), R4
+	LOAD #1, R3
+	ADD R4, R3
+	NEW R3, R3
+	STORE R4, 0(R3)
+	LOAD #1, R6
+	BRA while_cond_init_tableau52
+while_instruction_tableau53:
+	LOAD #0, R5
+	STORE R5, 0(R3, R6)
+	ADD #1, R6
+while_cond_init_tableau52:
+	CMP 0(R3), R6
+	BLE while_instruction_tableau53
+	STORE R3, 8(LB)
+	ADDSP #1
+; Beginning of method instructions:
+	LOAD -2(LB), R3
+	LOAD 2(LB), R4
+	LOAD 3(LB), R5
+	CMP R5, R4
+	BEQ else54
+	ADDSP #1
+	LOAD R3, R2
+	STORE R2, 0(SP)
+	LOAD 0(SP), R2
+	CMP #null, R2
+	BEQ Deferencement_de_null
+	BSR code.MathArray.assem
+	LOAD R4, R5
+	SUBSP #1
+	BRA if_fin54
+else54:
+if_fin54:
+	BRA while_condition55
+while_inst55:
+	LOAD 4(LB), R6
+	LOAD #1, R5
+	ADD R6, R5
+	NEW R5, R5
+	STORE R6, 0(R5)
+	LOAD #1, R8
+	BRA while_cond_init_tableau56
+while_instruction_tableau57:
+	LOAD #0, R7
+	STORE R7, 0(R5, R8)
+	ADD #1, R8
+while_cond_init_tableau56:
+	CMP 0(R5), R8
+	BLE while_instruction_tableau57
+	LOAD 8(LB), R7
+	LOAD 5(LB), R6
+	CMP #0, R6
+	BLT io_error_index_out_of_range
+	CMP 0(R7), R6
+	BGE io_error_index_out_of_range
+	ADD #1, R6
+	STORE R5, 0(R7, R6)
+	LOAD #0, R5
+	STORE R5, 6(LB)
+	BRA while_condition58
+while_inst58:
+	LOAD #0, R6
+	STORE R6, 7(LB)
+	BRA while_condition59
+while_inst59:
+	LOAD 8(LB), R8
+	LOAD 5(LB), R10
+	CMP #0, R10
+	BLT io_error_index_out_of_range
+	CMP 0(R8), R10
+	BGE io_error_index_out_of_range
+	ADD #1, R10
+	LOAD 0(R8, R10), R8
+	LOAD 6(LB), R9
+	CMP #0, R9
+	BLT io_error_index_out_of_range
+	CMP 0(R8), R9
+	BGE io_error_index_out_of_range
+	ADD #1, R9
+	LOAD 0(R8, R9), R8
+	LOAD -4(LB), R9
+	LOAD 7(LB), R11
+	CMP #0, R11
+	BLT io_error_index_out_of_range
+	CMP 0(R9), R11
+	BGE io_error_index_out_of_range
+	ADD #1, R11
+	LOAD 0(R9, R11), R9
+	LOAD 6(LB), R10
+	CMP #0, R10
+	BLT io_error_index_out_of_range
+	CMP 0(R9), R10
+	BGE io_error_index_out_of_range
+	ADD #1, R10
+	LOAD 0(R9, R10), R9
+	LOAD -3(LB), R7
+	LOAD 5(LB), R11
+	CMP #0, R11
+	BLT io_error_index_out_of_range
+	CMP 0(R7), R11
+	BGE io_error_index_out_of_range
+	ADD #1, R11
+	LOAD 0(R7, R11), R7
+	LOAD 7(LB), R10
+	CMP #0, R10
+	BLT io_error_index_out_of_range
+	CMP 0(R7), R10
+	BGE io_error_index_out_of_range
+	ADD #1, R10
+	LOAD 0(R7, R10), R7
+	MUL R9, R7
+	ADD R8, R7
+	LOAD 8(LB), R9
+	LOAD 5(LB), R10
+	CMP #0, R10
+	BLT io_error_index_out_of_range
+	CMP 0(R9), R10
+	BGE io_error_index_out_of_range
+	ADD #1, R10
+	LOAD 0(R9, R10), R9
+	LOAD 6(LB), R8
+	CMP #0, R8
+	BLT io_error_index_out_of_range
+	CMP 0(R9), R8
+	BGE io_error_index_out_of_range
+	ADD #1, R8
+	STORE R7, 0(R9, R8)
+	LOAD 7(LB), R8
+	LOAD #1, R7
+	ADD R8, R7
+	STORE R7, 7(LB)
+while_condition59:
+	LOAD 7(LB), R6
+	LOAD 2(LB), R7
+	CMP R7, R6
+	BLT while_inst59
+while_fin59:
+	LOAD 6(LB), R7
+	LOAD #1, R6
+	ADD R7, R6
+	STORE R6, 6(LB)
+while_condition58:
+	LOAD 6(LB), R5
+	LOAD 4(LB), R6
+	CMP R6, R5
+	BLT while_inst58
+while_fin58:
+	LOAD 5(LB), R6
+	LOAD #1, R5
+	ADD R6, R5
+	STORE R5, 5(LB)
+while_condition55:
+	LOAD 5(LB), R4
+	LOAD 1(LB), R5
+	CMP R5, R4
+	BLT while_inst55
+while_fin55:
+	LOAD 8(LB), R4
+	BRA fin.MathArray.multiplyInt
+	WSTR "Erreur : sortie de la methodeMathArray.multiplyIntsans return"
+	WNL
+	ERROR
+fin.MathArray.multiplyInt:
+	POP R3
+	RTS
+code.MathArray.multiplyFloat:
+	PUSH R3
+; Beginning of method declarations
+	LOAD -3(LB), R3
+	LOAD 0(R3), R3
+	STORE R3, 1(LB)
+	ADDSP #1
+	LOAD -3(LB), R3
+	LOAD #0, R4
+	CMP #0, R4
+	BLT io_error_index_out_of_range
+	CMP 0(R3), R4
+	BGE io_error_index_out_of_range
+	ADD #1, R4
+	LOAD 0(R3, R4), R3
+	LOAD 0(R3), R3
+	STORE R3, 2(LB)
+	ADDSP #1
+	LOAD -4(LB), R3
+	LOAD 0(R3), R3
+	STORE R3, 3(LB)
+	ADDSP #1
+	LOAD -4(LB), R3
+	LOAD #0, R4
+	CMP #0, R4
+	BLT io_error_index_out_of_range
+	CMP 0(R3), R4
+	BGE io_error_index_out_of_range
+	ADD #1, R4
+	LOAD 0(R3, R4), R3
+	LOAD 0(R3), R3
+	STORE R3, 4(LB)
+	ADDSP #1
+	LOAD #0, R3
+	STORE R3, 5(LB)
+	ADDSP #1
+	LOAD #0, R3
+	STORE R3, 6(LB)
+	ADDSP #1
+	LOAD #0, R3
+	STORE R3, 7(LB)
+	ADDSP #1
+	LOAD 1(LB), R4
+	LOAD #1, R3
+	ADD R4, R3
+	NEW R3, R3
+	STORE R4, 0(R3)
+	LOAD #1, R6
+	BRA while_cond_init_tableau60
+while_instruction_tableau61:
+	LOAD #0, R5
+	STORE R5, 0(R3, R6)
+	ADD #1, R6
+while_cond_init_tableau60:
+	CMP 0(R3), R6
+	BLE while_instruction_tableau61
+	STORE R3, 8(LB)
+	ADDSP #1
+; Beginning of method instructions:
+	LOAD -2(LB), R3
+	LOAD 2(LB), R4
+	LOAD 3(LB), R5
+	CMP R5, R4
+	BEQ else62
+	ADDSP #1
+	LOAD R3, R2
+	STORE R2, 0(SP)
+	LOAD 0(SP), R2
+	CMP #null, R2
+	BEQ Deferencement_de_null
+	BSR code.MathArray.assem
+	LOAD R4, R5
+	SUBSP #1
+	BRA if_fin62
+else62:
+if_fin62:
+	BRA while_condition63
+while_inst63:
+	LOAD #0, R5
+	STORE R5, 6(LB)
+	LOAD 4(LB), R6
+	LOAD #1, R5
+	ADD R6, R5
+	NEW R5, R5
+	STORE R6, 0(R5)
+	LOAD #1, R8
+	BRA while_cond_init_tableau64
+while_instruction_tableau65:
+	LOAD #0, R7
+	STORE R7, 0(R5, R8)
+	ADD #1, R8
+while_cond_init_tableau64:
+	CMP 0(R5), R8
+	BLE while_instruction_tableau65
+	LOAD 8(LB), R7
+	LOAD 5(LB), R6
+	CMP #0, R6
+	BLT io_error_index_out_of_range
+	CMP 0(R7), R6
+	BGE io_error_index_out_of_range
+	ADD #1, R6
+	STORE R5, 0(R7, R6)
+	BRA while_condition66
+while_inst66:
+	LOAD #0, R6
+	STORE R6, 7(LB)
+	BRA while_condition67
+while_inst67:
+	LOAD 8(LB), R8
+	LOAD 5(LB), R10
+	CMP #0, R10
+	BLT io_error_index_out_of_range
+	CMP 0(R8), R10
+	BGE io_error_index_out_of_range
+	ADD #1, R10
+	LOAD 0(R8, R10), R8
+	LOAD 6(LB), R9
+	CMP #0, R9
+	BLT io_error_index_out_of_range
+	CMP 0(R8), R9
+	BGE io_error_index_out_of_range
+	ADD #1, R9
+	LOAD 0(R8, R9), R8
+	LOAD -4(LB), R9
+	LOAD 7(LB), R11
+	CMP #0, R11
+	BLT io_error_index_out_of_range
+	CMP 0(R9), R11
+	BGE io_error_index_out_of_range
+	ADD #1, R11
+	LOAD 0(R9, R11), R9
+	LOAD 6(LB), R10
+	CMP #0, R10
+	BLT io_error_index_out_of_range
+	CMP 0(R9), R10
+	BGE io_error_index_out_of_range
+	ADD #1, R10
+	LOAD 0(R9, R10), R9
+	LOAD -3(LB), R7
+	LOAD 5(LB), R11
+	CMP #0, R11
+	BLT io_error_index_out_of_range
+	CMP 0(R7), R11
+	BGE io_error_index_out_of_range
+	ADD #1, R11
+	LOAD 0(R7, R11), R7
+	LOAD 7(LB), R10
+	CMP #0, R10
+	BLT io_error_index_out_of_range
+	CMP 0(R7), R10
+	BGE io_error_index_out_of_range
+	ADD #1, R10
+	LOAD 0(R7, R10), R7
+	MUL R9, R7
+	BOV io_debordement_valeur
+	ADD R8, R7
+	BOV io_debordement_valeur
+	LOAD 8(LB), R9
+	LOAD 5(LB), R10
+	CMP #0, R10
+	BLT io_error_index_out_of_range
+	CMP 0(R9), R10
+	BGE io_error_index_out_of_range
+	ADD #1, R10
+	LOAD 0(R9, R10), R9
+	LOAD 6(LB), R8
+	CMP #0, R8
+	BLT io_error_index_out_of_range
+	CMP 0(R9), R8
+	BGE io_error_index_out_of_range
+	ADD #1, R8
+	STORE R7, 0(R9, R8)
+	LOAD 7(LB), R8
+	LOAD #1, R7
+	ADD R8, R7
+	STORE R7, 7(LB)
+while_condition67:
+	LOAD 7(LB), R6
+	LOAD 2(LB), R7
+	CMP R7, R6
+	BLT while_inst67
+while_fin67:
+	LOAD 6(LB), R7
+	LOAD #1, R6
+	ADD R7, R6
+	STORE R6, 6(LB)
+while_condition66:
+	LOAD 6(LB), R5
+	LOAD 4(LB), R6
+	CMP R6, R5
+	BLT while_inst66
+while_fin66:
+	LOAD 5(LB), R6
+	LOAD #1, R5
+	ADD R6, R5
+	STORE R5, 5(LB)
+while_condition63:
+	LOAD 5(LB), R4
+	LOAD 1(LB), R5
+	CMP R5, R4
+	BLT while_inst63
+while_fin63:
+	WSTR "Erreur : sortie de la methodeMathArray.multiplyFloatsans return"
+	WNL
+	ERROR
+fin.MathArray.multiplyFloat:
+	POP R3
+	RTS
+; Main program
+DebutMain:
+; Beginning of main declarations
+	LOAD #4, R4
+	LOAD #1, R3
+	ADD R4, R3
+	NEW R3, R3
+	STORE R4, 0(R3)
+	LOAD #4, R5
+	LOAD #1, R4
+	ADD R5, R4
+	NEW R4, R4
+	STORE R5, 0(R4)
+	LOAD #1, R5
+	STORE R5, 1(R4)
+	LOAD #5, R5
+	STORE R5, 2(R4)
+	LOAD #2, R5
+	STORE R5, 3(R4)
+	LOAD #12, R5
+	STORE R5, 4(R4)
+	STORE R4, 1(R3)
+	LOAD #4, R5
+	LOAD #1, R4
+	ADD R5, R4
+	NEW R4, R4
+	STORE R5, 0(R4)
+	LOAD #1, R5
+	STORE R5, 1(R4)
+	LOAD #3, R5
+	STORE R5, 2(R4)
+	LOAD #2, R5
+	STORE R5, 3(R4)
+	LOAD #2, R5
+	STORE R5, 4(R4)
+	STORE R4, 2(R3)
+	LOAD #4, R5
+	LOAD #1, R4
+	ADD R5, R4
+	NEW R4, R4
+	STORE R5, 0(R4)
+	LOAD #6, R5
+	STORE R5, 1(R4)
+	LOAD #2, R5
+	STORE R5, 2(R4)
+	LOAD #6, R5
+	STORE R5, 3(R4)
+	LOAD #1, R5
+	STORE R5, 4(R4)
+	STORE R4, 3(R3)
+	LOAD #4, R5
+	LOAD #1, R4
+	ADD R5, R4
+	NEW R4, R4
+	STORE R5, 0(R4)
+	LOAD #6, R5
+	STORE R5, 1(R4)
+	LOAD #3, R5
+	STORE R5, 2(R4)
+	LOAD #1, R5
+	STORE R5, 3(R4)
+	LOAD #7, R5
+	STORE R5, 4(R4)
+	STORE R4, 4(R3)
+	STORE R3, 1(LB)
+	ADDSP #1
+	LOAD #4, R4
+	LOAD #1, R3
+	ADD R4, R3
+	NEW R3, R3
+	STORE R4, 0(R3)
+	LOAD #4, R5
+	LOAD #1, R4
+	ADD R5, R4
+	NEW R4, R4
+	STORE R5, 0(R4)
+	LOAD #1, R5
+	STORE R5, 1(R4)
+	LOAD #2, R5
+	STORE R5, 2(R4)
+	LOAD #6, R5
+	STORE R5, 3(R4)
+	LOAD #1, R5
+	STORE R5, 4(R4)
+	STORE R4, 1(R3)
+	LOAD #4, R5
+	LOAD #1, R4
+	ADD R5, R4
+	NEW R4, R4
+	STORE R5, 0(R4)
+	LOAD #5, R5
+	STORE R5, 1(R4)
+	LOAD #1, R5
+	STORE R5, 2(R4)
+	LOAD #2, R5
+	STORE R5, 3(R4)
+	LOAD #8, R5
+	STORE R5, 4(R4)
+	STORE R4, 2(R3)
+	LOAD #4, R5
+	LOAD #1, R4
+	ADD R5, R4
+	NEW R4, R4
+	STORE R5, 0(R4)
+	LOAD #4, R5
+	STORE R5, 1(R4)
+	LOAD #4, R5
+	STORE R5, 2(R4)
+	LOAD #2, R5
+	STORE R5, 3(R4)
+	LOAD #6, R5
+	STORE R5, 4(R4)
+	STORE R4, 3(R3)
+	LOAD #4, R5
+	LOAD #1, R4
+	ADD R5, R4
+	NEW R4, R4
+	STORE R5, 0(R4)
+	LOAD #5, R5
+	STORE R5, 1(R4)
+	LOAD #2, R5
+	STORE R5, 2(R4)
+	LOAD #6, R5
+	STORE R5, 3(R4)
+	LOAD #3, R5
+	STORE R5, 4(R4)
+	STORE R4, 4(R3)
+	STORE R3, 2(LB)
+	ADDSP #1
+	PUSH R1
+	NEW #1, R3
+	BOV tas_plein
+	LEA 3(GB), R0
+	STORE R0, 0(R3)
+	PUSH R3
+	BSR init.MathArray
+	POP R3
+	POP R1
+	STORE R3, 3(LB)
+	ADDSP #1
+	ADDSP #3
+	LOAD 3(LB), R2
+	STORE R2, 0(SP)
+	LOAD 1(LB), R2
+	STORE R2, -1(SP)
+	LOAD 2(LB), R2
+	STORE R2, -2(SP)
+	LOAD 0(SP), R2
+	CMP #null, R2
+	BEQ Deferencement_de_null
+	BSR code.MathArray.multiplyInt
+	LOAD R4, R3
+	SUBSP #3
+	STORE R3, 4(LB)
+	ADDSP #1
+	LOAD 4(LB), R3
+	LOAD 0(R3), R3
+	STORE R3, 5(LB)
+	ADDSP #1
+	LOAD 4(LB), R3
+	LOAD #0, R4
+	CMP #0, R4
+	BLT io_error_index_out_of_range
+	CMP 0(R3), R4
+	BGE io_error_index_out_of_range
+	ADD #1, R4
+	LOAD 0(R3, R4), R3
+	LOAD 0(R3), R3
+	STORE R3, 6(LB)
+	ADDSP #1
+	LOAD #0, R3
+	STORE R3, 7(LB)
+	ADDSP #1
+	LOAD #0, R3
+	STORE R3, 8(LB)
+	ADDSP #1
+; Beginning of main instructions:
+	BRA while_condition68
+while_inst68:
+	LOAD #0, R4
+	STORE R4, 8(LB)
+	BRA while_condition69
+while_inst69:
+	LOAD 4(LB), R7
+	LOAD 7(LB), R8
+	CMP #0, R8
+	BLT io_error_index_out_of_range
+	CMP 0(R7), R8
+	BGE io_error_index_out_of_range
+	ADD #1, R8
+	LOAD 0(R7, R8), R7
+	LOAD 8(LB), R6
+	CMP #0, R6
+	BLT io_error_index_out_of_range
+	CMP 0(R7), R6
+	BGE io_error_index_out_of_range
+	ADD #1, R6
+	LOAD 0(R7, R6), R1
+	WINT
+	WSTR "  "
+	LOAD 8(LB), R6
+	LOAD #1, R5
+	ADD R6, R5
+	STORE R5, 8(LB)
+while_condition69:
+	LOAD 8(LB), R4
+	LOAD 6(LB), R5
+	CMP R5, R4
+	BLT while_inst69
+while_fin69:
+	WNL
+	LOAD 7(LB), R5
+	LOAD #1, R4
+	ADD R5, R4
+	STORE R4, 7(LB)
+while_condition68:
+	LOAD 7(LB), R3
+	LOAD 5(LB), R4
+	CMP R4, R3
+	BLT while_inst68
+while_fin68:
+	HALT
+; end main program
+io_error:
+	WSTR "Error: Input/Output error"
+	WNL
+	ERROR
+io_error_div_O:
+	WSTR "Division par 0 interdite"
+	WNL
+	ERROR
+io_debordement_valeur:
+	WSTR "Error: Debordement flottant nombre trop grand"
+	WNL
+	ERROR
+pile_pleine:
+	WSTR "Erreur : la pile est pleine"
+	WNL
+	ERROR
+tas_plein:
+	WSTR "Erreur : le tas est plein"
+	WNL
+	ERROR
+Deferencement_de_null:
+	WSTR "L'identifier est null"
+	WNL
+	ERROR
+io_error_index_out_of_range:
+	WSTR "Erreur : Index out of range"
+	WNL
+	ERROR
+io_incorrect_sizes:
+	WSTR "Erreur : Les tableaux passées en paramètres doivent être de bonnes tailles"
+	WNL
+	ERROR

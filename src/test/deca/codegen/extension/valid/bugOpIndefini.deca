@@ -1,0 +1,10 @@
+{
+    //int[] tab = {1, 4, 2};
+    //tab[0] = tab[0] + 2;
+    // Ca ok
+    int i = 0;
+    int j = 0;
+    int[][] matrice = {{1, 2}, {6, 3}};
+    matrice[i][j] = matrice[i][j] + matrice[i][j+1];
+
+}

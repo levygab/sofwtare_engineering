@@ -1,0 +1,15 @@
+// Description:
+//    Programme utilisant des boucles while
+//
+// Resultats:
+//    
+//
+// Historique:
+//    cree le 14/01/2022
+
+{
+    int x = 0;
+    while (x) {
+        x = x + 1;
+    }
+}

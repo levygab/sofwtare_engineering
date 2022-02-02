@@ -1,0 +1,243 @@
+//test inspire d'un partiel.
+//contient plusieurs classe, methodes.....
+
+class Vehicule {
+
+    protected int chevaux ;
+    protected  int conso ;
+    int numero ;
+
+    void Constructeur ( int chevaux , int consommation , int num) {
+        this.chevaux = chevaux ;
+        this.conso = consommation ;
+        this.numero = num ;
+    }
+    int getConso() { 
+        return this.conso ;
+    }
+    void setConso(int consommation) { 
+        this.conso = consommation ;
+    }
+    int getChevaux() {
+        return this.chevaux ;
+    }
+    boolean equal (Vehicule vehi) {
+        //deux vehicules sont egaux ssi ils ont le meme nombre de chevaux et la meme conso et le meme numero
+        if (this.conso == vehi.getConso() && this.chevaux == vehi.getChevaux() && this.numero == vehi.numero ) {
+            return true ;
+        }
+
+        else {
+            return false ;
+        }
+    }
+}
+
+class Voiture extends Vehicule{
+
+    int calculerCout() {
+        int retour = 20 ;
+        retour = retour + 2*this.getChevaux() ;
+        return retour ;
+    }
+}
+
+class Utilitaire extends Vehicule{
+    protected int hauteur ;
+
+    void ConstructeurUtilitaire( int chevaux , int conso , int num , int h) {
+        this.chevaux = chevaux ;
+        this.conso = conso ;
+        this.numero = num ;
+        this.hauteur = h ;
+    }
+
+    int gethauteur() {
+        return this.hauteur ;
+    }
+
+    int calculerCout() {
+        int retour = 30 ;
+        retour = retour + 2*this.chevaux ;
+        return retour ;
+    }
+}
+
+class Fourgonnette extends Utilitaire {
+
+}
+
+class Camion extends Utilitaire{
+    protected int poids ;
+
+    void ConstructeurCamion(int chevaux , int conso , int num , int poids) {
+        this.chevaux = chevaux ;
+        this.conso = conso ;
+        this.numero = num ;
+        this.poids = poids ;
+
+    }
+
+    int getPoids () {
+        return this.poids ;
+    }
+
+    int calcCout() {
+        int retour = 30 ;
+        int bonus ;
+        retour = retour + 2*this.chevaux ;
+
+        
+        if (poids > 2000) {
+            bonus = ((poids - 2000 ) / 200)*2 ; //division entiere
+            retour = retour + bonus ;
+        }
+        return retour ;
+    }
+}
+
+
+class Client {
+    int numero1 ;
+    protected int numero2 ;
+    protected Vehicule location ;
+
+    void Constructeur (int num1 , int num2 , Vehicule vehi) {
+        this.numero1 = num1 ;
+        this.numero2 = num2 ;
+        this.location = new Vehicule() ;
+        this.location = vehi ;
+    }
+
+    Vehicule getVehicule() {
+        return this.location ;
+    }
+
+    int getVehiculeNumero() {
+        return this.location.numero ;
+    }
+
+    int getVehiculeConsommation() {
+        return this.location.getConso() ;
+    }
+
+}
+
+{
+    Vehicule vehi1 = new Vehicule() ;
+    
+
+    Vehicule vehi2 = new Vehicule() ;
+    
+
+    Vehicule vehi3 = new Vehicule() ;
+    
+
+    Voiture voit1 = new Voiture () ;
+    
+
+    Voiture voit2 = new Voiture () ;
+
+    Voiture vehi10;
+    
+
+    int resultat1 ;
+
+    Utilitaire util1 = new Utilitaire() ;
+    
+
+    Camion camion1 = new Camion() ;
+    
+
+    Client client1 = new Client() ;
+   
+
+    Client client2 = new Client() ;
+    
+    
+    vehi1.Constructeur(100, 25 , 0) ;
+    vehi2.Constructeur(100, 25 , 0) ;
+    vehi3.Constructeur(100, 25 , 3) ;
+    voit1.Constructeur(50,43,4) ;
+    voit1.Constructeur(50,43,4) ;
+    util1.ConstructeurUtilitaire(100,25,0,167) ;
+    camion1.ConstructeurCamion(500, 25 , 10 , 5400) ;
+    client1.Constructeur(0,0,vehi3) ;
+    client2.Constructeur(1,1,voit1) ;
+    
+    if (vehi1.equal(vehi2) ) {
+        println ("1er test reussi") ;
+    }
+    else {
+        println ("1er test rate, les vehicules devraient etre egaux") ;
+    }
+
+    if (! vehi3.equal(vehi1) ) {
+        println("2eme test reussi") ;
+    }
+    else {
+        println("2eme test rate, les vehicules doivent etre differents") ;
+    }
+
+    if (voit1.equal(voit2) ) {
+        println ("3er test reussi") ;
+    }
+    else {
+        println ("3er test rate, les voitures devraient etre egales") ;
+    }    
+
+    vehi10 = (Voiture) (vehi1) ; //cast
+    resultat1 = vehi10.calculerCout() ;
+
+    if (resultat1 == 220) {
+        println("4eme test reussi") ;
+    }
+    else {
+        println("4eme test rate : le cout (resultat1) doit etre de 220") ;
+    }
+
+    if ( util1.equal(vehi2) ) {
+        println("5eme test reussi") ;
+    }
+    else {
+        print("5eme test rate : vehi2 et util1 ont le meme nb de chevaux, la meme conso et le meme numero. ") ;
+        println("la methode devrait bien pouvoir etre appele") ;
+    }
+
+    resultat1 = util1.calculerCout() ;
+    if (resultat1 == 230) {
+        println("6eme test reussi") ;
+    }
+    else {
+        println("6eme test rate : le cout devrait etre de 230") ;
+    }
+
+    resultat1 = camion1.calcCout() ;
+
+    if (resultat1 == 1064 ) {
+        println("7eme test reussi") ;
+    }
+    else {
+        println("7eme test rate : le cout devrait etre de 1064") ;
+    }
+
+    if ( client2.getVehicule().equal(voit2) ) {
+        println("8eme test reussi") ;
+    }
+    else {
+        println("8eme test rate : voit1 et voit2 sont egaux comme au dessus") ;
+    }
+
+    if (client2.getVehiculeConsommation() == 43) {
+        println("9eme tesy reussi") ;
+    }
+    else {
+        println("9eme test rate : la consommation est celle de voit1 qui est de 43") ;
+    }
+
+
+}
+
+
+
+

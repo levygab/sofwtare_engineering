@@ -1,0 +1,14 @@
+// Description:
+//    Programme vérifiant l'appartenance au lexique.
+//
+// Resultats:
+//    Erreur ligne 13 : z n'a pas été déclaré et n'appartient pas à l'environnement
+//
+// Historique:
+//    cree le 12/01/2022
+
+{
+    int x = 2;
+    float y = x;
+    z = 12;
+}

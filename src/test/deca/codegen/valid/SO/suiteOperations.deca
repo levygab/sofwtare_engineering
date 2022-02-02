@@ -1,0 +1,24 @@
+// Description:
+//    Test complet pour vérifier la sémantique : suite d'opérations et affichage du résultat
+//
+// Resultats:
+//    621.5
+//
+// Historique:
+//    cree le 12/01/2022
+
+{
+    int x = 1;
+    int y = 10;
+    float z = 5.5;
+    float resultat;
+
+    resultat = 5; //5
+    resultat = resultat + z; //10.5
+    resultat = resultat + x; //11.5
+    resultat = resultat * y; //115.0
+    resultat = resultat - 2 * x; //113.0
+    resultat = resultat * z; //621.5
+
+    println(resultat);
+}

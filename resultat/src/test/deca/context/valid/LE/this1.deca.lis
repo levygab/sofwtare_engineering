@@ -1,0 +1,84 @@
+`> [4, 0] Program
+   +> ListDeclClass [List with 1 elements]
+   |  []> [4, 0] DeclClass
+   |      +> [4, 6] Identifier (C1)
+   |      |  definition: type defined at [4, 0], type=C1
+   |      +> Identifier (Object)
+   |      |  definition: type (builtin), type=Object
+   |      +> ListDeclField [List with 1 elements]
+   |      |  []> [5, 8] [visibility = PUBLIC] DeclField
+   |      |      +> [5, 4] Identifier (int)
+   |      |      |  definition: type (builtin), type=int
+   |      |      +> [5, 8] Identifier (a)
+   |      |      |  definition: field defined at [5, 8], type=int
+   |      |      `> NoInitialization
+   |      `> ListDeclMethod [List with 3 elements]
+   |         []> [7, 4] Method
+   |         ||  +> [7, 4] Identifier (int)
+   |         ||  |  definition: type (builtin), type=int
+   |         ||  +> [7, 8] Identifier (m1)
+   |         ||  |  definition: method defined at [7, 4], type=int
+   |         ||  +> ListParams [List with 1 elements]
+   |         ||  |  []> [7, 12] Params
+   |         ||  |      type: int
+   |         ||  |      +> [7, 12] Identifier (int)
+   |         ||  |      |  definition: type (builtin), type=int
+   |         ||  |      `> [7, 16] Identifier (valeur)
+   |         ||  |         definition: parameter defined at [7, 12], type=int
+   |         ||  +> ListDeclVar [List with 0 elements]
+   |         ||  `> ListInst [List with 2 elements]
+   |         ||     []> [8, 10] Assign
+   |         ||     ||  type: int
+   |         ||     ||  +> [8, 8] Identifier (a)
+   |         ||     ||  |  definition: field defined at [5, 8], type=int
+   |         ||     ||  `> [8, 12] Identifier (valeur)
+   |         ||     ||     definition: parameter defined at [7, 12], type=int
+   |         ||     []> [9, 8] Return
+   |         ||         `> [9, 15] Identifier (a)
+   |         ||            definition: field defined at [5, 8], type=int
+   |         []> [12, 4] Method
+   |         ||  +> [12, 4] Identifier (void)
+   |         ||  |  definition: type (builtin), type=void
+   |         ||  +> [12, 9] Identifier (m2)
+   |         ||  |  definition: method defined at [12, 4], type=void
+   |         ||  +> ListParams [List with 1 elements]
+   |         ||  |  []> [12, 13] Params
+   |         ||  |      type: int
+   |         ||  |      +> [12, 13] Identifier (int)
+   |         ||  |      |  definition: type (builtin), type=int
+   |         ||  |      `> [12, 17] Identifier (a)
+   |         ||  |         definition: parameter defined at [12, 13], type=int
+   |         ||  +> ListDeclVar [List with 0 elements]
+   |         ||  `> ListInst [List with 1 elements]
+   |         ||     []> [13, 15] Assign
+   |         ||         type: int
+   |         ||         +> [13, 8] MethodCall
+   |         ||         |  type: int
+   |         ||         |  +> [13, 8] This
+   |         ||         |  |  type: C1
+   |         ||         |  DOT
+   |         ||         |  `> [13, 13] Identifier (a)
+   |         ||         |     definition: field defined at [5, 8], type=int
+   |         ||         `> [13, 17] Identifier (a)
+   |         ||            definition: parameter defined at [12, 13], type=int
+   |         []> [16, 4] Method
+   |             +> [16, 4] Identifier (void)
+   |             |  definition: type (builtin), type=void
+   |             +> [16, 9] Identifier (m3)
+   |             |  definition: method defined at [16, 4], type=void
+   |             +> ListParams [List with 0 elements]
+   |             +> ListDeclVar [List with 0 elements]
+   |             `> ListInst [List with 1 elements]
+   |                []> [17, 10] Assign
+   |                    type: int
+   |                    +> [17, 8] Identifier (a)
+   |                    |  definition: field defined at [5, 8], type=int
+   |                    `> [17, 12] MethodCall
+   |                       type: int
+   |                       DOT
+   |                       +> [17, 12] Identifier (m1)
+   |                       |  definition: method defined at [7, 4], type=int
+   |                       `> ListExpr [List with 1 elements]
+   |                          []> [17, 15] Int (18)
+   |                              type: int
+   `> EmptyMain

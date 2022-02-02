@@ -1,0 +1,71 @@
+`> [10, 0] Program
+   +> ListDeclClass [List with 0 elements]
+   `> [10, 0] Main
+      +> ListDeclVar [List with 4 elements]
+      |  []> [11, 8] DeclVar
+      |  ||  +> [11, 4] Identifier (int)
+      |  ||  |  definition: type (builtin), type=int
+      |  ||  +> [11, 8] Identifier (x_1)
+      |  ||  |  definition: variable defined at [11, 8], type=int
+      |  ||  `> [11, 14] Initialization
+      |  ||     `> [11, 14] Int (12)
+      |  ||        type: int
+      |  []> [12, 8] DeclVar
+      |  ||  +> [12, 4] Identifier (int)
+      |  ||  |  definition: type (builtin), type=int
+      |  ||  +> [12, 8] Identifier (x_2)
+      |  ||  |  definition: variable defined at [12, 8], type=int
+      |  ||  `> [12, 14] Initialization
+      |  ||     `> [12, 14] Int (13)
+      |  ||        type: int
+      |  []> [13, 12] DeclVar
+      |  ||  +> [13, 4] Identifier (boolean)
+      |  ||  |  definition: type (builtin), type=boolean
+      |  ||  +> [13, 12] Identifier (b)
+      |  ||  |  definition: variable defined at [13, 12], type=boolean
+      |  ||  `> [13, 16] Initialization
+      |  ||     `> [13, 21] Greater
+      |  ||        type: boolean
+      |  ||        +> [13, 17] Identifier (x_2)
+      |  ||        |  definition: variable defined at [12, 8], type=int
+      |  ||        `> [13, 23] Identifier (x_1)
+      |  ||           definition: variable defined at [11, 8], type=int
+      |  []> [14, 12] DeclVar
+      |      +> [14, 4] Identifier (boolean)
+      |      |  definition: type (builtin), type=boolean
+      |      +> [14, 12] Identifier (c)
+      |      |  definition: variable defined at [14, 12], type=boolean
+      |      `> [14, 16] Initialization
+      |         `> [14, 21] NotEquals
+      |            type: boolean
+      |            +> [14, 17] Identifier (x_2)
+      |            |  definition: variable defined at [12, 8], type=int
+      |            `> [14, 24] Identifier (x_1)
+      |               definition: variable defined at [11, 8], type=int
+      `> ListInst [List with 2 elements]
+         []> [15, 4] IfThenElse
+         ||  +> [15, 8] Identifier (b)
+         ||  |  definition: variable defined at [13, 12], type=boolean
+         ||  +> ListInst [List with 1 elements]
+         ||  |  []> [16, 8] Println
+         ||  |      `> ListExpr [List with 1 elements]
+         ||  |         []> [16, 16] StringLiteral (OK)
+         ||  |             type: string
+         ||  `> ListInst [List with 1 elements]
+         ||     []> [19, 8] Println
+         ||         `> ListExpr [List with 1 elements]
+         ||            []> [19, 16] StringLiteral (Problem)
+         ||                type: string
+         []> [21, 4] IfThenElse
+             +> [21, 8] Identifier (c)
+             |  definition: variable defined at [14, 12], type=boolean
+             +> ListInst [List with 1 elements]
+             |  []> [22, 8] Println
+             |      `> ListExpr [List with 1 elements]
+             |         []> [22, 16] StringLiteral (OK)
+             |             type: string
+             `> ListInst [List with 1 elements]
+                []> [25, 8] Println
+                    `> ListExpr [List with 1 elements]
+                       []> [25, 16] StringLiteral (Problem)
+                           type: string

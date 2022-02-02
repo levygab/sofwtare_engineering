@@ -1,0 +1,26 @@
+// Description:
+//    Opérations booleennes : &&, ||
+//
+// Resultats:
+//    
+//
+// Historique:
+//    cree le 14/01/2022
+
+{
+    boolean a = true;
+    boolean b = false;
+    boolean c = a && b;
+    boolean d = a || b;
+    boolean A = !a;
+    if (c) {
+        println("Probleme de &&");
+    }else{
+        println("ok pour &&");
+    }
+    if (d){
+        println("Ok pour ||");
+    } else {
+        println("Probleme pour ||");
+    }
+}

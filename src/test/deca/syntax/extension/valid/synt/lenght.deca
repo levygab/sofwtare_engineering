@@ -1,0 +1,4 @@
+{
+    int[] tableau = new int[10];
+    int x = length(tableau);
+}

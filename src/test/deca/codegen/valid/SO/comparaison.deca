@@ -1,0 +1,78 @@
+// Description:
+//    Test complet pour vérifier la sémantique : on va verifier les operateurs de conditions
+//
+//
+// Historique:
+//    cree le 15/01/2022
+
+{
+    int x = 5;
+    float y = 3 + 3;
+    int z = 5 ;
+    int xy ;
+    boolean monBool1 = false ;
+    boolean monBool2 = false ;
+    boolean monBool3 = false ;
+    boolean monBool4 = false ;
+    boolean monBool5 = false ;
+    boolean monBool6 = false ;
+    xy = 25 ;
+
+
+    //test <
+    if (x < y ) {
+        monBool1 = true ;
+    }
+
+    if (y < x) {
+        println("il y a un pb1") ;
+    }
+    if (x < z) {
+        println("il y a un pb1.2") ;
+    }
+
+    //test <=
+    if ( x <= y) {
+        monBool2 = true ;
+    }
+
+    if (x <= z ) {
+        monBool3 = true ;
+    }
+
+    if ( y <= x ) {
+        println("il y a un pb2") ;
+    }
+
+    //test >=
+    if ( y >= x) {
+        monBool4 = true ;
+    }
+
+    if ( x >= z) {
+        monBool5 = true ;
+    }
+
+    if ( x >= y) {
+        println("il y a un pb3") ;
+    }
+
+    //test >
+    if ( y > x) {
+        monBool6 = true ;
+    }
+
+    if ( x > z) {
+        println("il y a un pb4") ;
+    }
+
+    if ( x > y) {
+        println("il y a un pb5") ;
+    }
+    if (monBool1 && monBool2 && monBool3 && monBool4 && monBool5 && monBool6){
+        println("tres bien");
+    }
+
+
+
+}

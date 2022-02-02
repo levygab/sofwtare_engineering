@@ -1,0 +1,12 @@
+// Description:
+//    Initialisation avec rvalue de type différent de la lvalue
+//
+// Resultats:
+//    ligne 11 : Erreur, initialisation incorrecte (types)
+//
+// Historique:
+//    cree le 01/01/2022
+
+{
+    boolean x = 12;
+}

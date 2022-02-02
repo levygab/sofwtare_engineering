@@ -1,0 +1,11 @@
+// Description:
+//    tests de programme incorrect contextuellement
+//
+// Resultats:
+//    ligne 10 : Erreur, mauvais opérande
+//
+// Historique:
+//    cree le 10/01/2022
+{
+    int a = -true;
+}

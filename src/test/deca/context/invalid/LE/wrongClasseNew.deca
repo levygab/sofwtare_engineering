@@ -1,0 +1,24 @@
+// Historique:
+//    cree le 19/01/2022
+
+class C1 {
+    int a ;
+
+    int meth1 () {
+        this.a = 3 ;
+        return 5 ;
+    }
+}
+
+class C2 {
+    int a ;
+
+    int meth1 () {
+        this.a = 3 ;
+        return 5 ;
+    }
+}
+
+{
+    C1 variable = new C2 () ;
+}

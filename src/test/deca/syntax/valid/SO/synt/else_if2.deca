@@ -1,0 +1,23 @@
+// Description:
+//    Programme pour vérifier la déclaration de variable avec affectation d'inégalité
+//
+// Resultats:
+//    
+//
+// Historique:
+//    cree le 07/01/2022
+
+{
+    float poulet = 3.012412;
+    if ( a==1) {
+        print("Debut");
+    } else if ( b==2){
+        a = b;
+    }
+    else if ( c==3) {
+        b=c;
+    }
+    else{
+        print("Fin");
+    }
+}

@@ -1,0 +1,263 @@
+<?xml version="1.0"?>
+<project name="Projet GL" company="" manager="" phase="" project-start="20220103T000000Z" mrproject-version="2" calendar="1">
+  <properties/>
+  <phases/>
+  <calendars>
+    <day-types>
+      <day-type id="0" name="Travaill&#xE9;" description="Un jour de travail normal"/>
+      <day-type id="1" name="Ch&#xF4;m&#xE9;" description="Un jour ch&#xF4;m&#xE9; normal"/>
+      <day-type id="2" name="Utiliser la base" description="Utilise un jour du calendrier de base"/>
+    </day-types>
+    <calendar id="1" name="D&#xE9;faut">
+      <default-week mon="0" tue="0" wed="0" thu="0" fri="0" sat="1" sun="1"/>
+      <overridden-day-types>
+        <overridden-day-type id="0">
+          <interval start="0800" end="1200"/>
+          <interval start="1300" end="1700"/>
+        </overridden-day-type>
+      </overridden-day-types>
+      <days>
+        <day date="20220108" type="day-type" id="0"/>
+        <day date="20220115" type="day-type" id="0"/>
+        <day date="20220122" type="day-type" id="0"/>
+        <day date="20220129" type="day-type" id="0"/>
+      </days>
+    </calendar>
+  </calendars>
+  <tasks>
+    <task id="1" name="R&#xE9;unions de suivi" note="" work="0" start="20220107T000000Z" end="20220107T000000Z" work-start="20220107T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="2" name="Suivi 1" note="" work="0" start="20220107T000000Z" end="20220107T000000Z" work-start="20220107T080000Z" percent-complete="0" priority="0" type="milestone" scheduling="fixed-work">
+        <constraint type="must-start-on" time="20220107T000000Z"/>
+      </task>
+    </task>
+    <task id="3" name="Ecriture de tests" note="" work="295200" start="20220103T000000Z" end="20220114T100000Z" work-start="20220103T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="4" name="Hello-World" note="" work="129600" start="20220103T000000Z" end="20220107T120000Z" work-start="20220103T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <task id="5" name="A" note="" work="57600" start="20220103T000000Z" end="20220104T170000Z" work-start="20220103T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+        <task id="6" name="B" note="" work="43200" start="20220104T170000Z" end="20220106T120000Z" work-start="20220105T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <predecessors>
+            <predecessor id="1" predecessor-id="5" type="FS"/>
+          </predecessors>
+        </task>
+        <task id="7" name="C" note="" work="28800" start="20220106T120000Z" end="20220107T120000Z" work-start="20220106T120000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <predecessors>
+            <predecessor id="1" predecessor-id="6" type="FS"/>
+          </predecessors>
+        </task>
+      </task>
+      <task id="8" name="Sans-Objet" note="" work="68400" start="20220107T120000Z" end="20220110T160000Z" work-start="20220107T120000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="4" type="FS"/>
+        </predecessors>
+        <task id="9" name="A" note="" work="10800" start="20220107T120000Z" end="20220107T160000Z" work-start="20220107T120000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+        <task id="10" name="B" note="" work="28800" start="20220107T160000Z" end="20220108T160000Z" work-start="20220107T160000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <predecessors>
+            <predecessor id="1" predecessor-id="9" type="FS"/>
+          </predecessors>
+        </task>
+        <task id="11" name="C" note="" work="28800" start="20220108T160000Z" end="20220110T160000Z" work-start="20220108T160000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <predecessors>
+            <predecessor id="1" predecessor-id="10" type="FS"/>
+          </predecessors>
+        </task>
+      </task>
+      <task id="12" name="Essentiel" note="" work="97200" start="20220110T160000Z" end="20220114T100000Z" work-start="20220110T160000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="8" type="FS"/>
+        </predecessors>
+        <task id="13" name="A" note="" work="10800" start="20220110T160000Z" end="20220111T100000Z" work-start="20220110T160000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+        <task id="14" name="B" note="" work="57600" start="20220111T100000Z" end="20220113T100000Z" work-start="20220111T100000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <predecessors>
+            <predecessor id="1" predecessor-id="13" type="FS"/>
+          </predecessors>
+        </task>
+        <task id="15" name="C" note="" work="28800" start="20220113T100000Z" end="20220114T100000Z" work-start="20220113T100000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <predecessors>
+            <predecessor id="1" predecessor-id="14" type="FS"/>
+          </predecessors>
+        </task>
+      </task>
+    </task>
+    <task id="16" name="Etape A" note="" work="180000" start="20220103T000000Z" end="20220117T140000Z" work-start="20220103T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="17" name="Langage Hello-World A" note="" work="64800" start="20220103T000000Z" end="20220105T100000Z" work-start="20220103T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <task id="18" name="Analyse Lexicale HW" note="" work="28800" start="20220103T000000Z" end="20220103T170000Z" work-start="20220103T080000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work"/>
+        <task id="19" name="Analyse Syntaxique HW" note="" work="28800" start="20220103T170000Z" end="20220104T170000Z" work-start="20220104T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <predecessors>
+            <predecessor id="1" predecessor-id="18" type="FS"/>
+          </predecessors>
+        </task>
+        <task id="20" name="R&#xE9;alisation de tests HW" note="" work="7200" start="20220104T170000Z" end="20220105T100000Z" work-start="20220105T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <predecessors>
+            <predecessor id="1" predecessor-id="19" type="FS"/>
+          </predecessors>
+        </task>
+      </task>
+      <task id="21" name="Langage sans-objet A" note="" work="54000" start="20220107T160000Z" end="20220110T150000Z" work-start="20220107T160000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="9" type="FS"/>
+          <predecessor id="1" predecessor-id="30" type="FS"/>
+        </predecessors>
+        <task id="22" name="Analyse Lexicale SO" note="" work="14400" start="20220107T160000Z" end="20220108T110000Z" work-start="20220107T160000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+        <task id="23" name="Analyse Syntaxique SO" note="" work="28800" start="20220108T110000Z" end="20220110T110000Z" work-start="20220108T110000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <predecessors>
+            <predecessor id="1" predecessor-id="22" type="FS"/>
+          </predecessors>
+        </task>
+        <task id="24" name="R&#xE9;alisation de tests SO" note="" work="10800" start="20220110T110000Z" end="20220110T150000Z" work-start="20220110T110000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <predecessors>
+            <predecessor id="1" predecessor-id="23" type="FS"/>
+          </predecessors>
+        </task>
+      </task>
+      <task id="25" name="Langage Essentiel A" note="" work="61200" start="20220114T120000Z" end="20220117T140000Z" work-start="20220114T120000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="13" type="FS"/>
+          <predecessor id="1" predecessor-id="34" type="FS"/>
+        </predecessors>
+        <task id="26" name="Analyse Lexicale LE" note="" work="28800" start="20220114T120000Z" end="20220115T120000Z" work-start="20220114T120000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+        <task id="27" name="Analyse Syntaxique LE" note="" work="21600" start="20220115T120000Z" end="20220117T100000Z" work-start="20220115T120000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <predecessors>
+            <predecessor id="1" predecessor-id="26" type="FS"/>
+          </predecessors>
+        </task>
+        <task id="28" name="Realisation de tests LE" note="" work="10800" start="20220117T100000Z" end="20220117T140000Z" work-start="20220117T100000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <predecessors>
+            <predecessor id="1" predecessor-id="27" type="FS"/>
+          </predecessors>
+        </task>
+      </task>
+    </task>
+    <task id="29" name="Etape B" note="" work="208800" start="20220106T120000Z" end="20220120T110000Z" work-start="20220106T120000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="30" name="Langage Hello-World B" note="" work="21600" start="20220106T120000Z" end="20220107T100000Z" work-start="20220106T120000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="6" type="FS"/>
+          <predecessor id="1" predecessor-id="17" type="FS"/>
+        </predecessors>
+        <task id="31" name="Implantation des 3 parcours de l'arbre" note="" work="7200" start="20220106T120000Z" end="20220106T150000Z" work-start="20220106T120000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+        <task id="32" name="Enrichissement de l'arbre et d&#xE9;coration" note="" work="7200" start="20220106T150000Z" end="20220106T170000Z" work-start="20220106T150000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <predecessors>
+            <predecessor id="1" predecessor-id="31" type="FS"/>
+          </predecessors>
+        </task>
+        <task id="33" name="R&#xE9;alisation de tests" note="" work="7200" start="20220106T170000Z" end="20220107T100000Z" work-start="20220107T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <predecessors>
+            <predecessor id="1" predecessor-id="32" type="FS"/>
+          </predecessors>
+        </task>
+      </task>
+      <task id="34" name="Langage sans-objet B" note="" work="108000" start="20220110T150000Z" end="20220114T120000Z" work-start="20220110T150000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="10" type="FS"/>
+          <predecessor id="1" predecessor-id="21" type="FS"/>
+        </predecessors>
+        <task id="35" name="Implantation des 3 parcours de l'arbre SO B" note="" work="50400" start="20220110T150000Z" end="20220112T120000Z" work-start="20220110T150000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+        <task id="36" name="Enrichissement de l'arbre et d&#xE9;coration" note="" work="28800" start="20220112T120000Z" end="20220113T120000Z" work-start="20220112T120000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <predecessors>
+            <predecessor id="1" predecessor-id="35" type="FS"/>
+          </predecessors>
+        </task>
+        <task id="37" name="Realisation de tests" note="" work="28800" start="20220113T120000Z" end="20220114T120000Z" work-start="20220113T120000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <predecessors>
+            <predecessor id="1" predecessor-id="36" type="FS"/>
+          </predecessors>
+        </task>
+      </task>
+      <task id="38" name="Langage essentiel B" note="" work="79200" start="20220117T140000Z" end="20220120T110000Z" work-start="20220117T140000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="14" type="FS"/>
+          <predecessor id="1" predecessor-id="25" type="FS"/>
+        </predecessors>
+        <task id="39" name="Implantation des 3 parcours de l'arbre" note="" work="28800" start="20220117T140000Z" end="20220118T140000Z" work-start="20220117T140000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+        <task id="40" name="Enrichissement de l'arbre et d&#xE9;coration" note="" work="28800" start="20220118T140000Z" end="20220119T140000Z" work-start="20220118T140000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <predecessors>
+            <predecessor id="1" predecessor-id="39" type="FS"/>
+          </predecessors>
+        </task>
+        <task id="41" name="Realisation de Tests B" note="" work="21600" start="20220119T140000Z" end="20220120T110000Z" work-start="20220119T140000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+          <predecessors>
+            <predecessor id="1" predecessor-id="40" type="FS"/>
+          </predecessors>
+        </task>
+      </task>
+    </task>
+    <task id="42" name="Etape C" note="" work="172800" start="20220107T120000Z" end="20220124T110000Z" work-start="20220107T120000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="43" name="Langage Hello-World C" note="" work="43200" start="20220107T120000Z" end="20220108T170000Z" work-start="20220107T120000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="30" type="FS"/>
+          <predecessor id="1" predecessor-id="7" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="44" name="Langage sans-objet C" note="" work="43200" start="20220114T120000Z" end="20220115T170000Z" work-start="20220114T120000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="34" type="FS"/>
+          <predecessor id="1" predecessor-id="11" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="45" name="Langage essentiel C" note="" work="86400" start="20220120T110000Z" end="20220124T110000Z" work-start="20220120T110000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="41" type="FS"/>
+          <predecessor id="1" predecessor-id="7" type="FS"/>
+        </predecessors>
+      </task>
+    </task>
+    <task id="46" name="Extension [TAB]" note="" work="540000" start="20220103T000000Z" end="20220124T150000Z" work-start="20220103T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="47" name="Recherche biblio" note="" work="144000" start="20220103T000000Z" end="20220107T170000Z" work-start="20220103T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="48" name="D&#xE9;finition des fonctionalit&#xE9;s" note="" work="144000" start="20220107T170000Z" end="20220113T170000Z" work-start="20220108T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="47" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="49" name="Validation prof" note="" work="0" start="20220114T000000Z" end="20220114T000000Z" work-start="20220114T080000Z" percent-complete="0" priority="0" type="milestone" scheduling="fixed-work">
+        <constraint type="must-start-on" time="20220114T000000Z"/>
+      </task>
+      <task id="50" name="Etape A" note="" work="79200" start="20220114T000000Z" end="20220117T150000Z" work-start="20220114T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="49" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="51" name="Etape B" note="" work="57600" start="20220117T150000Z" end="20220119T150000Z" work-start="20220117T150000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="50" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="52" name="Etape C Extension" note="" work="86400" start="20220119T150000Z" end="20220122T150000Z" work-start="20220119T150000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="51" type="FS"/>
+        </predecessors>
+      </task>
+      <task id="53" name="Impl&#xE9;mentation avec le reste du projet" note="" work="28800" start="20220122T150000Z" end="20220124T150000Z" work-start="20220122T150000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="52" type="FS"/>
+        </predecessors>
+      </task>
+    </task>
+    <task id="54" name="Documentation" note="" work="0" start="20220124T000000Z" end="20220127T000000Z" work-start="20220124T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="55" name="Documentation Utilisateur" note="" work="0" start="20220124T000000Z" end="20220124T000000Z" work-start="20220124T080000Z" percent-complete="0" priority="0" type="milestone" scheduling="fixed-work">
+        <constraint type="must-start-on" time="20220124T000000Z"/>
+      </task>
+      <task id="56" name="Documentation de conception" note="" work="0" start="20220127T000000Z" end="20220127T000000Z" work-start="20220127T080000Z" percent-complete="0" priority="0" type="milestone" scheduling="fixed-work">
+        <constraint type="must-start-on" time="20220127T000000Z"/>
+      </task>
+      <task id="57" name="Documentation de validation" note="" work="0" start="20220127T000000Z" end="20220127T000000Z" work-start="20220127T080000Z" percent-complete="0" priority="0" type="milestone" scheduling="fixed-work">
+        <constraint type="must-start-on" time="20220127T000000Z"/>
+      </task>
+      <task id="58" name="Documentation de l'extension" note="" work="0" start="20220127T000000Z" end="20220127T000000Z" work-start="20220127T080000Z" percent-complete="0" priority="0" type="milestone" scheduling="fixed-work">
+        <constraint type="must-start-on" time="20220127T000000Z"/>
+      </task>
+      <task id="59" name="Documentation Impacts Energetiques" note="" work="0" start="20220127T000000Z" end="20220127T000000Z" work-start="20220127T080000Z" percent-complete="0" priority="0" type="milestone" scheduling="fixed-work">
+        <constraint type="must-start-on" time="20220127T000000Z"/>
+      </task>
+      <task id="60" name="Bilan Gestion Equipe et Projet" note="" work="0" start="20220126T000000Z" end="20220126T000000Z" work-start="20220126T080000Z" percent-complete="0" priority="0" type="milestone" scheduling="fixed-work">
+        <constraint type="must-start-on" time="20220126T000000Z"/>
+      </task>
+    </task>
+  </tasks>
+  <resource-groups/>
+  <resources>
+    <resource id="1" name="Nathan" short-name="" type="1" units="0" email="" note="" std-rate="0"/>
+    <resource id="2" name="Nicolas" short-name="" type="1" units="0" email="" note="" std-rate="0"/>
+    <resource id="3" name="Lucas" short-name="" type="1" units="0" email="" note="" std-rate="0"/>
+    <resource id="4" name="Greg" short-name="" type="1" units="0" email="" note="" std-rate="0"/>
+    <resource id="5" name="Gab" short-name="" type="1" units="0" email="" note="" std-rate="0"/>
+  </resources>
+  <allocations/>
+</project>

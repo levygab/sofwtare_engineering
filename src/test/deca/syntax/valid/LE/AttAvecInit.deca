@@ -1,0 +1,8 @@
+//test pour les classes
+//attribut declare avec une valeur 
+
+class C1 {
+    int a  ;
+    float b = 15 ;
+    
+}

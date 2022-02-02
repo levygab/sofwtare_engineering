@@ -1,0 +1,99 @@
+`> [1, 0] Program
+   +> ListDeclClass [List with 2 elements]
+   |  []> [1, 0] DeclClass
+   |  ||  +> [1, 6] Identifier (poulet)
+   |  ||  +> [1, 13] Identifier (animal)
+   |  ||  +> ListDeclField [List with 3 elements]
+   |  ||  |  []> [2, 8] [visibility = PUBLIC] DeclField
+   |  ||  |  ||  +> [2, 4] Identifier (int)
+   |  ||  |  ||  +> [2, 8] Identifier (x)
+   |  ||  |  ||  `> [2, 12] Initialization
+   |  ||  |  ||     `> [2, 12] Int (12)
+   |  ||  |  []> [2, 16] [visibility = PUBLIC] DeclField
+   |  ||  |  ||  +> [2, 4] Identifier (int)
+   |  ||  |  ||  +> [2, 16] Identifier (y)
+   |  ||  |  ||  `> [2, 19] Initialization
+   |  ||  |  ||     `> [2, 19] Int (15)
+   |  ||  |  []> [9, 10] [visibility = PUBLIC] DeclField
+   |  ||  |      +> [9, 4] Identifier (float)
+   |  ||  |      +> [9, 10] Identifier (z)
+   |  ||  |      `> [9, 14] Initialization
+   |  ||  |         `> [9, 14] Int (15)
+   |  ||  `> ListDeclMethod [List with 1 elements]
+   |  ||     []> [4, 4] Method
+   |  ||         +> [4, 4] Identifier (void)
+   |  ||         +> [4, 9] Identifier (manger)
+   |  ||         +> ListParams [List with 2 elements]
+   |  ||         |  []> [4, 16] Params
+   |  ||         |  ||  +> [4, 16] Identifier (int)
+   |  ||         |  ||  `> [4, 20] Identifier (x)
+   |  ||         |  []> [4, 23] Params
+   |  ||         |      +> [4, 23] Identifier (float)
+   |  ||         |      `> [4, 29] Identifier (z)
+   |  ||         +> ListDeclVar [List with 1 elements]
+   |  ||         |  []> [5, 14] DeclVar
+   |  ||         |      +> [5, 8] Identifier (float)
+   |  ||         |      +> [5, 14] Identifier (a)
+   |  ||         |      `> [5, 18] Initialization
+   |  ||         |         `> [5, 20] Plus
+   |  ||         |            +> [5, 18] Identifier (x)
+   |  ||         |            `> [5, 21] Identifier (z)
+   |  ||         `> ListInst [List with 1 elements]
+   |  ||            []> [6, 8] Println
+   |  ||                `> ListExpr [List with 1 elements]
+   |  ||                   []> [6, 16] Identifier (a)
+   |  []> [12, 0] DeclClass
+   |      +> [12, 6] Identifier (poulet)
+   |      +> [12, 13] Identifier (animal)
+   |      +> ListDeclField [List with 3 elements]
+   |      |  []> [13, 8] [visibility = PUBLIC] DeclField
+   |      |  ||  +> [13, 4] Identifier (int)
+   |      |  ||  +> [13, 8] Identifier (x)
+   |      |  ||  `> [13, 12] Initialization
+   |      |  ||     `> [13, 12] Int (12)
+   |      |  []> [13, 16] [visibility = PUBLIC] DeclField
+   |      |  ||  +> [13, 4] Identifier (int)
+   |      |  ||  +> [13, 16] Identifier (y)
+   |      |  ||  `> [13, 19] Initialization
+   |      |  ||     `> [13, 19] Int (15)
+   |      |  []> [20, 10] [visibility = PUBLIC] DeclField
+   |      |      +> [20, 4] Identifier (float)
+   |      |      +> [20, 10] Identifier (z)
+   |      |      `> [20, 14] Initialization
+   |      |         `> [20, 14] Int (15)
+   |      `> ListDeclMethod [List with 1 elements]
+   |         []> [15, 4] Method
+   |             +> [15, 4] Identifier (void)
+   |             +> [15, 9] Identifier (manger)
+   |             +> ListParams [List with 2 elements]
+   |             |  []> [15, 16] Params
+   |             |  ||  +> [15, 16] Identifier (int)
+   |             |  ||  `> [15, 20] Identifier (x)
+   |             |  []> [15, 23] Params
+   |             |      +> [15, 23] Identifier (float)
+   |             |      `> [15, 29] Identifier (z)
+   |             +> ListDeclVar [List with 1 elements]
+   |             |  []> [16, 14] DeclVar
+   |             |      +> [16, 8] Identifier (float)
+   |             |      +> [16, 14] Identifier (a)
+   |             |      `> [16, 18] Initialization
+   |             |         `> [16, 23] Plus
+   |             |            +> [16, 20] Plus
+   |             |            |  +> [16, 18] Identifier (x)
+   |             |            |  `> [16, 21] Identifier (z)
+   |             |            `> [16, 24] Identifier (z)
+   |             `> ListInst [List with 1 elements]
+   |                []> [17, 8] Println
+   |                    `> ListExpr [List with 1 elements]
+   |                       []> [17, 16] Identifier (a)
+   `> [23, 0] Main
+      +> ListDeclVar [List with 1 elements]
+      |  []> [24, 8] DeclVar
+      |      +> [24, 4] Identifier (int)
+      |      +> [24, 8] Identifier (x)
+      |      `> [24, 12] Initialization
+      |         `> [24, 12] Int (15)
+      `> ListInst [List with 1 elements]
+         []> [25, 4] Println
+             `> ListExpr [List with 1 elements]
+                []> [25, 12] Identifier (x)

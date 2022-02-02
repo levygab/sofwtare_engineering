@@ -1,0 +1,18 @@
+`> [4, 0] Program
+   +> ListDeclClass [List with 1 elements]
+   |  []> [4, 0] DeclClass
+   |      +> [4, 6] Identifier (C1)
+   |      +> Identifier (Object)
+   |      |  definition: type (builtin), type=Object
+   |      +> ListDeclField [List with 2 elements]
+   |      |  []> [5, 8] [visibility = PUBLIC] DeclField
+   |      |  ||  +> [5, 4] Identifier (int)
+   |      |  ||  +> [5, 8] Identifier (a)
+   |      |  ||  `> NoInitialization
+   |      |  []> [6, 10] [visibility = PUBLIC] DeclField
+   |      |      +> [6, 4] Identifier (float)
+   |      |      +> [6, 10] Identifier (b)
+   |      |      `> [6, 14] Initialization
+   |      |         `> [6, 14] Int (15)
+   |      `> ListDeclMethod [List with 0 elements]
+   `> EmptyMain

@@ -1,0 +1,18 @@
+// Historique:
+//    cree le 19/01/2022
+
+class A {
+    int x;
+
+    int ajoute(int x){
+        return x+1;
+    }
+}
+class B extends A{
+    
+    int y;
+
+    int ajoute(int x, int y){
+        return x+y;
+    }
+}

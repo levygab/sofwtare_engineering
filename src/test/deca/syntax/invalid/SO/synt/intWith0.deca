@@ -1,0 +1,11 @@
+// Description:
+//    Programme pour vérifier la validité d'un identificateur
+//
+// Resultats:
+//    Erreur ligne 10 : un entier ne peut pas commencer par un 0
+//
+// Historique:
+//    cree le 13/01/2022
+{
+    int x = 03;
+}

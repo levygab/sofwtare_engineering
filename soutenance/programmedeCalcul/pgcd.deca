@@ -1,0 +1,18 @@
+//programme de calcul pour la présentation
+//prend en entrée deux nombres et calcul leur pgcd
+
+{   
+    int a ;
+    int b ;
+    println("entrez 2 nombres svp") ;
+    a = readInt();
+    b = readInt();
+    while (a != b) {
+        if(a > b) {
+            a = a - b;
+        } else {
+            b = b - a;
+        }
+    }
+    println("Le pgcd est " , b);
+}

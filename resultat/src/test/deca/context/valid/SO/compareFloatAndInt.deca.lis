@@ -1,0 +1,48 @@
+`> [10, 0] Program
+   +> ListDeclClass [List with 0 elements]
+   `> [10, 0] Main
+      +> ListDeclVar [List with 3 elements]
+      |  []> [11, 10] DeclVar
+      |  ||  +> [11, 4] Identifier (float)
+      |  ||  |  definition: type (builtin), type=float
+      |  ||  +> [11, 10] Identifier (f)
+      |  ||  |  definition: variable defined at [11, 10], type=float
+      |  ||  `> [11, 14] Initialization
+      |  ||     `> [11, 14] Float (1.0)
+      |  ||        type: float
+      |  []> [12, 8] DeclVar
+      |  ||  +> [12, 4] Identifier (int)
+      |  ||  |  definition: type (builtin), type=int
+      |  ||  +> [12, 8] Identifier (i)
+      |  ||  |  definition: variable defined at [12, 8], type=int
+      |  ||  `> [12, 12] Initialization
+      |  ||     `> [12, 12] Int (1)
+      |  ||        type: int
+      |  []> [13, 12] DeclVar
+      |      +> [13, 4] Identifier (boolean)
+      |      |  definition: type (builtin), type=boolean
+      |      +> [13, 12] Identifier (b)
+      |      |  definition: variable defined at [13, 12], type=boolean
+      |      `> [13, 16] Initialization
+      |         `> [13, 19] Equals
+      |            type: boolean
+      |            +> [13, 17] Identifier (f)
+      |            |  definition: variable defined at [11, 10], type=float
+      |            `> ConvFloat
+      |               type: float
+      |               `> [13, 22] Identifier (i)
+      |                  definition: variable defined at [12, 8], type=int
+      `> ListInst [List with 1 elements]
+         []> [14, 4] IfThenElse
+             +> [14, 8] Identifier (b)
+             |  definition: variable defined at [13, 12], type=boolean
+             +> ListInst [List with 1 elements]
+             |  []> [15, 8] Println
+             |      `> ListExpr [List with 1 elements]
+             |         []> [15, 16] StringLiteral (OK)
+             |             type: string
+             `> ListInst [List with 1 elements]
+                []> [18, 8] Println
+                    `> ListExpr [List with 1 elements]
+                       []> [18, 16] StringLiteral (Problem)
+                           type: string

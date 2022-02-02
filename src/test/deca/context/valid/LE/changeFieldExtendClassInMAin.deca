@@ -1,0 +1,21 @@
+// Description:
+//    test les methods dans le main
+//
+// Resultats:
+//    
+//
+// Historique:
+//    cree le 19/01/2022
+
+class A {
+    
+    int x;
+}
+class B extends A{
+    int v;
+}
+
+{
+    B y = new B();
+    y.x = 15; 
+}

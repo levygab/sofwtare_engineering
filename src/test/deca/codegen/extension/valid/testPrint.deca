@@ -1,0 +1,19 @@
+{
+    float[] tab = {1.2,3.5};
+    int i =0;
+    boolean[] tab2 = { true, false};
+    println(tab[0]);
+    printlnx(tab[1]);
+    if(tab[0]==1.2){
+        println("Ok");
+    }
+    if(tab2[0]||(tab2[1]||tab2[0])){
+        println("Ok");
+    }
+    if(tab2[0]){
+        
+    }
+    while(tab2[0]){
+        tab2[0] = false;
+    }
+}

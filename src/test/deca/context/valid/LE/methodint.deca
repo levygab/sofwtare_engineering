@@ -1,0 +1,16 @@
+// Description:
+//    test les methods iny
+//
+// Resultats:
+//    
+//
+// Historique:
+//    cree le 19/01/2022
+
+class A {
+
+    int ajoute(int x){
+        x = x +1;
+        return x;
+    }
+}

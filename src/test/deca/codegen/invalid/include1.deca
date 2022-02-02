@@ -1,0 +1,11 @@
+// Description:
+//    include inexistant
+//
+// Resultats: erreur
+//
+// Historique:
+//    cree le 23/01/2022
+
+{
+    #include "trouve_ce_fichier.deca" ;
+}

@@ -1,0 +1,276 @@
+// Library for class MathArray of Deca, implemented in Deca
+// Operation for tables and matrices : opposite, transpose, add & multiply 
+
+class MathArray {
+
+// ----- ASM -----
+
+void assem() asm (
+    "BRA io_incorrect_sizes"
+);
+
+
+// ----- OPPOSITE -----
+
+
+    // Return the opposite int table
+    int[] oppositeIntTable(int[] A) {
+        int size = length(A);
+        int i = 0;
+        int[] B = new int[size];
+        while (i < size) {
+            B[i] = -A[i];
+            i = i + 1;
+        }
+        return B;
+    }
+
+    // Return the opposite float table
+    float[] oppositeFloatTable(float[] A) {
+        int size = length(A);
+        int i = 0;
+        float[] B = new float[size];
+        while (i < size) {
+            B[i] = -A[i];
+            i = i + 1;
+        }
+        return B;
+    }
+
+     // Return the opposite int matrix
+    int[][] oppositeIntMatrix(int[][] A) {
+        int nbLines = length(A);
+        int nbColumns = length(A[0]);
+        int i = 0;
+        int j = 0;
+        int[][] B = new int[][nbLines];
+        while (i < nbLines) {
+            B[i] = new int[nbColumns];
+            j = 0;
+            while (j < nbColumns) {
+                B[i][j] = -A[i][j];
+                j = j + 1;
+            }
+            i = i + 1;
+        }
+        return B;
+    }
+
+    // Return the opposite float matrix
+    float[][] oppositeFloatMatrix(float[][] A) {
+        int nbLines = length(A);
+        int nbColumns = length(A[0]);
+        int i = 0;
+        int j = 0;
+        float[][] B = new float[][nbLines];
+        while (i < nbLines) {
+            B[i] = new float[nbColumns];
+            j = 0;
+            while (j < nbColumns) {
+                B[i][j] = -A[i][j];
+                j = j + 1;
+            }
+            i = i + 1;
+        }
+        return B;
+    }
+
+
+// ----- TRANSPOSE -----
+
+
+    // Return the transpose int matrix
+    int[][] transposeIntMatrix(int[][] A) {
+        int nbLines = length(A);
+        int nbColumns = length(A[0]);
+        int i = 0;
+        int j = 0;
+        int[][] B = new int[][nbLines];
+        while (i < nbLines) {
+            B[i] = new int[nbColumns];
+            j = 0;
+            while (j < nbColumns) {
+                B[i][j] = A[j][i];
+                j = j + 1;
+            }
+            i = i + 1;
+        }
+        return B;
+    }
+
+
+    // Return the transpose float matrix
+    float[][] transposeFloatMatrix(float[][] A) {
+        int nbLines = length(A);
+        int nbColumns = length(A[0]);
+        int i = 0;
+        int j = 0;
+        float[][] B = new float[][nbLines];
+        while (i < nbLines) {
+            B[i] = new float[nbColumns];
+            j = 0;
+            while (j < nbColumns) {
+                B[i][j] = A[j][i];
+                j = j + 1;
+            }
+            i = i + 1;
+        }
+        return B;
+    }
+    
+
+
+// ----- ADDITION -----
+
+
+    // Return addition of two int tables (1D)
+    int[] addIntTable(int[] A, int[] B) {
+        int sizeA = length(A);
+        int sizeB = length(B);
+        int[] C;
+        int i = 0;
+        if (sizeA != sizeB) {
+            assem();
+        }
+        C = new int[sizeA];
+        while (i < sizeA) {
+            C[i] = A[i] + B[i];
+            i = i + 1;
+        }
+        return C;
+    }
+
+
+    // Return addition of two float tables (1D)
+    float[] addFloatTable(float[] A, float[] B) {
+        int sizeA = length(A);
+        int sizeB = length(B);
+        float[] C;
+        int i = 0;
+        if (sizeA != sizeB) {
+            assem();
+        }
+        C = new float[sizeA];
+        while (i < sizeA) {
+            C[i] = A[i] + B[i];
+            i = i + 1;
+        }
+        return C;
+    }
+
+
+    // Return addition of two int matrices     
+    int[][] addIntMatrix(int[][] A, int[][] B) {
+        int nbLinesA = length(A);
+        int nbColumnsA = length(A[0]);
+        int nbLinesB = length(B);
+        int nbColumnsB = length(B[0]);
+        int i = 0;
+        int j = 0;
+        int k = 0;
+        int[][] C = new int[][nbLinesA];
+        if (nbColumnsA != nbLinesB) {
+            assem();
+        }
+        while (i < nbLinesA) {
+            C[i] = new int[nbColumnsB];
+            j = 0;
+            while (j < nbColumnsB) {
+                C[i][j] = A[i][j] + B[i][j];
+                j = j + 1;
+            }
+            i = i + 1;
+        }   
+    }
+
+
+    // Return addition of two float matrices     
+    float[][] addFloatMatrix(float[][] A, float[][] B) {
+        int nbLinesA = length(A);
+        int nbColumnsA = length(A[0]);
+        int nbLinesB = length(B);
+        int nbColumnsB = length(B[0]);
+        int i = 0;
+        int j = 0;
+        int k = 0;
+        float[][] C = new float[][nbLinesA];
+        if (nbColumnsA != nbLinesB) {
+            assem();
+        }
+        while (i < nbLinesA) {
+            C[i] = new float[nbColumnsB];
+            j = 0;
+            while (j < nbColumnsB) {
+                C[i][j] = A[i][j] + B[i][j];
+                j = j + 1;
+            }
+            i = i + 1;
+        }   
+    }
+
+
+
+// ----- MULTIPLICATION -----
+
+
+    // Return multiplication of two int matrices
+    int[][] multiplyInt(int[][] A, int[][] B) {
+        int nbLinesA = length(A);
+        int nbColumnsA = length(A[0]);
+        int nbLinesB = length(B);
+        int nbColumnsB = length(B[0]);
+        int i = 0;
+        int j = 0;
+        int k = 0;
+        int[][] matrix = new int[][nbLinesA];
+        if (nbColumnsA != nbLinesB) {
+            assem();
+        }
+        while (i < nbLinesA) {
+            matrix[i] = new int[nbColumnsB];
+            j = 0;
+            while (j < nbColumnsB) {
+                k = 0;
+                while (k < nbColumnsA) {
+                    matrix[i][j] = matrix[i][j] + A[i][k]*B[k][j];
+                    k = k + 1;
+                }
+                j = j + 1;
+            }
+            i = i + 1;
+        }
+        return matrix;
+    }
+
+    // Return multiplication of two float matrices
+    float[][] multiplyFloat(float[][] A, float[][] B) {
+        int nbLinesA = length(A);
+        int nbColumnsA = length(A[0]);
+        int nbLinesB = length(B);
+        int nbColumnsB = length(B[0]);
+        int i = 0;
+        int j = 0;
+        int k = 0;
+        float[][] matrix = new float[][nbLinesA];
+        if (nbColumnsA != nbLinesB) {
+            assem();
+        }
+        while (i < nbLinesA) {
+            j = 0;
+            matrix[i] = new float[nbColumnsB];
+            while (j < nbColumnsB) {
+                k = 0;
+                while (k < nbColumnsA) {
+                    matrix[i][j] = matrix[i][j] + A[i][k] * B[k][j];
+                    k = k + 1;
+                }
+                j = j + 1;
+            }
+            i = i + 1;
+        }         
+    }
+
+
+
+
+}

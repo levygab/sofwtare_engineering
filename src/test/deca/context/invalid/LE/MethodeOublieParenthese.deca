@@ -1,0 +1,16 @@
+// Historique:
+//    cree le 19/01/2022
+
+class C1 {
+    int a ;
+
+    int gabi () {
+        a = 2 ;
+        return 3 ;
+    }
+}
+
+{
+    C1 variable = new C1() ;
+    int truc = C1.gabi ;
+}

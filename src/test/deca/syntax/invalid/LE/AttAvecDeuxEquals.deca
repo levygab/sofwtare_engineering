@@ -1,0 +1,7 @@
+//test invalide
+//declaration avec deux equals
+
+class C2 {
+    int a ;
+    int b = 5  = 3;
+}

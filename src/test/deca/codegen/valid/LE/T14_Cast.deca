@@ -1,0 +1,8 @@
+{
+    float x = 24.2343;
+    float z ;
+    int y = (int) (x);
+    println("24 = ",y);
+    z = (float) (y);
+    println(z);
+}

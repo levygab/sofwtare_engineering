@@ -1,0 +1,16 @@
+// Historique:
+//    cree le 19/01/2022
+
+
+class B {
+    int y;
+}
+    
+    
+class A {
+    int x;
+
+    int ajoute(int x, B b){
+        return x+b.y;
+    }
+}

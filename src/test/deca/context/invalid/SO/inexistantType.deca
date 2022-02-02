@@ -1,0 +1,12 @@
+// Description:
+//    Initialisation avec un type inexistant (pas présent dans EnvType)
+//
+// Resultats:
+//    ligne 11 : Erreur, type inexistant
+//
+// Historique:
+//    cree le 10/01/2022
+
+{
+    inexistant x;
+}

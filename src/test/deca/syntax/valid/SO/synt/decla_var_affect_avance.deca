@@ -1,0 +1,12 @@
+// Description:
+//    Programme pour vérifier la déclaration de variable avec un enchainement de mots de lexique
+//
+// Resultats:
+//    
+//
+// Historique:
+//    cree le 07/01/2022
+
+{
+    boolean le_0 = (-false + 7.5 * $2) != !true && (jg_8 <= -5 > los_6)% "je suis un chat";
+}

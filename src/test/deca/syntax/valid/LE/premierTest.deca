@@ -1,0 +1,26 @@
+class poulet extends animal{
+    int x = 12, y =15;
+
+    void manger(int x, float z){
+        float a = x +z;
+        println(a);
+    }
+
+    float z = 15;
+}
+
+class poulet extends animal{
+    int x = 12, y =15;
+
+    void manger(int x, float z){
+        float a = x +z +z;
+        println(a);
+    }
+
+    float z = 15;
+}
+
+{
+    int x = 15;
+    println(x);
+}

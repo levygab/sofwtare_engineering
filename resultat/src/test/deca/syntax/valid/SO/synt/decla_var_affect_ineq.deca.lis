@@ -1,0 +1,44 @@
+`> [10, 0] Program
+   +> ListDeclClass [List with 0 elements]
+   `> [10, 0] Main
+      +> ListDeclVar [List with 5 elements]
+      |  []> [11, 11] DeclVar
+      |  ||  +> [11, 4] Identifier (or_and)
+      |  ||  +> [11, 11] Identifier ($e4)
+      |  ||  `> [11, 17] Initialization
+      |  ||     `> [11, 23] Equals
+      |  ||        +> [11, 17] Identifier (oerl_)
+      |  ||        `> [11, 26] Identifier (ju3)
+      |  []> [12, 9] DeclVar
+      |  ||  +> [12, 4] Identifier (bool)
+      |  ||  +> [12, 9] Identifier (le_0)
+      |  ||  `> [12, 16] Initialization
+      |  ||     `> [12, 21] LowerOrEqual
+      |  ||        +> [12, 16] BooleanLiteral (true)
+      |  ||        `> [12, 24] BooleanLiteral (false)
+      |  []> [13, 9] DeclVar
+      |  ||  +> [13, 4] Identifier (bool)
+      |  ||  +> [13, 9] Identifier (le_0)
+      |  ||  `> [13, 16] Initialization
+      |  ||     `> [13, 21] GreaterOrEqual
+      |  ||        +> [13, 16] BooleanLiteral (true)
+      |  ||        `> [13, 24] Int (5)
+      |  []> [14, 9] DeclVar
+      |  ||  +> [14, 4] Identifier (bool)
+      |  ||  +> [14, 9] Identifier (le_0)
+      |  ||  `> [14, 16] Initialization
+      |  ||     `> [14, 30] And
+      |  ||        +> [14, 22] NotEquals
+      |  ||        |  +> [14, 16] BooleanLiteral (false)
+      |  ||        |  `> [14, 25] BooleanLiteral (true)
+      |  ||        `> [14, 35] Greater
+      |  ||           +> [14, 33] Int (5)
+      |  ||           `> [14, 37] Identifier (los_6)
+      |  []> [15, 11] DeclVar
+      |      +> [15, 4] Identifier (jdhe_8)
+      |      +> [15, 11] Identifier ($4)
+      |      `> [15, 16] Initialization
+      |         `> [15, 20] Lower
+      |            +> [15, 16] Identifier (ju7)
+      |            `> [15, 22] Int (45)
+      `> ListInst [List with 0 elements]

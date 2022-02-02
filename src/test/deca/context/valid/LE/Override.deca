@@ -1,0 +1,24 @@
+// Description:
+//    test les extensions de classes : plus precisement les override
+//
+// Resultats:
+//    
+//
+// Historique:
+//    cree le 20/01/2022
+
+class C1 {
+    int a ;
+    void Constructeur (int valeur) {
+        this.a = valeur ;
+    }
+}
+
+class C2 extends C1 {
+    int b ;
+    void Constructeur(int valeur) {
+        this.a = valeur ;
+        this.b = valeur ;
+    }
+}
+

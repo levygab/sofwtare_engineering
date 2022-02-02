@@ -1,0 +1,55 @@
+`> [10, 0] Program
+   +> ListDeclClass [List with 0 elements]
+   `> [10, 0] Main
+      +> ListDeclVar [List with 7 elements]
+      |  []> [11, 11] DeclVar
+      |  ||  +> [11, 4] Identifier (or_and)
+      |  ||  +> [11, 11] Identifier ($e4)
+      |  ||  `> [11, 17] Initialization
+      |  ||     `> [11, 22] Plus
+      |  ||        +> [11, 17] BooleanLiteral (true)
+      |  ||        `> [11, 24] Int (56)
+      |  []> [12, 9] DeclVar
+      |  ||  +> [12, 4] Identifier (bool)
+      |  ||  +> [12, 9] Identifier (le_0)
+      |  ||  `> [12, 16] Initialization
+      |  ||     `> [12, 19] Minus
+      |  ||        +> [12, 16] Identifier ($4)
+      |  ||        `> [12, 21] Float (4.1)
+      |  []> [13, 9] DeclVar
+      |  ||  +> [13, 4] Identifier (bool)
+      |  ||  +> [13, 9] Identifier (le_0)
+      |  ||  `> [13, 16] Initialization
+      |  ||     `> [13, 21] Multiply
+      |  ||        +> [13, 16] Identifier (mpld)
+      |  ||        `> [13, 23] Identifier (te_je)
+      |  []> [14, 9] DeclVar
+      |  ||  +> [14, 4] Identifier (bool)
+      |  ||  +> [14, 9] Identifier (le_0)
+      |  ||  `> [14, 16] Initialization
+      |  ||     `> [14, 20] Plus
+      |  ||        +> [14, 16] Identifier (ut8)
+      |  ||        `> [14, 26] Multiply
+      |  ||           +> [14, 22] Identifier ($_E)
+      |  ||           `> [14, 28] Identifier (mdlz)
+      |  []> [15, 11] DeclVar
+      |  ||  +> [15, 4] Identifier (jdhe_8)
+      |  ||  +> [15, 11] Identifier ($4)
+      |  ||  `> [15, 16] Initialization
+      |  ||     `> [15, 20] Modulo
+      |  ||        +> [15, 16] Identifier (ju7)
+      |  ||        `> [15, 22] Int (45)
+      |  []> [16, 9] DeclVar
+      |  ||  +> [16, 4] Identifier ($7_8)
+      |  ||  +> [16, 9] Identifier (ehtd)
+      |  ||  `> [16, 16] Initialization
+      |  ||     `> [16, 19] Divide
+      |  ||        +> [16, 16] Int (45)
+      |  ||        `> [16, 21] BooleanLiteral (true)
+      |  []> [17, 10] DeclVar
+      |      +> [17, 4] Identifier (uei$3)
+      |      +> [17, 10] Identifier (tra)
+      |      `> [17, 16] Initialization
+      |         `> [17, 16] Not
+      |            `> [17, 17] ReadInt
+      `> ListInst [List with 0 elements]

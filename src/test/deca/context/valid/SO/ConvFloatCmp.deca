@@ -1,0 +1,20 @@
+// Description:
+//    Comparaison d'un flottant et d'un entier (ConvFloat)
+//
+// Resultats:
+//    
+//
+// Historique:
+//    cree le 12/01/2022
+
+{
+        int i = 12;
+        float f = 4.3;
+        boolean y;
+        y = i>f;
+        y = i<f;
+        y = i == f;
+        y = i>=f;
+        y = i<=f;
+        y = i != f; 
+}

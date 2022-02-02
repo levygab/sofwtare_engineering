@@ -1,0 +1,31 @@
+`> [2, 0] Program
+   +> ListDeclClass [List with 0 elements]
+   `> [2, 0] Main
+      +> ListDeclVar [List with 1 elements]
+      |  []> [3, 8] DeclVar
+      |      +> [3, 4] Identifier (int)
+      |      |  definition: type defined at [3, 4], type=int
+      |      +> [3, 8] Identifier (x)
+      |      |  definition: variable defined at [3, 8], type=int
+      |      `> NoInitialization
+      `> ListInst [List with 2 elements]
+         []> [4, 4] Assign
+         ||  type: int
+         ||  +> [4, 4] Identifier (x)
+         ||  |  definition: variable defined at [3, 8], type=int
+         ||  `> [4, 6] ReadInt
+         ||     type: int
+         []> [5, 12] Println
+             `> ListExpr [List with 1 elements]
+                []> [5, 12] Multiply
+                    type: float
+                    +> [5, 12] Float (0.5)
+                    |  type: float
+                    `> ConvFloat
+                       type: float
+                       `> [5, 16] Multiply
+                          type: int
+                          +> [5, 17] Identifier (x)
+                          |  definition: variable defined at [3, 8], type=int
+                          `> [5, 19] Identifier (x)
+                             definition: variable defined at [3, 8], type=int

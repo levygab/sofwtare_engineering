@@ -1,0 +1,16 @@
+// Description:
+//    test les methods boolean
+//
+// Resultats:
+//    
+//
+// Historique:
+//    cree le 19/01/2022
+
+class A {
+    
+    boolean ajoute(int x){
+        x = x +1;
+        return x == 12; 
+    }
+}

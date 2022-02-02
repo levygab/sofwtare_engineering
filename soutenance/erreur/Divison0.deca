@@ -1,0 +1,8 @@
+//test pour la presentation 
+//divison par 0 impossible
+
+{
+    int x = 3;
+    int y = 0 ;
+    float c = x/y ;
+}

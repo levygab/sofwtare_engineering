@@ -1,0 +1,36 @@
+// Description:
+//    Programme pour l'emploi des boucles if
+//
+// Resultats:
+//    
+//
+// Historique:
+//    cree le 07/01/2022
+
+{
+    if ( 5) {
+        print(5);
+        println("Hello");
+    } else if ( $3 && "carac"){
+        a = b;
+    }
+    else{
+        kal = true % false;
+    }
+    if ( 5) {
+        print(5);
+        println("Hello");
+        if ( 5) {
+        print(5);
+        println("Hello");
+        }
+    } else if ( $3 && "carac"){
+        a = b;
+    }if ( 5) {
+        print(5);
+        println("Hello");
+    }
+    else{
+        kal = true % false;
+    }
+}

@@ -1,0 +1,15 @@
+// Description:
+//    test les methods void
+//
+// Resultats:
+//    
+//
+// Historique:
+//    cree le 19/01/2022
+
+class A {
+    
+    void ajoute(int x){
+        x = x +1;
+    }
+}

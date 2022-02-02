@@ -1,0 +1,14 @@
+// Description:
+//    test les extensions de classes
+//
+// Resultats:
+//    
+//
+// Historique:
+//    cree le 19/01/2022
+
+class A {
+
+}
+
+class B extends A{}

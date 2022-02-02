@@ -1,0 +1,11 @@
+// Description:
+//    include circulaire
+//
+// Resultats: erreur
+//
+// Historique:
+//    cree le 23/01/2022
+
+{
+    #include "includefile1.deca" ;
+}

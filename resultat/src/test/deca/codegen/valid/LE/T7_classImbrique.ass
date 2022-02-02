@@ -1,0 +1,171 @@
+; start main program
+	TSTO #0
+	BOV pile_pleine
+	BRA DebutMain
+code.Object.equals:
+init.Object:
+	RTS
+	LOAD #null, R0
+	STORE R0, 1(GB)
+	LOAD code.Object.equals, R0
+	STORE R0, 2(GB)
+	LEA 1(GB), R0
+	STORE R0, 3(GB)
+	LOAD code.Object.equals, R0
+	STORE R0, 4(GB)
+	LOAD code.C1.affichage1, R0
+	STORE R0, 5(GB)
+	LEA 1(GB), R0
+	STORE R0, 6(GB)
+	LOAD code.Object.equals, R0
+	STORE R0, 7(GB)
+	LOAD code.C2.modif, R0
+	STORE R0, 8(GB)
+	LOAD code.C2.constructeur, R0
+	STORE R0, 9(GB)
+init.C1:
+	LOAD -2(LB), R1
+	LOAD #0, R0
+	STORE R0, 1(R1)
+	LOAD #0, R0
+	STORE R0, 2(R1)
+	PUSH R1
+	BSR init.Object
+	SUBSP #1
+	LOAD -2(LB), R1
+	RTS
+code.C1.affichage1:
+	PUSH R3
+; Beginning of method declarations
+; Beginning of method instructions:
+	LOAD -2(LB), R3
+	WSTR "15 attendu : "
+	LOAD 1(R3), R1
+	WINT
+	WNL
+	WSTR "12.3 attendu : "
+	LOAD 2(R3), R1
+	WFLOAT
+	WNL
+fin.C1.affichage1:
+	POP R3
+	RTS
+init.C2:
+	LOAD -2(LB), R1
+	LOAD #0, R0
+	STORE R0, 1(R1)
+	LOAD #0, R0
+	STORE R0, 2(R1)
+	PUSH R1
+	BSR init.Object
+	SUBSP #1
+	LOAD -2(LB), R1
+	RTS
+code.C2.constructeur:
+	PUSH R3
+; Beginning of method declarations
+; Beginning of method instructions:
+	LOAD -2(LB), R3
+	PUSH R1
+	NEW #3, R4
+	BOV tas_plein
+	LEA 3(GB), R0
+	STORE R0, 0(R4)
+	PUSH R4
+	BSR init.C1
+	POP R4
+	POP R1
+	STORE R4, 1(R3)
+fin.C2.constructeur:
+	POP R3
+	RTS
+code.C2.modif:
+	PUSH R3
+; Beginning of method declarations
+; Beginning of method instructions:
+	LOAD -2(LB), R3
+	LOAD #15, R4
+	LOAD 1(R3), R5
+	STORE R4, 1(R5)
+	LOAD #0x1.89999ap3, R4
+	LOAD 1(R3), R6
+	STORE R4, 2(R6)
+	ADDSP #1
+	LOAD 1(R3), R2
+	STORE R2, 0(SP)
+	LOAD 0(SP), R2
+	CMP #null, R2
+	BEQ Deferencement_de_null
+	BSR code.C1.affichage1
+	LOAD R0, R4
+	SUBSP #1
+fin.C2.modif:
+	POP R3
+	RTS
+; Main program
+DebutMain:
+; Beginning of main declarations
+	PUSH R1
+	NEW #3, R3
+	BOV tas_plein
+	LEA 6(GB), R0
+	STORE R0, 0(R3)
+	PUSH R3
+	BSR init.C2
+	POP R3
+	POP R1
+	STORE R3, 1(LB)
+	ADDSP #1
+; Beginning of main instructions:
+	ADDSP #1
+	LOAD 1(LB), R2
+	STORE R2, 0(SP)
+	LOAD 0(SP), R2
+	CMP #null, R2
+	BEQ Deferencement_de_null
+	BSR code.C2.constructeur
+	LOAD R0, R3
+	SUBSP #1
+	ADDSP #1
+	LOAD 1(LB), R2
+	STORE R2, 0(SP)
+	LOAD 0(SP), R2
+	CMP #null, R2
+	BEQ Deferencement_de_null
+	BSR code.C2.modif
+	LOAD R0, R3
+	SUBSP #1
+	HALT
+; end main program
+io_error:
+	WSTR "Error: Input/Output error"
+	WNL
+	ERROR
+io_error_div_O:
+	WSTR "Division par 0 interdite"
+	WNL
+	ERROR
+io_debordement_valeur:
+	WSTR "Error: Debordement flottant nombre trop grand"
+	WNL
+	ERROR
+pile_pleine:
+	WSTR "Erreur : la pile est pleine"
+	WNL
+	ERROR
+tas_plein:
+	WSTR "Erreur : le tas est plein"
+	WNL
+	ERROR
+Deferencement_de_null:
+	WSTR "L'identifier est null"
+	WNL
+	ERROR
+io_error_index_out_of_range:
+	WSTR "Erreur : Index out of range"
+	WNL
+	ERROR
+io_incorrect_sizes:
+	WSTR "Erreur : Les tableaux passées en paramètres doivent être de bonnes tailles"
+	WNL
+	ERROR

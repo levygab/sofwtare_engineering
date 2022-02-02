@@ -1,0 +1,17 @@
+// Description:
+//    Utilisation du not dans une condition
+//
+// Resultats:
+//    Nice !
+//
+// Historique:
+//    cree le 15/01/2022
+
+{
+    boolean b;
+    int i = 14;
+    float f = 15.0;
+    if (!(f < i)) {
+        println("Nice !");
+    } 
+}

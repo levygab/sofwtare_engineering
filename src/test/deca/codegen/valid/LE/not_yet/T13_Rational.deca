@@ -1,0 +1,110 @@
+class Rational {
+    int num ;
+    protected int denom ;
+
+    void affiche () {
+        println(num , "/" , denom ) ;
+    }
+
+    int getDenom () {
+        return denom ;
+  }
+
+    void setDenom(int x) {
+        if (x == 0) {
+        println("le denominateur d'un rationel ne peut pas etre 0") ;     
+        }
+        this.denom = x ;
+    }
+
+    void constructeur(int x , int y ) {
+        num = x ;
+        this.denom = y ;
+    }
+
+    void mult (Rational ratio) {
+        this.num =this.num * ratio.num ;
+        this.denom = denom * ratio.denom ;
+        reduction() ;
+    }
+
+    void addi (Rational ratio) {
+        this.num = this.num*ratio.denom + this.denom * ratio.num ;
+        this.denom = (denom * ratio.denom) ;
+        reduction () ;
+    }
+
+    int pgcd (int a , int b) {
+    if ( b == 0 ) {
+        return a ;
+    } 
+    return pgcd (b,a%b) ;
+    }
+
+    void reduction () {
+        int pgc = pgcd (num, denom) ;
+        num = num/pgc ;
+        denom = denom/pgc ;
+    }
+
+}
+
+class Vector {
+    Rational v1 ;
+    protected Rational v2 ;
+
+    void constructeur (Rational V1 , Rational V2) {
+        v1 = V1 ;
+        this.v2 = V2 ;
+    }
+
+    void mult (Vector v) {
+        v1.mult(v.v1) ;
+        v2.mult(v.getV2()) ;
+    }
+
+    Rational getV2 () {
+        return v2 ;
+    }
+
+    void mult4foisDe2 () {
+        int i = 0 ;
+        Rational ratio = new Rational() ;
+        while (i < 4) {
+            ratio.constructeur(2,2);
+            v2.mult(ratio) ;
+            i = i + 1 ;
+        }
+    }
+
+    void affiche() {
+        v1.affiche() ;
+        v2.affiche() ;
+    }
+}
+
+{
+    Rational ratio0 = new Rational() ;
+    Rational ratio1 = new Rational() ;
+
+    Vector V1 = new Vector() ;
+
+    ratio0.constructeur(3,4) ;    
+    ratio1.constructeur(3,4) ;
+    println("on attend  3 / 4  dans les deux cas") ;
+    ratio0.affiche() ;
+    ratio1.affiche() ;
+
+    ratio0.mult(ratio1) ;
+    println("on attend 9/16") ;
+    ratio0.affiche() ;
+
+    ratio0.addi(ratio1) ;
+    println("on attend 21 / 16") ;
+    ratio0.affiche() ;
+
+    V1.constructeur(ratio0, ratio1) ;
+    V1.mult4foisDe2() ;
+    println("le premier vaut 21/16, le deuxieme est 24/4 (ou 6/1 si simplifie)") ;
+    V1.affiche() ;
+}

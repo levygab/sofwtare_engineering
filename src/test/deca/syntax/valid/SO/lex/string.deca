@@ -1,0 +1,13 @@
+// Description:
+//    Programme pour vérifier l'appartenance au lexique.
+//
+// Resultats:
+//    
+//
+// Historique:
+//    cree le 07/01/2022
+""
+"a"
+"\\""
+"\\\\"
+"hjda\\\\kdqj\\""

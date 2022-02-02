@@ -1,0 +1,18 @@
+// Description:
+//    Programme pour vérifier la déclaration de variable avec affectation de sommes et multiplication
+//
+// Resultats:
+//    
+//
+// Historique:
+//    cree le 07/01/2022
+
+{
+    or_and $e4 = true + 56;
+    bool le_0 = $4 - 4.1;
+    bool le_0 = mpld * te_je;
+    bool le_0 = ut8 + $_E * mdlz;
+    jdhe_8 $4 = ju7 % 45;
+    $7_8 ehtd = 45 / true;
+    uei$3 tra = !readInt();
+}

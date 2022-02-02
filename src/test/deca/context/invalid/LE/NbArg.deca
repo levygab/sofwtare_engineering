@@ -1,0 +1,14 @@
+// Historique:
+//    cree le 22/01/2022
+
+class C1{
+    void methode (int a) {
+
+    }
+    
+}
+
+{
+    C1 var = new C1() ;
+    var.methode(12,3) ;
+}

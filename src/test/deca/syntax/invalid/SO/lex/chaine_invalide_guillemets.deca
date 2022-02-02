@@ -1,0 +1,10 @@
+// Description:
+//    tests de programme incorrect lexicalement (chaine non terminee)
+//
+// Resultats:
+//    ligne 10 : Erreur, chaine invalide
+//
+// Historique:
+//    cree le 01/01/2022
+
+"je ne peux pas utiliser des guillemets" dans mes string"

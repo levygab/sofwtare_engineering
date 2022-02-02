@@ -1,0 +1,13 @@
+// Description:
+//    Programme utilisant un print d'un bool
+//
+// Resultats:
+//    
+//
+// Historique:
+//    cree le 14/01/2022
+
+{
+    boolean p;
+    println(p);
+}

@@ -1,0 +1,61 @@
+`> [4, 0] Program
+   +> ListDeclClass [List with 1 elements]
+   |  []> [4, 0] DeclClass
+   |      +> [4, 6] Identifier (C1)
+   |      +> Identifier (Object)
+   |      |  definition: type (builtin), type=Object
+   |      +> ListDeclField [List with 2 elements]
+   |      |  []> [5, 8] [visibility = PUBLIC] DeclField
+   |      |  ||  +> [5, 4] Identifier (int)
+   |      |  ||  +> [5, 8] Identifier (a)
+   |      |  ||  `> NoInitialization
+   |      |  []> [15, 8] [visibility = PUBLIC] DeclField
+   |      |      +> [15, 4] Identifier (int)
+   |      |      +> [15, 8] Identifier (c)
+   |      |      `> NoInitialization
+   |      `> ListDeclMethod [List with 3 elements]
+   |         []> [7, 4] Method
+   |         ||  +> [7, 4] Identifier (void)
+   |         ||  +> [7, 9] Identifier (meth1)
+   |         ||  +> ListParams [List with 1 elements]
+   |         ||  |  []> [7, 16] Params
+   |         ||  |      +> [7, 16] Identifier (int)
+   |         ||  |      `> [7, 20] Identifier (b)
+   |         ||  +> ListDeclVar [List with 0 elements]
+   |         ||  `> ListInst [List with 1 elements]
+   |         ||     []> [8, 10] Assign
+   |         ||         +> [8, 8] Identifier (a)
+   |         ||         `> [8, 12] Identifier (b)
+   |         []> [11, 4] Method
+   |         ||  +> [11, 4] Identifier (int)
+   |         ||  +> [11, 8] Identifier (meth2)
+   |         ||  +> ListParams [List with 0 elements]
+   |         ||  +> ListDeclVar [List with 0 elements]
+   |         ||  `> ListInst [List with 1 elements]
+   |         ||     []> [12, 8] Return
+   |         ||         `> [12, 15] Identifier (c)
+   |         []> [17, 4] Method
+   |             +> [17, 4] Identifier (float)
+   |             +> [17, 10] Identifier (meth3)
+   |             +> ListParams [List with 0 elements]
+   |             +> ListDeclVar [List with 1 elements]
+   |             |  []> [18, 14] DeclVar
+   |             |      +> [18, 8] Identifier (float)
+   |             |      +> [18, 14] Identifier (z)
+   |             |      `> [18, 18] Initialization
+   |             |         `> [18, 18] Int (5)
+   |             `> ListInst [List with 1 elements]
+   |                []> [19, 8] IfThenElse
+   |                    +> [19, 13] Equals
+   |                    |  +> [19, 12] Identifier (c)
+   |                    |  `> [19, 15] Int (0)
+   |                    +> ListInst [List with 1 elements]
+   |                    |  []> [20, 12] Return
+   |                    |      `> [20, 19] Identifier (z)
+   |                    `> ListInst [List with 2 elements]
+   |                       []> [23, 14] Assign
+   |                       ||  +> [23, 12] Identifier (z)
+   |                       ||  `> [23, 16] Int (0)
+   |                       []> [24, 12] Return
+   |                           `> [24, 19] Identifier (z)
+   `> EmptyMain

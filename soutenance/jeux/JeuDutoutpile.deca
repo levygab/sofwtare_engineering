@@ -1,0 +1,17 @@
+//jeu pour la presentation
+//jeu du tout pile
+
+{
+    int chiffre = 67;
+    int proposition;
+    println("Vous devez trouver un chiffre entre 1 et 100");
+    while (proposition != chiffre) {
+        proposition = readInt();
+        if (proposition < chiffre) {
+            println("C'est plus !, entrez un autre nombre");
+        } else if (proposition > chiffre) {
+            println("C'est moins !, entrez un autre nombre");
+        }
+    }
+    println("Bravo, vous avez proposé ", proposition, " et le résultat est bien ", chiffre);
+}

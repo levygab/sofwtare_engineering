@@ -1,0 +1,6 @@
+//test invalide
+//declaration plusieurs attributs sans mettre de virgule
+
+class c1 {
+    int a , b c ;
+}

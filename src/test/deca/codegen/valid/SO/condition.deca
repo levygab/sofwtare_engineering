@@ -1,0 +1,60 @@
+// Description:
+//    Test complet pour vérifier la sémantique : on va verifier les operateurs de conditions
+//
+//
+// Historique:
+//    cree le 15/01/2022
+
+// erreur ligne 21 : le || ne marche pas : je pense que c'est parce que la condition est trop longue
+//la condition de droite est true
+
+{
+    int x =5;
+    float y =5;
+    int z =10;
+    int xy =25;
+
+    boolean monBool1 = false ;
+    boolean monBool2 = false ;
+    boolean monBool3 = false ;
+    if ( (x == y && (x*y) == xy && 6 == x) ||  (x == 5 && (x*y) == xy && (z/2) == x  )  ) {
+        monBool1 = true ;
+        println("tres bien") ;
+    }
+
+    //test d'un elsif
+    if (x == z) {
+        println("c'est pas normal1") ;
+    }
+    else if (x == y) {
+        monBool2 = true ;
+    }
+    else {
+        println("c'est pas normal6") ;
+    }
+
+
+    //test de plsrs elsif
+    if (x == z) {
+        println("c'est pas normal2") ;
+    }
+    else if (x == xy) {
+        println("c'est pas normal3") ;
+    }
+    else if ( x*y == z ) {
+        println("c'est pas normal4") ;
+    }
+    else if ( x*xy == z ) {
+        println("c'est pas normal5") ;
+    }
+    else {
+        monBool3 = true ;
+    }
+
+    if (monBool1) {
+        println("tres bien") ;
+    }
+    else {
+        println ("il y a un pb dans le test") ;
+    }
+}

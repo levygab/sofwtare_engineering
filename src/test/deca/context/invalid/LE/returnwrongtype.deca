@@ -1,0 +1,30 @@
+// Description:
+//    test les methods dans le main
+//
+// Resultats:
+//    
+//
+// Historique:
+//    cree le 19/01/2022
+
+class C {
+    int x;
+}
+
+class D {
+    int x;
+}
+
+class A {
+    int x;
+
+    C methodC(){
+        return new C();
+    }
+}
+class B extends A{
+    int y ;
+    D methodC(){
+        return new D();
+    }
+}

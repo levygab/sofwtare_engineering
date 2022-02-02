@@ -1,0 +1,21 @@
+// Description:
+//    Test pour vérifier les tableaux de classe 
+//
+// Resultats:
+//    
+//
+// Historique:
+//    cree le 23/01/2022
+
+class C1 {
+    int a ;
+}
+
+{
+    C1 var1 = new C1() ;
+    C2 var2 = new C1() ;
+
+    C1[] x = new C1[2] ;
+    x[0] = var1 ;
+    x[1] = var2 ;
+}

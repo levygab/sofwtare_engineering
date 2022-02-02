@@ -1,0 +1,25 @@
+// Historique:
+//    cree le 19/01/2022
+
+class C {
+    int x;
+}
+
+class D extends C{
+    int y;
+}
+
+class A {
+    int x;
+
+    C methodC(){
+        return new C();
+    }
+}
+
+class B extends A{
+    int y ;
+    D methodC(){
+        return new D();
+    }
+}

@@ -1,0 +1,12 @@
+// Description:
+//    Programme minimaliste assignation d'assignation
+//
+// Resultats:
+//    
+//
+// Historique:
+//    cree le 07/01/2022
+{
+    int x;
+    int tab =(x=12);
+}

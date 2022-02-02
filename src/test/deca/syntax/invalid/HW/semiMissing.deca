@@ -1,0 +1,11 @@
+// Description:
+//    Programme minimaliste oubliant le point virgule en fin de ligne
+//
+// Resultats:
+//    Hello
+//
+// Historique:
+//    cree le 06/01/2022
+{
+        print("Hello")
+}

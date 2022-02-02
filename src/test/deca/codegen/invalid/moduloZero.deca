@@ -1,0 +1,13 @@
+// Description:
+//    Modulo zero
+//
+// Resultats: "Division par zero interdite" 
+// Resultats avec decac - n : 12
+//
+// Historique:
+//    cree le 14/01/2022
+
+{
+    int x = 12;
+    println(x % 0);
+}

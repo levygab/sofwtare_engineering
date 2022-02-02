@@ -1,0 +1,13 @@
+// Description:
+//    Addition d'un flottant et d'un entier (ConvFloat)
+//
+// Resultats:
+//    
+//
+// Historique:
+//    cree le 12/01/2022
+
+{
+        int x = 3;
+        float y = x;
+}

@@ -1,0 +1,132 @@
+`> [10, 0] Program
+   +> ListDeclClass [List with 0 elements]
+   `> [10, 0] Main
+      +> ListDeclVar [List with 4 elements]
+      |  []> [11, 8] DeclVar
+      |  ||  +> [11, 4] Identifier (int)
+      |  ||  |  definition: type (builtin), type=int
+      |  ||  +> [11, 8] Identifier (a)
+      |  ||  |  definition: variable defined at [11, 8], type=int
+      |  ||  `> [11, 12] Initialization
+      |  ||     `> [11, 12] Int (3)
+      |  ||        type: int
+      |  []> [12, 8] DeclVar
+      |  ||  +> [12, 4] Identifier (int)
+      |  ||  |  definition: type (builtin), type=int
+      |  ||  +> [12, 8] Identifier (b)
+      |  ||  |  definition: variable defined at [12, 8], type=int
+      |  ||  `> [12, 12] Initialization
+      |  ||     `> [12, 13] Plus
+      |  ||        type: int
+      |  ||        +> [12, 12] Identifier (a)
+      |  ||        |  definition: variable defined at [11, 8], type=int
+      |  ||        `> [12, 14] Int (1)
+      |  ||           type: int
+      |  []> [13, 12] DeclVar
+      |  ||  +> [13, 4] Identifier (boolean)
+      |  ||  |  definition: type (builtin), type=boolean
+      |  ||  +> [13, 12] Identifier (c)
+      |  ||  |  definition: variable defined at [13, 12], type=boolean
+      |  ||  `> [13, 16] Initialization
+      |  ||     `> [13, 16] BooleanLiteral (true)
+      |  ||        type: boolean
+      |  []> [14, 12] DeclVar
+      |      +> [14, 4] Identifier (boolean)
+      |      |  definition: type (builtin), type=boolean
+      |      +> [14, 12] Identifier (d)
+      |      |  definition: variable defined at [14, 12], type=boolean
+      |      `> [14, 16] Initialization
+      |         `> [14, 16] BooleanLiteral (false)
+      |            type: boolean
+      `> ListInst [List with 5 elements]
+         []> [15, 4] IfThenElse
+         ||  +> [15, 10] GreaterOrEqual
+         ||  |  type: boolean
+         ||  |  +> [15, 8] Identifier (b)
+         ||  |  |  definition: variable defined at [12, 8], type=int
+         ||  |  `> [15, 13] Identifier (a)
+         ||  |     definition: variable defined at [11, 8], type=int
+         ||  +> ListInst [List with 1 elements]
+         ||  |  []> [16, 8] Println
+         ||  |      `> ListExpr [List with 1 elements]
+         ||  |         []> [16, 16] StringLiteral (ok)
+         ||  |             type: string
+         ||  `> ListInst [List with 0 elements]
+         []> [18, 4] IfThenElse
+         ||  +> [18, 10] Equals
+         ||  |  type: boolean
+         ||  |  +> [18, 8] Identifier (b)
+         ||  |  |  definition: variable defined at [12, 8], type=int
+         ||  |  `> [18, 13] Identifier (a)
+         ||  |     definition: variable defined at [11, 8], type=int
+         ||  +> ListInst [List with 1 elements]
+         ||  |  []> [19, 8] Print
+         ||  |      `> ListExpr [List with 1 elements]
+         ||  |         []> [19, 14] StringLiteral (Pas ok)
+         ||  |             type: string
+         ||  `> ListInst [List with 1 elements]
+         ||     []> [21, 9] IfThenElse
+         ||         +> [21, 14] Equals
+         ||         |  type: boolean
+         ||         |  +> [21, 12] Identifier (b)
+         ||         |  |  definition: variable defined at [12, 8], type=int
+         ||         |  `> [21, 17] Int (4)
+         ||         |     type: int
+         ||         +> ListInst [List with 1 elements]
+         ||         |  []> [22, 8] Print
+         ||         |      `> ListExpr [List with 1 elements]
+         ||         |         []> [22, 14] StringLiteral (Ok)
+         ||         |             type: string
+         ||         `> ListInst [List with 0 elements]
+         []> [24, 4] IfThenElse
+         ||  +> [24, 9] NotEquals
+         ||  |  type: boolean
+         ||  |  +> [24, 8] Identifier (b)
+         ||  |  |  definition: variable defined at [12, 8], type=int
+         ||  |  `> [24, 11] Int (4)
+         ||  |     type: int
+         ||  +> ListInst [List with 1 elements]
+         ||  |  []> [25, 8] Print
+         ||  |      `> ListExpr [List with 1 elements]
+         ||  |         []> [25, 14] StringLiteral (Pas ok)
+         ||  |             type: string
+         ||  `> ListInst [List with 1 elements]
+         ||     []> [27, 9] IfThenElse
+         ||         +> [27, 15] NotEquals
+         ||         |  type: boolean
+         ||         |  +> [27, 13] Identifier (a)
+         ||         |  |  definition: variable defined at [11, 8], type=int
+         ||         |  `> [27, 17] Int (3)
+         ||         |     type: int
+         ||         +> ListInst [List with 1 elements]
+         ||         |  []> [28, 8] Print
+         ||         |      `> ListExpr [List with 1 elements]
+         ||         |         []> [28, 14] StringLiteral (Pas ok)
+         ||         |             type: string
+         ||         `> ListInst [List with 1 elements]
+         ||            []> [31, 8] Print
+         ||                `> ListExpr [List with 1 elements]
+         ||                   []> [31, 14] StringLiteral (ok)
+         ||                       type: string
+         []> [33, 4] IfThenElse
+         ||  +> [33, 7] Identifier (c)
+         ||  |  definition: variable defined at [13, 12], type=boolean
+         ||  +> ListInst [List with 1 elements]
+         ||  |  []> [34, 8] Println
+         ||  |      `> ListExpr [List with 1 elements]
+         ||  |         []> [34, 16] StringLiteral (C'est ok)
+         ||  |             type: string
+         ||  `> ListInst [List with 0 elements]
+         []> [36, 4] IfThenElse
+             +> [36, 9] Or
+             |  type: boolean
+             |  +> [36, 7] Identifier (c)
+             |  |  definition: variable defined at [13, 12], type=boolean
+             |  `> [36, 12] Identifier (d)
+             |     definition: variable defined at [14, 12], type=boolean
+             +> ListInst [List with 1 elements]
+             |  []> [37, 8] Println
+             |      `> ListExpr [List with 1 elements]
+             |         []> [37, 16] StringLiteral (C'est niquel)
+             |             type: string
+             `> ListInst [List with 0 elements]

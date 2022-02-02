@@ -1,0 +1,20 @@
+// Historique:
+//    cree le 21/01/2022
+// on teste l'ajout d'une partie assembleur dans le programme 
+
+class C1 {
+    void assem () asm (        
+        "LOAD #1, R1
+        WINT
+	    WNL
+        RTS"
+    ) ;
+    
+}
+
+{
+    int x = 18;
+    C1 c = new C1(); 
+    println(x);
+    c.assem();    
+}

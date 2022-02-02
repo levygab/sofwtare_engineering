@@ -1,0 +1,14 @@
+// Description:
+//    Initialisation avec un type inexistant (pas présent dans EnvType)
+//
+// Resultats:
+//    ligne 11 : Erreur, il faut deux int pour un modulo
+//
+// Historique:
+//    cree le 17/01/2022
+
+{
+    int x = 12;
+    float y = 5.0;
+    int z = x % y;
+}

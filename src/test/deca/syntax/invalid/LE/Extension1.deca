@@ -1,0 +1,13 @@
+//test invalide
+//manque un extends
+
+class C1 {
+    int a ;
+    void C1 (int b ) {
+        a = b ;
+    }
+}
+
+class C2 C1 {
+
+}

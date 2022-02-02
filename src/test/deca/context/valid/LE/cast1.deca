@@ -1,0 +1,16 @@
+// Historique:
+//    cree le 19/01/2022
+
+class c1 {
+    int a ;
+
+}
+
+class c2 extends c1{
+    int b ;
+}
+
+{
+    c1 variable = new c1() ;
+    c2 var = (c2) (variable) ; 
+}

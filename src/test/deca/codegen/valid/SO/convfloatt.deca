@@ -1,0 +1,34 @@
+// Description:
+//    Test complet pour vérifier la sémantique : on va verifier convFloat
+//
+//
+// Historique:
+//    cree le 15/01/2022
+
+{
+    int a = 1 ;
+    float z = 2 ;
+    float e = 3.5 ;
+
+    float r ;
+    r = 2.5 ;
+    if (r != 2.5) {
+        println("pb1") ;
+    }
+    r = 1 ;
+    if (r != 1) {
+        println("pb2") ;
+    }
+    r = 0 ;
+    if (r != 0) {
+        println("pb2") ;
+    }
+    
+    r = r + a + z + e;
+    if (r != 6.5) {
+        println("pb2") ;
+    }
+
+    
+    
+}

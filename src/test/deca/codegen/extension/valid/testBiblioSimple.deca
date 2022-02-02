@@ -1,0 +1,14 @@
+#include "MathArray.decah"
+{
+    MathArray calc = new MathArray();
+    int[] A = {1,2,3,4,5};
+    int[] B = {1,1,1,1,1};
+    float[] X = {1.0,2.0,3.0,4.0,5.0};
+    float[] Y = {1.0,1.0,1.0,1.0,1.0};
+    float[] Z = new float[5];
+    int[] C = calc.addIntTable(A, B);
+    Z = calc.addFloatTable(X, Y);
+    C = calc.oppositeIntTable(C);
+    Z = calc.oppositeFloatTable(Z);
+    
+}

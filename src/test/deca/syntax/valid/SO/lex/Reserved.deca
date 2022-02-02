@@ -1,0 +1,23 @@
+// Description:
+//    Programme vérifiant l'appartenance au lexique.
+//
+// Resultats:
+//    
+//
+// Historique:
+//    cree le 07/01/2022
+
+else
+false
+if
+null
+readInt
+readFloat
+print
+println
+printlnx
+printx
+return
+true
+while
+#include "int.deca"

@@ -1,0 +1,12 @@
+//test pour les classes : test valides
+//declaration d'un attribut de type d'une autre classe 
+
+
+class C1 {
+    int a ;
+}
+
+class C2 {
+    float b ;
+    C1 essai ;
+}

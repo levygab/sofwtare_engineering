@@ -1,0 +1,14 @@
+// Description:
+//    Programme initialisant correctement des variables
+//
+// Resultats:
+//    
+//
+// Historique:
+//    cree le 10/01/2022
+
+{
+        int y = 12;
+        float z = 4.5;
+        boolean b = false;
+}

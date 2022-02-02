@@ -1,0 +1,28 @@
+// Description:
+//    Opérations de comparaisons : +, -, /, * et %
+//
+// Resultats: ok ok
+//    
+//
+// Historique:
+//    cree le 14/01/2022
+
+{
+    int x_1 = 12;
+    int x_2 = 13;
+    boolean b = (x_2 > x_1);
+    boolean c = (x_2 != x_1);
+    if (b){
+        println("OK");
+    }
+    else{
+        println("Problem");
+    }
+    if (c){
+        println("OK");
+    }
+    else{
+        println("Problem");
+    }
+
+}

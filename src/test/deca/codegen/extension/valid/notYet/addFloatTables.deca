@@ -1,0 +1,9 @@
+#include "MathArray.decah"
+
+{
+    MathArray Calc = new MathArray();
+    float[] A = {1.0, 2.3, 5.3};
+    float[] B ={1.0, 2.8, 5.0};
+    float[] C = Calc.addFloatTable(A, B);
+    println(C[0], " ", C[1], " ", C[2]);
+}

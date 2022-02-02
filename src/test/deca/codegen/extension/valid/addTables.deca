@@ -1,0 +1,12 @@
+{
+    int[] t1 = {12, 5, 4, 5};
+    int[] t2 = {1, 4, 2, 1};
+    int size = length(t1);
+    int[] table = new int[size];
+    int i = 0;
+    while (i < size) {
+        table[i] = t1[i] + t2[i];
+        println(table[i], "  ");
+        i = i + 1;
+    }
+}

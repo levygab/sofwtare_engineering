@@ -1,0 +1,8 @@
+// Historique:
+//    cree le 22/01/2022
+
+{
+    boolean a = true ;
+    int b ;
+    boolean c =  a && b ;
+}

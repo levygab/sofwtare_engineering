@@ -1,0 +1,16 @@
+// Description:
+//    Division par 0 (erreur etape C)
+//
+// Resultats: "Division par zero interdite" 
+// Resultats avec decac - n : 3
+//
+// Historique:
+//    cree le 12/01/2022
+
+{
+    int x = 3;
+    int y = 3*2;
+    float z = 3/0.0;
+    println(z);
+    println(y);
+}

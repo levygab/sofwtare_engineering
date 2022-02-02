@@ -1,0 +1,15 @@
+//multiple de 10 
+
+{   
+    int a  ;
+    int stock ;
+    println("Entrez un nombre svp") ;
+    a = readInt() ;
+    stock = a ;
+    a = a + 4 ;
+    a = a * 7;
+    a = a + 3*stock ;
+    a = a - 28 ;
+
+    println(a) ;
+}

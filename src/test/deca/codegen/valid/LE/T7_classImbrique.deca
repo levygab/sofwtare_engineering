@@ -1,0 +1,36 @@
+// Historique:
+//    cree le 19/01/2022
+// on teste la declaration d'une variable de type class dans une classe.
+
+class C1 {
+    int a ;
+    float b  ;
+
+    void affichage1 () {
+        println("15 attendu : ", this.a ) ;
+        println("12.3 attendu : " , this.b  ) ;
+    }
+
+}
+
+class C2 {
+    C1 vari ;
+    float retour ;
+
+    void constructeur () {
+        this.vari = new C1 () ;
+    }
+
+    void modif () {
+        this.vari.a = 15 ;
+        this.vari.b = 12.3 ;
+        this.vari.affichage1() ;
+    }
+
+}
+
+{
+    C2 variable = new C2 () ;
+    variable.constructeur() ;
+    variable.modif() ;
+ }

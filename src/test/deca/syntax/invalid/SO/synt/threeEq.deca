@@ -1,0 +1,11 @@
+// Description:
+//    Programme pour vérifier les erreurs en cas de triple =
+//
+// Resultats: extraneous input '=
+//    
+//
+// Historique:
+//    cree le 17/01/2022
+{
+    a===b;
+}

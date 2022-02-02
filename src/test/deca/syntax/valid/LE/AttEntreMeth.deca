@@ -1,0 +1,27 @@
+//test pour les classes
+//attribut declare entre deux methodes 
+
+class C1 {
+    int a ;
+
+    void meth1 (int b) {
+        a = b ;
+    }
+
+    int meth2 () {
+        return c ;
+    }
+
+    int c ;
+
+    float meth3 () {
+        float z = 5 ;
+        if (c==0) {
+            return z ;
+        }
+        else {
+            z = 0 ;
+            return z ;
+        }
+    }
+}

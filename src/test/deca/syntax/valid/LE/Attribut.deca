@@ -1,0 +1,8 @@
+//test pour les classes
+
+class Atrribut {
+    int a; 
+    protected float b ;
+    boolean juste ;
+
+}

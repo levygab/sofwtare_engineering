@@ -1,0 +1,99 @@
+`> [10, 0] Program
+   +> ListDeclClass [List with 0 elements]
+   `> [10, 0] Main
+      +> ListDeclVar [List with 3 elements]
+      |  []> [11, 12] DeclVar
+      |  ||  +> [11, 8] Identifier (int)
+      |  ||  |  definition: type (builtin), type=int
+      |  ||  +> [11, 12] Identifier (i)
+      |  ||  |  definition: variable defined at [11, 12], type=int
+      |  ||  `> [11, 16] Initialization
+      |  ||     `> [11, 16] Int (12)
+      |  ||        type: int
+      |  []> [12, 14] DeclVar
+      |  ||  +> [12, 8] Identifier (float)
+      |  ||  |  definition: type (builtin), type=float
+      |  ||  +> [12, 14] Identifier (f)
+      |  ||  |  definition: variable defined at [12, 14], type=float
+      |  ||  `> [12, 18] Initialization
+      |  ||     `> [12, 18] Float (4.3)
+      |  ||        type: float
+      |  []> [13, 16] DeclVar
+      |      +> [13, 8] Identifier (boolean)
+      |      |  definition: type (builtin), type=boolean
+      |      +> [13, 16] Identifier (y)
+      |      |  definition: variable defined at [13, 16], type=boolean
+      |      `> NoInitialization
+      `> ListInst [List with 6 elements]
+         []> [14, 10] Assign
+         ||  type: boolean
+         ||  +> [14, 8] Identifier (y)
+         ||  |  definition: variable defined at [13, 16], type=boolean
+         ||  `> [14, 13] Greater
+         ||     type: boolean
+         ||     +> ConvFloat
+         ||     |  type: float
+         ||     |  `> [14, 12] Identifier (i)
+         ||     |     definition: variable defined at [11, 12], type=int
+         ||     `> [14, 14] Identifier (f)
+         ||        definition: variable defined at [12, 14], type=float
+         []> [15, 10] Assign
+         ||  type: boolean
+         ||  +> [15, 8] Identifier (y)
+         ||  |  definition: variable defined at [13, 16], type=boolean
+         ||  `> [15, 13] Lower
+         ||     type: boolean
+         ||     +> ConvFloat
+         ||     |  type: float
+         ||     |  `> [15, 12] Identifier (i)
+         ||     |     definition: variable defined at [11, 12], type=int
+         ||     `> [15, 14] Identifier (f)
+         ||        definition: variable defined at [12, 14], type=float
+         []> [16, 10] Assign
+         ||  type: boolean
+         ||  +> [16, 8] Identifier (y)
+         ||  |  definition: variable defined at [13, 16], type=boolean
+         ||  `> [16, 14] Equals
+         ||     type: boolean
+         ||     +> ConvFloat
+         ||     |  type: float
+         ||     |  `> [16, 12] Identifier (i)
+         ||     |     definition: variable defined at [11, 12], type=int
+         ||     `> [16, 17] Identifier (f)
+         ||        definition: variable defined at [12, 14], type=float
+         []> [17, 10] Assign
+         ||  type: boolean
+         ||  +> [17, 8] Identifier (y)
+         ||  |  definition: variable defined at [13, 16], type=boolean
+         ||  `> [17, 13] GreaterOrEqual
+         ||     type: boolean
+         ||     +> ConvFloat
+         ||     |  type: float
+         ||     |  `> [17, 12] Identifier (i)
+         ||     |     definition: variable defined at [11, 12], type=int
+         ||     `> [17, 15] Identifier (f)
+         ||        definition: variable defined at [12, 14], type=float
+         []> [18, 10] Assign
+         ||  type: boolean
+         ||  +> [18, 8] Identifier (y)
+         ||  |  definition: variable defined at [13, 16], type=boolean
+         ||  `> [18, 13] LowerOrEqual
+         ||     type: boolean
+         ||     +> ConvFloat
+         ||     |  type: float
+         ||     |  `> [18, 12] Identifier (i)
+         ||     |     definition: variable defined at [11, 12], type=int
+         ||     `> [18, 15] Identifier (f)
+         ||        definition: variable defined at [12, 14], type=float
+         []> [19, 10] Assign
+             type: boolean
+             +> [19, 8] Identifier (y)
+             |  definition: variable defined at [13, 16], type=boolean
+             `> [19, 14] NotEquals
+                type: boolean
+                +> ConvFloat
+                |  type: float
+                |  `> [19, 12] Identifier (i)
+                |     definition: variable defined at [11, 12], type=int
+                `> [19, 17] Identifier (f)
+                   definition: variable defined at [12, 14], type=float

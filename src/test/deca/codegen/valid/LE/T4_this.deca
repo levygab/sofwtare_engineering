@@ -1,0 +1,34 @@
+// Historique:
+//    cree le 19/01/2022
+// on teste l'utilisation de this
+
+class C1 {
+    int a = 15;
+    float b = 12.0 ;
+
+    void affichage1 (){
+        println("15 attendu : ", this.a ) ;
+        println("12 attendu : " , this.b  ) ;
+    }
+
+    void modif (int a , float b) {
+        this.a = a ;
+        this.b = b ;
+    }
+
+    void affichage2() {
+        println("5 attendu : ", this.a ) ;
+        println("30.0 attendu : " , this.b  ) ;
+    }
+
+
+}
+
+{
+    float retour;
+    C1 variable = new C1() ;
+    variable.affichage1() ;
+
+    variable.modif(5,30) ;
+    variable.affichage2() ;
+}

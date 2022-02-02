@@ -1,0 +1,27 @@
+`> [10, 0] Program
+   +> ListDeclClass [List with 0 elements]
+   `> [10, 0] Main
+      +> ListDeclVar [List with 1 elements]
+      |  []> [11, 12] DeclVar
+      |      +> [11, 4] Identifier (boolean)
+      |      +> [11, 12] Identifier (le_0)
+      |      `> [11, 19] Initialization
+      |         `> [11, 48] And
+      |            +> [11, 39] NotEquals
+      |            |  +> [11, 27] Plus
+      |            |  |  +> [11, 20] UnaryMinus
+      |            |  |  |  `> [11, 21] BooleanLiteral (false)
+      |            |  |  `> [11, 33] Multiply
+      |            |  |     +> [11, 29] Float (7.5)
+      |            |  |     `> [11, 35] Identifier ($2)
+      |            |  `> [11, 42] Not
+      |            |     `> [11, 43] BooleanLiteral (true)
+      |            `> [11, 71] Modulo
+      |               +> [11, 63] Greater
+      |               |  +> [11, 57] LowerOrEqual
+      |               |  |  +> [11, 52] Identifier (jg_8)
+      |               |  |  `> [11, 60] UnaryMinus
+      |               |  |     `> [11, 61] Int (5)
+      |               |  `> [11, 65] Identifier (los_6)
+      |               `> [11, 73] StringLiteral (je suis un chat)
+      `> ListInst [List with 0 elements]

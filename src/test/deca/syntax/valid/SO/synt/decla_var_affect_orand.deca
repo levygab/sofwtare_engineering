@@ -1,0 +1,16 @@
+// Description:
+//    Programme pour vérifier la déclaration de variable avec or et and
+//
+// Resultats:
+//    
+//
+// Historique:
+//    cree le 07/01/2022
+
+{
+    or_and $e4 = oerl_ = ju3;
+    bool le_0 = true || false;
+    bool le_0 = true && 5;
+    bool le_0 = false && true && 5 || los_6;
+    ;
+}

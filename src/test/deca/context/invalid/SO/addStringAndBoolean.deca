@@ -1,0 +1,14 @@
+// Description:
+//    Addition d'un String et d'un int
+//
+// Resultats:
+//    ligne 13 : Erreur, opération binaire sur deux types différents (autre que float et int)
+//
+// Historique:
+//    cree le 10/01/2022
+
+{
+    boolean x = true;
+    int y = 12;
+    int a = x + y;
+}

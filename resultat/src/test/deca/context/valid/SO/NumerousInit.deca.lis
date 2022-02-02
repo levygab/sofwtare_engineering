@@ -1,0 +1,41 @@
+`> [1, 0] Program
+   +> ListDeclClass [List with 0 elements]
+   `> [1, 0] Main
+      +> ListDeclVar [List with 3 elements]
+      |  []> [2, 8] DeclVar
+      |  ||  +> [2, 4] Identifier (int)
+      |  ||  |  definition: type (builtin), type=int
+      |  ||  +> [2, 8] Identifier (x)
+      |  ||  |  definition: variable defined at [2, 8], type=int
+      |  ||  `> [2, 12] Initialization
+      |  ||     `> [2, 12] Int (28)
+      |  ||        type: int
+      |  []> [2, 16] DeclVar
+      |  ||  +> [2, 4] Identifier (int)
+      |  ||  |  definition: type (builtin), type=int
+      |  ||  +> [2, 16] Identifier (y)
+      |  ||  |  definition: variable defined at [2, 16], type=int
+      |  ||  `> [2, 20] Initialization
+      |  ||     `> [2, 20] Int (13)
+      |  ||        type: int
+      |  []> [2, 24] DeclVar
+      |      +> [2, 4] Identifier (int)
+      |      |  definition: type (builtin), type=int
+      |      +> [2, 24] Identifier (z)
+      |      |  definition: variable defined at [2, 24], type=int
+      |      `> [2, 28] Initialization
+      |         `> [2, 28] Int (15)
+      |            type: int
+      `> ListInst [List with 3 elements]
+         []> [3, 4] Println
+         ||  `> ListExpr [List with 1 elements]
+         ||     []> [3, 12] Identifier (x)
+         ||         definition: variable defined at [2, 8], type=int
+         []> [4, 4] Println
+         ||  `> ListExpr [List with 1 elements]
+         ||     []> [4, 12] Identifier (y)
+         ||         definition: variable defined at [2, 16], type=int
+         []> [5, 4] Println
+             `> ListExpr [List with 1 elements]
+                []> [5, 12] Identifier (z)
+                    definition: variable defined at [2, 24], type=int

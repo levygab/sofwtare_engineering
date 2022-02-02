@@ -1,0 +1,6 @@
+{
+    int x = 28, y = 13, z = 15;
+    println(x);
+    println(y);
+    println(z);
+}

@@ -1,0 +1,106 @@
+; start main program
+	TSTO #2
+	BOV pile_pleine
+	BRA DebutMain
+code.Object.equals:
+init.Object:
+	RTS
+	LOAD #null, R0
+	STORE R0, 1(GB)
+	LOAD code.Object.equals, R0
+	STORE R0, 2(GB)
+; Main program
+DebutMain:
+; Beginning of main declarations
+	LOAD #42, R3
+	STORE R3, 1(LB)
+	ADDSP #1
+	LOAD #0, R3
+	STORE R3, 2(LB)
+	ADDSP #1
+; Beginning of main instructions:
+	BRA while_condition0
+while_inst0:
+	LOAD #2, R6
+	LOAD 1(LB), R4
+	REM R6, R4
+	BOV io_error_div_O
+	LOAD #0, R5
+	CMP R5, R4
+	BNE else1
+	LOAD #2, R6
+	LOAD 1(LB), R5
+	QUO R6, R5
+	BOV io_error_div_O
+	STORE R5, 1(LB)
+	BRA if_fin1
+else1:
+	LOAD 1(LB), R8
+	LOAD #2, R7
+	MUL R8, R7
+	LOAD 1(LB), R6
+	ADD R7, R6
+	LOAD #1, R5
+	ADD R6, R5
+	STORE R5, 1(LB)
+if_fin1:
+	LOAD 2(LB), R5
+	LOAD #1, R4
+	ADD R5, R4
+	STORE R4, 2(LB)
+while_condition0:
+	LOAD 1(LB), R4
+	LOAD #1, R5
+	CMP R5, R4
+	BEQ True2
+	BNE False2
+True2:
+	LOAD #1, R4
+	BRA Fin2
+False2:
+	LOAD #0, R4
+	BRA Fin2
+Fin2:
+	LOAD #1, R3
+	SUB R4, R3
+	LOAD #1, R0
+	CMP R0, R3
+	BEQ while_inst0
+while_fin0:
+	LOAD 2(LB), R1
+	WINT
+	WNL
+	HALT
+; end main program
+io_error:
+	WSTR "Error: Input/Output error"
+	WNL
+	ERROR
+io_error_div_O:
+	WSTR "Division par 0 interdite"
+	WNL
+	ERROR
+io_debordement_valeur:
+	WSTR "Error: Debordement flottant nombre trop grand"
+	WNL
+	ERROR
+pile_pleine:
+	WSTR "Erreur : la pile est pleine"
+	WNL
+	ERROR
+tas_plein:
+	WSTR "Erreur : le tas est plein"
+	WNL
+	ERROR
+Deferencement_de_null:
+	WSTR "L'identifier est null"
+	WNL
+	ERROR
+io_error_index_out_of_range:
+	WSTR "Erreur : Index out of range"
+	WNL
+	ERROR
+io_incorrect_sizes:
+	WSTR "Erreur : Les tableaux passées en paramètres doivent être de bonnes tailles"
+	WNL
+	ERROR

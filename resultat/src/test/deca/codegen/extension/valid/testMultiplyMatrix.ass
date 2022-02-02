@@ -1,0 +1,273 @@
+; start main program
+	TSTO #10
+	BOV pile_pleine
+	BRA DebutMain
+code.Object.equals:
+init.Object:
+	RTS
+	LOAD #null, R0
+	STORE R0, 1(GB)
+	LOAD code.Object.equals, R0
+	STORE R0, 2(GB)
+; Main program
+DebutMain:
+; Beginning of main declarations
+	LOAD #2, R4
+	LOAD #1, R3
+	ADD R4, R3
+	NEW R3, R3
+	STORE R4, 0(R3)
+	LOAD #3, R5
+	LOAD #1, R4
+	ADD R5, R4
+	NEW R4, R4
+	STORE R5, 0(R4)
+	LOAD #1, R5
+	STORE R5, 1(R4)
+	LOAD #5, R5
+	STORE R5, 2(R4)
+	LOAD #2, R5
+	STORE R5, 3(R4)
+	STORE R4, 1(R3)
+	LOAD #3, R5
+	LOAD #1, R4
+	ADD R5, R4
+	NEW R4, R4
+	STORE R5, 0(R4)
+	LOAD #1, R5
+	STORE R5, 1(R4)
+	LOAD #3, R5
+	STORE R5, 2(R4)
+	LOAD #2, R5
+	STORE R5, 3(R4)
+	STORE R4, 2(R3)
+	STORE R3, 1(LB)
+	ADDSP #1
+	LOAD #3, R4
+	LOAD #1, R3
+	ADD R4, R3
+	NEW R3, R3
+	STORE R4, 0(R3)
+	LOAD #2, R5
+	LOAD #1, R4
+	ADD R5, R4
+	NEW R4, R4
+	STORE R5, 0(R4)
+	LOAD #1, R5
+	STORE R5, 1(R4)
+	LOAD #2, R5
+	STORE R5, 2(R4)
+	STORE R4, 1(R3)
+	LOAD #2, R5
+	LOAD #1, R4
+	ADD R5, R4
+	NEW R4, R4
+	STORE R5, 0(R4)
+	LOAD #5, R5
+	STORE R5, 1(R4)
+	LOAD #1, R5
+	STORE R5, 2(R4)
+	STORE R4, 2(R3)
+	LOAD #2, R5
+	LOAD #1, R4
+	ADD R5, R4
+	NEW R4, R4
+	STORE R5, 0(R4)
+	LOAD #4, R5
+	STORE R5, 1(R4)
+	LOAD #4, R5
+	STORE R5, 2(R4)
+	STORE R4, 3(R3)
+	STORE R3, 2(LB)
+	ADDSP #1
+	LOAD 1(LB), R3
+	LOAD 0(R3), R3
+	STORE R3, 3(LB)
+	ADDSP #1
+	LOAD 1(LB), R3
+	LOAD #0, R4
+	CMP #0, R4
+	BLT io_error_index_out_of_range
+	CMP 0(R3), R4
+	BGE io_error_index_out_of_range
+	ADD #1, R4
+	LOAD 0(R3, R4), R3
+	LOAD 0(R3), R3
+	STORE R3, 4(LB)
+	ADDSP #1
+	LOAD 2(LB), R3
+	LOAD 0(R3), R3
+	STORE R3, 5(LB)
+	ADDSP #1
+	LOAD 2(LB), R3
+	LOAD #0, R4
+	CMP #0, R4
+	BLT io_error_index_out_of_range
+	CMP 0(R3), R4
+	BGE io_error_index_out_of_range
+	ADD #1, R4
+	LOAD 0(R3, R4), R3
+	LOAD 0(R3), R3
+	STORE R3, 6(LB)
+	ADDSP #1
+	LOAD #0, R3
+	STORE R3, 7(LB)
+	ADDSP #1
+	LOAD #0, R3
+	STORE R3, 8(LB)
+	ADDSP #1
+	LOAD #0, R3
+	STORE R3, 9(LB)
+	ADDSP #1
+	LOAD 3(LB), R4
+	LOAD #1, R3
+	ADD R4, R3
+	NEW R3, R3
+	STORE R4, 0(R3)
+	LOAD #1, R6
+	BRA while_cond_init_tableau0
+while_instruction_tableau1:
+	LOAD #0, R5
+	STORE R5, 0(R3, R6)
+	ADD #1, R6
+while_cond_init_tableau0:
+	CMP 0(R3), R6
+	BLE while_instruction_tableau1
+	STORE R3, 10(LB)
+	ADDSP #1
+; Beginning of main instructions:
+	LOAD 4(LB), R3
+	LOAD 5(LB), R4
+	CMP R4, R3
+	BEQ else2
+	WSTR "Vous allez avoir un index out of range : le nombre de colonnes de la première matrice doit être égale au nombre de lignes de la deuxième !"
+	WNL
+	BRA if_fin2
+else2:
+if_fin2:
+	BRA while_condition3
+while_inst3:
+	LOAD 6(LB), R5
+	LOAD #1, R4
+	ADD R5, R4
+	NEW R4, R4
+	STORE R5, 0(R4)
+	LOAD #1, R7
+	BRA while_cond_init_tableau4
+while_instruction_tableau5:
+	LOAD #0, R6
+	STORE R6, 0(R4, R7)
+	ADD #1, R7
+while_cond_init_tableau4:
+	CMP 0(R4), R7
+	BLE while_instruction_tableau5
+	LOAD 10(LB), R6
+	LOAD 7(LB), R5
+	CMP #0, R5
+	BLT io_error_index_out_of_range
+	CMP 0(R6), R5
+	BGE io_error_index_out_of_range
+	ADD #1, R5
+	STORE R4, 0(R6, R5)
+	LOAD 7(LB), R5
+	LOAD #1, R4
+	ADD R5, R4
+	STORE R4, 7(LB)
+while_condition3:
+	LOAD 7(LB), R3
+	LOAD 3(LB), R4
+	CMP R4, R3
+	BLT while_inst3
+while_fin3:
+	BRA while_condition6
+while_inst6:
+	LOAD 10(LB), R5
+	LOAD #0, R7
+	CMP #0, R7
+	BLT io_error_index_out_of_range
+	CMP 0(R5), R7
+	BGE io_error_index_out_of_range
+	ADD #1, R7
+	LOAD 0(R5, R7), R5
+	LOAD #0, R6
+	CMP #0, R6
+	BLT io_error_index_out_of_range
+	CMP 0(R5), R6
+	BGE io_error_index_out_of_range
+	ADD #1, R6
+	LOAD 0(R5, R6), R5
+	LOAD 1(LB), R4
+	LOAD #0, R7
+	CMP #0, R7
+	BLT io_error_index_out_of_range
+	CMP 0(R4), R7
+	BGE io_error_index_out_of_range
+	ADD #1, R7
+	LOAD 0(R4, R7), R4
+	LOAD #1, R6
+	CMP #0, R6
+	BLT io_error_index_out_of_range
+	CMP 0(R4), R6
+	BGE io_error_index_out_of_range
+	ADD #1, R6
+	LOAD 0(R4, R6), R4
+	ADD R5, R4
+	LOAD 10(LB), R6
+	LOAD #0, R7
+	CMP #0, R7
+	BLT io_error_index_out_of_range
+	CMP 0(R6), R7
+	BGE io_error_index_out_of_range
+	ADD #1, R7
+	LOAD 0(R6, R7), R6
+	LOAD #0, R5
+	CMP #0, R5
+	BLT io_error_index_out_of_range
+	CMP 0(R6), R5
+	BGE io_error_index_out_of_range
+	ADD #1, R5
+	STORE R4, 0(R6, R5)
+	LOAD 9(LB), R5
+	LOAD #1, R4
+	ADD R5, R4
+	STORE R4, 9(LB)
+while_condition6:
+	LOAD 9(LB), R3
+	LOAD 4(LB), R4
+	CMP R4, R3
+	BLT while_inst6
+while_fin6:
+	HALT
+; end main program
+io_error:
+	WSTR "Error: Input/Output error"
+	WNL
+	ERROR
+io_error_div_O:
+	WSTR "Division par 0 interdite"
+	WNL
+	ERROR
+io_debordement_valeur:
+	WSTR "Error: Debordement flottant nombre trop grand"
+	WNL
+	ERROR
+pile_pleine:
+	WSTR "Erreur : la pile est pleine"
+	WNL
+	ERROR
+tas_plein:
+	WSTR "Erreur : le tas est plein"
+	WNL
+	ERROR
+Deferencement_de_null:
+	WSTR "L'identifier est null"
+	WNL
+	ERROR
+io_error_index_out_of_range:
+	WSTR "Erreur : Index out of range"
+	WNL
+	ERROR
+io_incorrect_sizes:
+	WSTR "Erreur : Les tableaux passées en paramètres doivent être de bonnes tailles"
+	WNL
+	ERROR

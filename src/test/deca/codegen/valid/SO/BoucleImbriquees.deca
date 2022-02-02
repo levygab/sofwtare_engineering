@@ -1,0 +1,25 @@
+// Description:
+//    Test complet pour vérifier la sémantique : boucle avec calcul dans celle-ci
+//
+// Resultats:
+//    19 000 
+//
+// Historique:
+//    cree le 15/01/2022
+
+{
+    int i = 0 ;
+    int j = 0 ;
+    float nombre = 0 ;
+
+    while ( i < 100) {
+        j=0 ;
+        while ( j < 20) {
+            nombre = nombre + j ;
+            j = j+1 ;
+        }
+
+        i = i + 1 ;
+    }
+    println(nombre) ;
+}

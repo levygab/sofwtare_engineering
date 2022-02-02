@@ -1,0 +1,27 @@
+{
+    int a = 15;
+    int x = 9;
+    int[] tab = {8, 3, 12, x, 6, a, 7};
+    int size = length(tab);
+
+    // Affichage du tableau
+    int compteur = 0;
+    while (compteur < size) {
+        print(tab[compteur], " | ");
+        compteur = compteur + 1;
+    }
+
+    println();
+
+    // Modifications
+    tab[2] = tab[2] * 2;
+    tab[4] = 3;
+
+
+    // Affichage du tableau modifié
+    compteur = 0;
+    while (compteur < size) {
+        print(tab[compteur], " | ");
+        compteur = compteur + 1;
+    }
+}

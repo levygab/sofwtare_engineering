@@ -1,0 +1,10 @@
+// Description:
+//    Programme pour vérifier l'invalidité d'un caractère
+//
+// Resultats:
+//    Erreur ligne 10 : token pas reconnu
+//
+// Historique:
+//    cree le 13/01/2022
+
+^

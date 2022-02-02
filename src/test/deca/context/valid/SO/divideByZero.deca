@@ -1,0 +1,15 @@
+// Description:
+//    Division par 0 (erreur etape C)
+//
+// Resultats:
+//
+// Historique:
+//    cree le 12/01/2022
+
+{
+    int x = 3;
+    int y = 3*2;
+    int z = 3/0;
+    println(z);
+    println(y);
+}

@@ -1,0 +1,17 @@
+// Description:
+//    Programme pour vérifier l'utilisation de printx, printlnx et while
+//
+// Resultats:
+//    
+//
+// Historique:
+//    cree le 07/01/2022
+
+{
+    printx(true && 5);
+    printlnx("Bonsoir");
+    while ( $_8 == lkd){
+        a = 1;
+    }
+    ;
+}

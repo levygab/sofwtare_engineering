@@ -1,0 +1,39 @@
+// Historique:
+//    cree le 19/01/2022
+// on teste la creation d'une classe avec deux attributs et leur modification ensuite 
+
+class C1 {
+    int a = 15; 
+    float b = 12.0 ;
+
+    void affichage1 (){
+        println("15 attendu : ", this.a ) ;
+        println("12 attendu : " , this.b  ) ;
+    }
+
+    float modif (int a1 , float b1) {
+        this.a = a1 ;
+        this.b = b1 ;
+        return this.a + this.b ;
+    }
+
+    void affichage2() {
+        println("5 attendu : ", this.a ) ;
+        println("30.0 attendu : " , this.b  ) ;
+    }
+
+
+}
+
+{   
+    float retour ;
+    C1 variable = new C1() ;
+    variable.affichage1() ;
+
+    retour = variable.modif(5,30.0) ;
+    variable.affichage2() ;
+
+    println("35 attendu : " , retour) ;
+ 
+
+}

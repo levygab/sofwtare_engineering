@@ -1,0 +1,36 @@
+//test pour les classes
+
+class Maman {
+    int nb_eleves ;
+    float moyenne_totale ;
+
+    void Maman (int nb) {
+        nb_eleves = nb ;
+        moyenne_totale = 0 ;
+    }
+
+
+}
+
+class Enfant extends Maman{
+    int moyenne ; 
+
+    void Enfant (int nb , int moyenne_a) {
+        nb_eleves = nb ;
+        moyenne = moyenne_a ;
+    }
+
+}
+
+class PetitFils extends Enfant{
+    float age ;
+
+    void PetitFils () {
+        nb_eleves = 25 ;
+        moyenne_totale = 10 ;
+        moyenne = 11 ;
+        age = 3 ;
+    }
+
+
+}

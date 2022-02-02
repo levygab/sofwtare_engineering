@@ -1,0 +1,21 @@
+// Historique:
+//    cree le 19/01/2022
+// on teste la creation d'une classe avec deux attributs et leur affichage ensuite
+//on utilise donc un main et un new et l'appel de methode 
+
+
+class C1 {
+    int a = 15; 
+    float b = 12.0;
+
+    void affichage() {
+        println("a vaut (15 attendu)", this.a ) ;
+        println("b vaut (12.0 attendu)" , this.b    ) ;
+    }
+
+}
+
+{
+    C1 variable = new C1() ;
+    variable.affichage() ;
+}

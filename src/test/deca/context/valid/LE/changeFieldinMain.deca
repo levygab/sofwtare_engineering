@@ -1,0 +1,19 @@
+// Description:
+//    test les changements de field dans le main
+//
+// Resultats:
+//    
+//
+// Historique:
+//    cree le 19/01/2022
+
+class A {
+
+    int x;
+    
+}
+
+{
+    A y = new A();
+    y.x=15; 
+}

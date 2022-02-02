@@ -1,0 +1,90 @@
+`> [10, 0] Program
+   +> ListDeclClass [List with 2 elements]
+   |  []> [10, 0] DeclClass
+   |  ||  +> [10, 6] Identifier (C1)
+   |  ||  |  definition: type defined at [10, 0], type=C1
+   |  ||  +> Identifier (Object)
+   |  ||  |  definition: type (builtin), type=Object
+   |  ||  +> ListDeclField [List with 1 elements]
+   |  ||  |  []> [11, 8] [visibility = PUBLIC] DeclField
+   |  ||  |      +> [11, 4] Identifier (int)
+   |  ||  |      |  definition: type (builtin), type=int
+   |  ||  |      +> [11, 8] Identifier (a)
+   |  ||  |      |  definition: field defined at [11, 8], type=int
+   |  ||  |      `> NoInitialization
+   |  ||  `> ListDeclMethod [List with 1 elements]
+   |  ||     []> [12, 4] Method
+   |  ||         +> [12, 4] Identifier (void)
+   |  ||         |  definition: type (builtin), type=void
+   |  ||         +> [12, 9] Identifier (Constructeur)
+   |  ||         |  definition: method defined at [12, 4], type=void
+   |  ||         +> ListParams [List with 1 elements]
+   |  ||         |  []> [12, 23] Params
+   |  ||         |      type: int
+   |  ||         |      +> [12, 23] Identifier (int)
+   |  ||         |      |  definition: type (builtin), type=int
+   |  ||         |      `> [12, 27] Identifier (valeur)
+   |  ||         |         definition: parameter defined at [12, 23], type=int
+   |  ||         +> ListDeclVar [List with 0 elements]
+   |  ||         `> ListInst [List with 1 elements]
+   |  ||            []> [13, 15] Assign
+   |  ||                type: int
+   |  ||                +> [13, 8] MethodCall
+   |  ||                |  type: int
+   |  ||                |  +> [13, 8] This
+   |  ||                |  |  type: C1
+   |  ||                |  DOT
+   |  ||                |  `> [13, 13] Identifier (a)
+   |  ||                |     definition: field defined at [11, 8], type=int
+   |  ||                `> [13, 17] Identifier (valeur)
+   |  ||                   definition: parameter defined at [12, 23], type=int
+   |  []> [17, 0] DeclClass
+   |      +> [17, 6] Identifier (C2)
+   |      |  definition: type defined at [17, 0], type=C2
+   |      +> [17, 9] Identifier (C1)
+   |      |  definition: type defined at [10, 0], type=C1
+   |      +> ListDeclField [List with 1 elements]
+   |      |  []> [18, 8] [visibility = PUBLIC] DeclField
+   |      |      +> [18, 4] Identifier (int)
+   |      |      |  definition: type (builtin), type=int
+   |      |      +> [18, 8] Identifier (b)
+   |      |      |  definition: field defined at [18, 8], type=int
+   |      |      `> NoInitialization
+   |      `> ListDeclMethod [List with 1 elements]
+   |         []> [19, 4] Method
+   |             +> [19, 4] Identifier (void)
+   |             |  definition: type (builtin), type=void
+   |             +> [19, 9] Identifier (Constructeur)
+   |             |  definition: method defined at [19, 4], type=void
+   |             +> ListParams [List with 1 elements]
+   |             |  []> [19, 22] Params
+   |             |      type: int
+   |             |      +> [19, 22] Identifier (int)
+   |             |      |  definition: type (builtin), type=int
+   |             |      `> [19, 26] Identifier (valeur)
+   |             |         definition: parameter defined at [19, 22], type=int
+   |             +> ListDeclVar [List with 0 elements]
+   |             `> ListInst [List with 2 elements]
+   |                []> [20, 15] Assign
+   |                ||  type: int
+   |                ||  +> [20, 8] MethodCall
+   |                ||  |  type: int
+   |                ||  |  +> [20, 8] This
+   |                ||  |  |  type: C2
+   |                ||  |  DOT
+   |                ||  |  `> [20, 13] Identifier (a)
+   |                ||  |     definition: field defined at [11, 8], type=int
+   |                ||  `> [20, 17] Identifier (valeur)
+   |                ||     definition: parameter defined at [19, 22], type=int
+   |                []> [21, 15] Assign
+   |                    type: int
+   |                    +> [21, 8] MethodCall
+   |                    |  type: int
+   |                    |  +> [21, 8] This
+   |                    |  |  type: C2
+   |                    |  DOT
+   |                    |  `> [21, 13] Identifier (b)
+   |                    |     definition: field defined at [18, 8], type=int
+   |                    `> [21, 17] Identifier (valeur)
+   |                       definition: parameter defined at [19, 22], type=int
+   `> EmptyMain

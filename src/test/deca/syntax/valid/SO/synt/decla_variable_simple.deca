@@ -1,0 +1,13 @@
+// Description:
+//    Programme pour vérifier la déclaration de variable sans affectation
+//
+// Resultats:
+//    
+//
+// Historique:
+//    cree le 07/01/2022
+
+{
+    $1 _E;
+    x E$1, uy;
+}

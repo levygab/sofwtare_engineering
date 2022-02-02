@@ -1,0 +1,73 @@
+`> [10, 0] Program
+   +> ListDeclClass [List with 0 elements]
+   `> [10, 0] Main
+      +> ListDeclVar [List with 0 elements]
+      `> ListInst [List with 3 elements]
+         []> [11, 4] IfThenElse
+         ||  +> [11, 9] Int (5)
+         ||  +> ListInst [List with 2 elements]
+         ||  |  []> [12, 8] Print
+         ||  |  ||  `> ListExpr [List with 1 elements]
+         ||  |  ||     []> [12, 14] Int (5)
+         ||  |  []> [13, 8] Println
+         ||  |      `> ListExpr [List with 1 elements]
+         ||  |         []> [13, 16] StringLiteral (Hello)
+         ||  `> ListInst [List with 1 elements]
+         ||     []> [14, 11] IfThenElse
+         ||         +> [14, 19] And
+         ||         |  +> [14, 16] Identifier ($3)
+         ||         |  `> [14, 22] StringLiteral (carac)
+         ||         +> ListInst [List with 1 elements]
+         ||         |  []> [15, 10] Assign
+         ||         |      +> [15, 8] Identifier (a)
+         ||         |      `> [15, 12] Identifier (b)
+         ||         `> ListInst [List with 1 elements]
+         ||            []> [18, 12] Assign
+         ||                +> [18, 8] Identifier (kal)
+         ||                `> [18, 19] Modulo
+         ||                   +> [18, 14] BooleanLiteral (true)
+         ||                   `> [18, 21] BooleanLiteral (false)
+         []> [20, 4] IfThenElse
+         ||  +> [20, 9] Int (5)
+         ||  +> ListInst [List with 3 elements]
+         ||  |  []> [21, 8] Print
+         ||  |  ||  `> ListExpr [List with 1 elements]
+         ||  |  ||     []> [21, 14] Int (5)
+         ||  |  []> [22, 8] Println
+         ||  |  ||  `> ListExpr [List with 1 elements]
+         ||  |  ||     []> [22, 16] StringLiteral (Hello)
+         ||  |  []> [23, 8] IfThenElse
+         ||  |      +> [23, 13] Int (5)
+         ||  |      +> ListInst [List with 2 elements]
+         ||  |      |  []> [24, 8] Print
+         ||  |      |  ||  `> ListExpr [List with 1 elements]
+         ||  |      |  ||     []> [24, 14] Int (5)
+         ||  |      |  []> [25, 8] Println
+         ||  |      |      `> ListExpr [List with 1 elements]
+         ||  |      |         []> [25, 16] StringLiteral (Hello)
+         ||  |      `> ListInst [List with 0 elements]
+         ||  `> ListInst [List with 1 elements]
+         ||     []> [27, 11] IfThenElse
+         ||         +> [27, 19] And
+         ||         |  +> [27, 16] Identifier ($3)
+         ||         |  `> [27, 22] StringLiteral (carac)
+         ||         +> ListInst [List with 1 elements]
+         ||         |  []> [28, 10] Assign
+         ||         |      +> [28, 8] Identifier (a)
+         ||         |      `> [28, 12] Identifier (b)
+         ||         `> ListInst [List with 0 elements]
+         []> [29, 5] IfThenElse
+             +> [29, 10] Int (5)
+             +> ListInst [List with 2 elements]
+             |  []> [30, 8] Print
+             |  ||  `> ListExpr [List with 1 elements]
+             |  ||     []> [30, 14] Int (5)
+             |  []> [31, 8] Println
+             |      `> ListExpr [List with 1 elements]
+             |         []> [31, 16] StringLiteral (Hello)
+             `> ListInst [List with 1 elements]
+                []> [34, 12] Assign
+                    +> [34, 8] Identifier (kal)
+                    `> [34, 19] Modulo
+                       +> [34, 14] BooleanLiteral (true)
+                       `> [34, 21] BooleanLiteral (false)

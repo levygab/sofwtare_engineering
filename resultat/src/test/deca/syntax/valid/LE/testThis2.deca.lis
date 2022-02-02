@@ -1,0 +1,40 @@
+`> [4, 0] Program
+   +> ListDeclClass [List with 1 elements]
+   |  []> [4, 0] DeclClass
+   |      +> [4, 6] Identifier (C1)
+   |      +> Identifier (Object)
+   |      |  definition: type (builtin), type=Object
+   |      +> ListDeclField [List with 1 elements]
+   |      |  []> [5, 8] [visibility = PUBLIC] DeclField
+   |      |      +> [5, 4] Identifier (int)
+   |      |      +> [5, 8] Identifier (a)
+   |      |      `> NoInitialization
+   |      `> ListDeclMethod [List with 1 elements]
+   |         []> [7, 4] Method
+   |             +> [7, 4] Identifier (void)
+   |             +> [7, 9] Identifier (c1)
+   |             +> ListParams [List with 1 elements]
+   |             |  []> [7, 13] Params
+   |             |      +> [7, 13] Identifier (int)
+   |             |      `> [7, 17] Identifier (a)
+   |             +> ListDeclVar [List with 0 elements]
+   |             `> ListInst [List with 1 elements]
+   |                []> [8, 15] Assign
+   |                    +> [8, 8] MethodCall
+   |                    |  +> [8, 8] This
+   |                    |  DOT
+   |                    |  `> [8, 13] Identifier (a)
+   |                    `> [8, 17] Identifier (a)
+   `> [12, 0] Main
+      +> ListDeclVar [List with 1 elements]
+      |  []> [13, 7] DeclVar
+      |      +> [13, 4] Identifier (C1)
+      |      +> [13, 7] Identifier (var)
+      |      `> NoInitialization
+      `> ListInst [List with 1 elements]
+         []> [14, 4] MethodCall
+             +> [14, 4] Identifier (var)
+             DOT
+             +> [14, 8] Identifier (c1)
+             `> ListExpr [List with 1 elements]
+                []> [14, 11] Int (3)

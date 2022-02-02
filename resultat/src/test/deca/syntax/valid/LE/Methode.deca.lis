@@ -1,0 +1,120 @@
+`> [3, 0] Program
+   +> ListDeclClass [List with 1 elements]
+   |  []> [3, 0] DeclClass
+   |      +> [3, 6] Identifier (Methode)
+   |      +> Identifier (Object)
+   |      |  definition: type (builtin), type=Object
+   |      +> ListDeclField [List with 2 elements]
+   |      |  []> [4, 8] [visibility = PUBLIC] DeclField
+   |      |  ||  +> [4, 4] Identifier (int)
+   |      |  ||  +> [4, 8] Identifier (b)
+   |      |  ||  `> NoInitialization
+   |      |  []> [5, 20] [visibility = PROTECTED] DeclField
+   |      |      +> [5, 14] Identifier (float)
+   |      |      +> [5, 20] Identifier (a)
+   |      |      `> NoInitialization
+   |      `> ListDeclMethod [List with 3 elements]
+   |         []> [7, 4] Method
+   |         ||  +> [7, 4] Identifier (void)
+   |         ||  +> [7, 9] Identifier (Methode)
+   |         ||  +> ListParams [List with 2 elements]
+   |         ||  |  []> [7, 18] Params
+   |         ||  |  ||  +> [7, 18] Identifier (int)
+   |         ||  |  ||  `> [7, 22] Identifier (r)
+   |         ||  |  []> [7, 26] Params
+   |         ||  |      +> [7, 26] Identifier (float)
+   |         ||  |      `> [7, 32] Identifier (valeur)
+   |         ||  +> ListDeclVar [List with 0 elements]
+   |         ||  `> ListInst [List with 2 elements]
+   |         ||     []> [8, 10] Assign
+   |         ||     ||  +> [8, 8] Identifier (b)
+   |         ||     ||  `> [8, 12] Identifier (r)
+   |         ||     []> [9, 10] Assign
+   |         ||         +> [9, 8] Identifier (a)
+   |         ||         `> [9, 12] Identifier (valeur)
+   |         []> [12, 4] Method
+   |         ||  +> [12, 4] Identifier (void)
+   |         ||  +> [12, 9] Identifier (premiere_methode)
+   |         ||  +> ListParams [List with 1 elements]
+   |         ||  |  []> [12, 27] Params
+   |         ||  |      +> [12, 27] Identifier (int)
+   |         ||  |      `> [12, 31] Identifier (valeur)
+   |         ||  +> ListDeclVar [List with 0 elements]
+   |         ||  `> ListInst [List with 1 elements]
+   |         ||     []> [13, 8] IfThenElse
+   |         ||         +> [13, 19] Greater
+   |         ||         |  +> [13, 12] Identifier (valeur)
+   |         ||         |  `> [13, 21] Int (3)
+   |         ||         +> ListInst [List with 1 elements]
+   |         ||         |  []> [14, 14] Assign
+   |         ||         |      +> [14, 12] Identifier (b)
+   |         ||         |      `> [14, 16] Identifier (valeur)
+   |         ||         `> ListInst [List with 1 elements]
+   |         ||            []> [18, 14] Assign
+   |         ||                +> [18, 12] Identifier (a)
+   |         ||                `> [18, 16] Identifier (valeur)
+   |         []> [22, 4] Method
+   |             +> [22, 4] Identifier (float)
+   |             +> [22, 10] Identifier (getA)
+   |             +> ListParams [List with 0 elements]
+   |             +> ListDeclVar [List with 0 elements]
+   |             `> ListInst [List with 1 elements]
+   |                []> [23, 8] Return
+   |                    `> [23, 15] Identifier (a)
+   `> [27, 4] Main
+      +> ListDeclVar [List with 1 elements]
+      |  []> [28, 16] DeclVar
+      |      +> [28, 8] Identifier (Methode)
+      |      +> [28, 16] Identifier (premiere)
+      |      `> NoInitialization
+      `> ListInst [List with 5 elements]
+         []> [29, 8] MethodCall
+         ||  +> [29, 8] Identifier (premiere)
+         ||  DOT
+         ||  +> [29, 17] Identifier (Methode)
+         ||  `> ListExpr [List with 2 elements]
+         ||     []> [29, 26] Int (10)
+         ||     []> [29, 31] Int (10)
+         []> [31, 8] MethodCall
+         ||  +> [31, 8] Identifier (premiere)
+         ||  DOT
+         ||  +> [31, 17] Identifier (premiere_methode)
+         ||  `> ListExpr [List with 1 elements]
+         ||     []> [31, 35] Int (2)
+         []> [32, 8] IfThenElse
+         ||  +> [32, 29] Equals
+         ||  |  +> [32, 13] MethodCall
+         ||  |  |  +> [32, 13] Identifier (premiere)
+         ||  |  |  DOT
+         ||  |  |  +> [32, 22] Identifier (getA)
+         ||  |  |  `> ListExpr [List with 0 elements]
+         ||  |  `> [32, 32] Int (2)
+         ||  +> ListInst [List with 1 elements]
+         ||  |  []> [33, 12] Println
+         ||  |      `> ListExpr [List with 1 elements]
+         ||  |         []> [33, 21] StringLiteral (test_reussi)
+         ||  `> ListInst [List with 1 elements]
+         ||     []> [36, 12] Println
+         ||         `> ListExpr [List with 1 elements]
+         ||            []> [36, 21] StringLiteral (test rate)
+         []> [39, 8] MethodCall
+         ||  +> [39, 8] Identifier (premiere)
+         ||  DOT
+         ||  +> [39, 17] Identifier (premiere_methode)
+         ||  `> ListExpr [List with 1 elements]
+         ||     []> [39, 35] Int (5)
+         []> [40, 8] IfThenElse
+             +> [40, 23] Equals
+             |  +> [40, 12] MethodCall
+             |  |  +> [40, 12] Identifier (premiere)
+             |  |  DOT
+             |  |  `> [40, 21] Identifier (b)
+             |  `> [40, 26] Int (5)
+             +> ListInst [List with 1 elements]
+             |  []> [41, 12] Println
+             |      `> ListExpr [List with 1 elements]
+             |         []> [41, 21] StringLiteral (test_reussi)
+             `> ListInst [List with 1 elements]
+                []> [44, 12] Println
+                    `> ListExpr [List with 1 elements]
+                       []> [44, 21] StringLiteral (test rate)

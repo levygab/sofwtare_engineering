@@ -1,0 +1,58 @@
+`> [1, 0] Program
+   +> ListDeclClass [List with 0 elements]
+   `> [1, 0] Main
+      +> ListDeclVar [List with 1 elements]
+      |  []> [2, 12] DeclVar
+      |      +> [2, 4] Identifier (int[][])
+      |      |  definition: type (builtin), type=int[][]
+      |      +> [2, 12] Identifier (tab1)
+      |      |  definition: variable defined at [2, 12], type=int[][]
+      |      `> [2, 19] Initialization
+      |         `> [2, 19] Table
+      |            type: int[][]
+      |            `> [2, 29] Int (10)
+      |               type: int
+      `> ListInst [List with 3 elements]
+         []> [3, 12] Assign
+         ||  type: int[]
+         ||  +> [3, 4] ElementTable (tab1[3])
+         ||  |  definition: variable defined at [2, 12], type=int[]
+         ||  |  +> [3, 4] Identifier (tab1)
+         ||  |  |  definition: variable defined at [2, 12], type=int[][]
+         ||  |  `> [3, 9] Int (3)
+         ||  |     type: int
+         ||  `> [3, 14] Table
+         ||     type: int[]
+         ||     `> [3, 22] Int (5)
+         ||        type: int
+         []> [4, 15] Assign
+         ||  type: int
+         ||  +> [4, 4] ElementTable (tab1[3][5])
+         ||  |  definition: variable defined at [4, 4], type=int
+         ||  |  +> ElementTable (tab1[3])
+         ||  |  |  definition: variable defined at null, type=int[]
+         ||  |  |  +> [4, 4] Identifier (tab1)
+         ||  |  |  |  definition: variable defined at [2, 12], type=int[][]
+         ||  |  |  `> [4, 9] Int (3)
+         ||  |  |     type: int
+         ||  |  `> [4, 12] Int (5)
+         ||  |     type: int
+         ||  `> [4, 17] Int (12)
+         ||     type: int
+         []> [5, 12] Assign
+             type: int[]
+             +> [5, 4] ElementTable (tab1[4])
+             |  definition: variable defined at [2, 12], type=int[]
+             |  +> [5, 4] Identifier (tab1)
+             |  |  definition: variable defined at [2, 12], type=int[][]
+             |  `> [5, 9] Int (4)
+             |     type: int
+             `> [5, 14] Table
+                type: int[]
+                +> ListExpr [List with 2 elements]
+                |  []> [5, 15] Int (1)
+                |  ||  type: int
+                |  []> [5, 18] Int (6)
+                |      type: int
+                `> Int (2)
+                   type: int

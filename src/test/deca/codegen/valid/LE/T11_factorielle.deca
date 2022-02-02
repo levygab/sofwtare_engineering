@@ -1,0 +1,21 @@
+// Historique:
+//    cree le 20/01/2022
+// on teste la recursivite : on peut augmenter le nb de boucles
+
+class Fact {
+    int fact (int n) {
+        if (n == 0) {
+            return 1 ;
+        }
+        else {
+            return (n * this.fact(n-1)) ;
+        }
+    }
+}
+
+{   
+    int retour ;
+    Fact variable = new Fact() ;
+    retour = variable.fact(10) ;
+    println(retour);
+}

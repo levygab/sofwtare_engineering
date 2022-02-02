@@ -1,0 +1,19 @@
+{
+    int[][] A = {{1, 2, 2}, {3, 7, 2}, {2, 7, 8}};
+    int nbLines = length(A);
+    int nbColumns = length(A[0]);
+    int i = 0;
+    int j = 0;
+    int[][] B = new int[][nbLines];
+    while (i < nbLines) {
+        B[i] = new int[nbColumns];
+        j = 0;
+        while (j < nbColumns) {
+            B[i][j] = A[j][i];
+            print(B[i][j], "  ");
+            j = j + 1;
+        }
+        println();
+        i = i + 1;
+    }
+}

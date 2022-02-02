@@ -1,0 +1,12 @@
+// Description:
+//    Initialisation avec rvalue de type différent de la lvalue
+//
+// Resultats:
+//    ligne 11 : Erreur, on ne peut pas déclarer un String
+//
+// Historique:
+//    cree le 17/01/2022
+
+{
+    string x;
+}

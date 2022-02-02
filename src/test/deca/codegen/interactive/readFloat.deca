@@ -1,0 +1,12 @@
+// Description:
+//    Test complet pour vérifier la lecture
+//
+// Resultats:
+//    
+//
+// Historique:
+//    cree le 12/01/2022
+
+{
+    float a = readFloat();
+}

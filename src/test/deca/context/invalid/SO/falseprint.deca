@@ -1,0 +1,7 @@
+// Historique:
+//    cree le 22/01/2022
+
+{
+    boolean a ;
+    println (a) ;
+}

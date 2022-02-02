@@ -1,0 +1,44 @@
+`> [10, 0] Program
+   +> ListDeclClass [List with 0 elements]
+   `> [10, 0] Main
+      +> ListDeclVar [List with 3 elements]
+      |  []> [11, 12] DeclVar
+      |  ||  +> [11, 4] Identifier (boolean)
+      |  ||  |  definition: type (builtin), type=boolean
+      |  ||  +> [11, 12] Identifier (b)
+      |  ||  |  definition: variable defined at [11, 12], type=boolean
+      |  ||  `> NoInitialization
+      |  []> [12, 8] DeclVar
+      |  ||  +> [12, 4] Identifier (int)
+      |  ||  |  definition: type (builtin), type=int
+      |  ||  +> [12, 8] Identifier (i)
+      |  ||  |  definition: variable defined at [12, 8], type=int
+      |  ||  `> [12, 12] Initialization
+      |  ||     `> [12, 12] Int (14)
+      |  ||        type: int
+      |  []> [13, 10] DeclVar
+      |      +> [13, 4] Identifier (float)
+      |      |  definition: type (builtin), type=float
+      |      +> [13, 10] Identifier (f)
+      |      |  definition: variable defined at [13, 10], type=float
+      |      `> [13, 14] Initialization
+      |         `> [13, 14] Float (15.0)
+      |            type: float
+      `> ListInst [List with 1 elements]
+         []> [14, 4] IfThenElse
+             +> [14, 8] Not
+             |  type: boolean
+             |  `> [14, 12] Lower
+             |     type: boolean
+             |     +> [14, 10] Identifier (f)
+             |     |  definition: variable defined at [13, 10], type=float
+             |     `> ConvFloat
+             |        type: float
+             |        `> [14, 14] Identifier (i)
+             |           definition: variable defined at [12, 8], type=int
+             +> ListInst [List with 1 elements]
+             |  []> [15, 8] Println
+             |      `> ListExpr [List with 1 elements]
+             |         []> [15, 16] StringLiteral (Nice !)
+             |             type: string
+             `> ListInst [List with 0 elements]

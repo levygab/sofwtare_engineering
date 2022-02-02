@@ -1,0 +1,20 @@
+class Opposite {
+ // Return the opposite int matrix
+    int[][] oppositeIntMatrix(int[][] A) {
+        int nbLines = length(A);
+        int nbColumns = length(A[0]);
+        int i = 0;
+        int j = 0;
+        int[][] B = new int[][nbLines];
+        while (i < nbLines) {
+            B[i] = new int[nbColumns];
+            j = 0;
+            while (j < nbColumns) {
+                B[i][j] = -A[i][j];
+                j = j + 1;
+            }
+            i = i + 1;
+        }
+        return B;
+    }
+}

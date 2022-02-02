@@ -1,0 +1,203 @@
+`> [10, 0] Program
+   +> ListDeclClass [List with 0 elements]
+   `> [10, 0] Main
+      +> ListDeclVar [List with 15 elements]
+      |  []> [11, 12] DeclVar
+      |  ||  +> [11, 8] Identifier (int)
+      |  ||  |  definition: type (builtin), type=int
+      |  ||  +> [11, 12] Identifier (a)
+      |  ||  |  definition: variable defined at [11, 12], type=int
+      |  ||  `> [11, 16] Initialization
+      |  ||     `> [11, 16] UnaryMinus
+      |  ||        type: int
+      |  ||        `> [11, 17] Int (12)
+      |  ||           type: int
+      |  []> [12, 12] DeclVar
+      |  ||  +> [12, 8] Identifier (int)
+      |  ||  |  definition: type (builtin), type=int
+      |  ||  +> [12, 12] Identifier (b)
+      |  ||  |  definition: variable defined at [12, 12], type=int
+      |  ||  `> [12, 16] Initialization
+      |  ||     `> [12, 16] Int (5)
+      |  ||        type: int
+      |  []> [13, 12] DeclVar
+      |  ||  +> [13, 8] Identifier (int)
+      |  ||  |  definition: type (builtin), type=int
+      |  ||  +> [13, 12] Identifier (c)
+      |  ||  |  definition: variable defined at [13, 12], type=int
+      |  ||  `> NoInitialization
+      |  []> [13, 15] DeclVar
+      |  ||  +> [13, 8] Identifier (int)
+      |  ||  |  definition: type (builtin), type=int
+      |  ||  +> [13, 15] Identifier (d)
+      |  ||  |  definition: variable defined at [13, 15], type=int
+      |  ||  `> NoInitialization
+      |  []> [13, 18] DeclVar
+      |  ||  +> [13, 8] Identifier (int)
+      |  ||  |  definition: type (builtin), type=int
+      |  ||  +> [13, 18] Identifier (e)
+      |  ||  |  definition: variable defined at [13, 18], type=int
+      |  ||  `> NoInitialization
+      |  []> [13, 21] DeclVar
+      |  ||  +> [13, 8] Identifier (int)
+      |  ||  |  definition: type (builtin), type=int
+      |  ||  +> [13, 21] Identifier (f)
+      |  ||  |  definition: variable defined at [13, 21], type=int
+      |  ||  `> NoInitialization
+      |  []> [13, 24] DeclVar
+      |  ||  +> [13, 8] Identifier (int)
+      |  ||  |  definition: type (builtin), type=int
+      |  ||  +> [13, 24] Identifier (g)
+      |  ||  |  definition: variable defined at [13, 24], type=int
+      |  ||  `> NoInitialization
+      |  []> [14, 14] DeclVar
+      |  ||  +> [14, 8] Identifier (float)
+      |  ||  |  definition: type (builtin), type=float
+      |  ||  +> [14, 14] Identifier (z)
+      |  ||  |  definition: variable defined at [14, 14], type=float
+      |  ||  `> [14, 18] Initialization
+      |  ||     `> [14, 18] UnaryMinus
+      |  ||        type: float
+      |  ||        `> [14, 19] Float (2.0)
+      |  ||           type: float
+      |  []> [17, 14] DeclVar
+      |  ||  +> [17, 8] Identifier (float)
+      |  ||  |  definition: type (builtin), type=float
+      |  ||  +> [17, 14] Identifier (r)
+      |  ||  |  definition: variable defined at [17, 14], type=float
+      |  ||  `> [17, 18] Initialization
+      |  ||     `> [17, 18] Float (1.4)
+      |  ||        type: float
+      |  []> [18, 14] DeclVar
+      |  ||  +> [18, 8] Identifier (float)
+      |  ||  |  definition: type (builtin), type=float
+      |  ||  +> [18, 14] Identifier (s)
+      |  ||  |  definition: variable defined at [18, 14], type=float
+      |  ||  `> [18, 18] Initialization
+      |  ||     `> [18, 18] Float (5.7)
+      |  ||        type: float
+      |  []> [19, 14] DeclVar
+      |  ||  +> [19, 8] Identifier (float)
+      |  ||  |  definition: type (builtin), type=float
+      |  ||  +> [19, 14] Identifier (t)
+      |  ||  |  definition: variable defined at [19, 14], type=float
+      |  ||  `> NoInitialization
+      |  []> [19, 17] DeclVar
+      |  ||  +> [19, 8] Identifier (float)
+      |  ||  |  definition: type (builtin), type=float
+      |  ||  +> [19, 17] Identifier (u)
+      |  ||  |  definition: variable defined at [19, 17], type=float
+      |  ||  `> NoInitialization
+      |  []> [19, 20] DeclVar
+      |  ||  +> [19, 8] Identifier (float)
+      |  ||  |  definition: type (builtin), type=float
+      |  ||  +> [19, 20] Identifier (v)
+      |  ||  |  definition: variable defined at [19, 20], type=float
+      |  ||  `> NoInitialization
+      |  []> [19, 23] DeclVar
+      |  ||  +> [19, 8] Identifier (float)
+      |  ||  |  definition: type (builtin), type=float
+      |  ||  +> [19, 23] Identifier (w)
+      |  ||  |  definition: variable defined at [19, 23], type=float
+      |  ||  `> NoInitialization
+      |  []> [19, 26] DeclVar
+      |      +> [19, 8] Identifier (float)
+      |      |  definition: type (builtin), type=float
+      |      +> [19, 26] Identifier (x)
+      |      |  definition: variable defined at [19, 26], type=float
+      |      `> NoInitialization
+      `> ListInst [List with 10 elements]
+         []> [21, 10] Assign
+         ||  type: int
+         ||  +> [21, 8] Identifier (c)
+         ||  |  definition: variable defined at [13, 12], type=int
+         ||  `> [21, 14] Plus
+         ||     type: int
+         ||     +> [21, 12] Identifier (a)
+         ||     |  definition: variable defined at [11, 12], type=int
+         ||     `> [21, 16] Identifier (b)
+         ||        definition: variable defined at [12, 12], type=int
+         []> [22, 10] Assign
+         ||  type: int
+         ||  +> [22, 8] Identifier (d)
+         ||  |  definition: variable defined at [13, 15], type=int
+         ||  `> [22, 14] Minus
+         ||     type: int
+         ||     +> [22, 12] Identifier (a)
+         ||     |  definition: variable defined at [11, 12], type=int
+         ||     `> [22, 16] Identifier (b)
+         ||        definition: variable defined at [12, 12], type=int
+         []> [23, 10] Assign
+         ||  type: int
+         ||  +> [23, 8] Identifier (e)
+         ||  |  definition: variable defined at [13, 18], type=int
+         ||  `> [23, 14] Divide
+         ||     type: int
+         ||     +> [23, 12] Identifier (a)
+         ||     |  definition: variable defined at [11, 12], type=int
+         ||     `> [23, 16] Identifier (b)
+         ||        definition: variable defined at [12, 12], type=int
+         []> [24, 10] Assign
+         ||  type: int
+         ||  +> [24, 8] Identifier (f)
+         ||  |  definition: variable defined at [13, 21], type=int
+         ||  `> [24, 14] Multiply
+         ||     type: int
+         ||     +> [24, 12] Identifier (a)
+         ||     |  definition: variable defined at [11, 12], type=int
+         ||     `> [24, 16] Identifier (b)
+         ||        definition: variable defined at [12, 12], type=int
+         []> [25, 10] Assign
+         ||  type: int
+         ||  +> [25, 8] Identifier (g)
+         ||  |  definition: variable defined at [13, 24], type=int
+         ||  `> [25, 14] Modulo
+         ||     type: int
+         ||     +> [25, 12] Identifier (a)
+         ||     |  definition: variable defined at [11, 12], type=int
+         ||     `> [25, 16] Identifier (b)
+         ||        definition: variable defined at [12, 12], type=int
+         []> [26, 8] Println
+         ||  `> ListExpr [List with 1 elements]
+         ||     []> [26, 16] Identifier (g)
+         ||         definition: variable defined at [13, 24], type=int
+         []> [28, 10] Assign
+         ||  type: float
+         ||  +> [28, 8] Identifier (t)
+         ||  |  definition: variable defined at [19, 14], type=float
+         ||  `> [28, 14] Plus
+         ||     type: float
+         ||     +> [28, 12] Identifier (r)
+         ||     |  definition: variable defined at [17, 14], type=float
+         ||     `> [28, 16] Identifier (s)
+         ||        definition: variable defined at [18, 14], type=float
+         []> [29, 10] Assign
+         ||  type: float
+         ||  +> [29, 8] Identifier (u)
+         ||  |  definition: variable defined at [19, 17], type=float
+         ||  `> [29, 14] Minus
+         ||     type: float
+         ||     +> [29, 12] Identifier (r)
+         ||     |  definition: variable defined at [17, 14], type=float
+         ||     `> [29, 16] Identifier (s)
+         ||        definition: variable defined at [18, 14], type=float
+         []> [30, 10] Assign
+         ||  type: float
+         ||  +> [30, 8] Identifier (v)
+         ||  |  definition: variable defined at [19, 20], type=float
+         ||  `> [30, 14] Divide
+         ||     type: float
+         ||     +> [30, 12] Identifier (r)
+         ||     |  definition: variable defined at [17, 14], type=float
+         ||     `> [30, 16] Identifier (s)
+         ||        definition: variable defined at [18, 14], type=float
+         []> [31, 10] Assign
+             type: float
+             +> [31, 8] Identifier (w)
+             |  definition: variable defined at [19, 23], type=float
+             `> [31, 14] Multiply
+                type: float
+                +> [31, 12] Identifier (r)
+                |  definition: variable defined at [17, 14], type=float
+                `> [31, 16] Identifier (s)
+                   definition: variable defined at [18, 14], type=float

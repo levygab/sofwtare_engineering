@@ -1,0 +1,16 @@
+// Description:
+//    No operand
+//
+// Resultats:
+//    12 =1 2
+//
+// Historique:
+//    cree le 15/01/2022
+
+{
+    int x = 12;
+    x;
+    13;
+    print("12 = ");
+    println(x);
+}

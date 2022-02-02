@@ -1,0 +1,41 @@
+`> [10, 0] Program
+   +> ListDeclClass [List with 0 elements]
+   `> [10, 0] Main
+      +> ListDeclVar [List with 2 elements]
+      |  []> [11, 12] DeclVar
+      |  ||  +> [11, 8] Identifier (int)
+      |  ||  |  definition: type (builtin), type=int
+      |  ||  +> [11, 12] Identifier (i)
+      |  ||  |  definition: variable defined at [11, 12], type=int
+      |  ||  `> [11, 16] Initialization
+      |  ||     `> [11, 16] Int (12)
+      |  ||        type: int
+      |  []> [12, 14] DeclVar
+      |      +> [12, 8] Identifier (float)
+      |      |  definition: type (builtin), type=float
+      |      +> [12, 14] Identifier (f)
+      |      |  definition: variable defined at [12, 14], type=float
+      |      `> [12, 18] Initialization
+      |         `> [12, 18] Float (4.3)
+      |            type: float
+      `> ListInst [List with 3 elements]
+         []> [13, 10] Assign
+         ||  type: float
+         ||  +> [13, 8] Identifier (f)
+         ||  |  definition: variable defined at [12, 14], type=float
+         ||  `> [13, 14] Plus
+         ||     type: float
+         ||     +> [13, 12] Identifier (f)
+         ||     |  definition: variable defined at [12, 14], type=float
+         ||     `> ConvFloat
+         ||        type: float
+         ||        `> [13, 16] Identifier (i)
+         ||           definition: variable defined at [11, 12], type=int
+         []> [14, 8] Print
+         ||  `> ListExpr [List with 1 elements]
+         ||     []> [14, 14] StringLiteral (16.3=)
+         ||         type: string
+         []> [15, 8] Println
+             `> ListExpr [List with 1 elements]
+                []> [15, 16] Identifier (f)
+                    definition: variable defined at [12, 14], type=float

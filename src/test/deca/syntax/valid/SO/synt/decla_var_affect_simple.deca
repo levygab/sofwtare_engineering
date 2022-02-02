@@ -1,0 +1,17 @@
+// Description:
+//    Programme pour vérifier la déclaration de variable avec affectation simple
+//
+// Resultats:
+//    
+//
+// Historique:
+//    cree le 07/01/2022
+
+{
+    test $1 = 2, _3 = 2.5, fe = "Je suis un test";
+    bool je = true;
+    gu7_e kp = false;
+    gu7_e kp = (86);
+    jf_8 leP = readInt();
+    jf_8 leP = readFloat();
+}

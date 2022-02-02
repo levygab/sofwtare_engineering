@@ -1,0 +1,64 @@
+`> [10, 0] Program
+   +> ListDeclClass [List with 0 elements]
+   `> [10, 0] Main
+      +> ListDeclVar [List with 0 elements]
+      `> ListInst [List with 6 elements]
+         []> [11, 11] Assign
+         ||  +> [11, 4] ElementTable (tab[x])
+         ||  |  +> [11, 4] Identifier (tab)
+         ||  |  `> [11, 8] Identifier (x)
+         ||  `> [11, 13] Int (3)
+         []> [12, 17] Assign
+         ||  +> [12, 4] ElementTable (tab[3344][f])
+         ||  |  +> ElementTable (tab[3344])
+         ||  |  |  +> [12, 4] Identifier (tab)
+         ||  |  |  `> [12, 8] Int (3344)
+         ||  |  `> [12, 14] Identifier (f)
+         ||  `> [12, 19] Identifier (dfdg)
+         []> [13, 13] Assign
+         ||  +> [13, 4] ElementTable (tab[4.2])
+         ||  |  +> [13, 4] Identifier (tab)
+         ||  |  `> [13, 8] Float (4.2)
+         ||  `> [13, 15] Identifier (j)
+         []> [14, 18] Assign
+         ||  +> [14, 4] ElementTable (tab[3*tttt+y])
+         ||  |  +> [14, 4] Identifier (tab)
+         ||  |  `> [14, 14] Plus
+         ||  |     +> [14, 9] Multiply
+         ||  |     |  +> [14, 8] Int (3)
+         ||  |     |  `> [14, 10] Identifier (tttt)
+         ||  |     `> [14, 15] Identifier (y)
+         ||  `> [14, 20] Identifier (ton)
+         []> [15, 19] Assign
+         ||  +> [15, 4] ElementTable (dfsqf[5&&xm])
+         ||  |  +> [15, 4] Identifier (dfsqf)
+         ||  |  `> [15, 12] And
+         ||  |     +> [15, 10] Int (5)
+         ||  |     `> [15, 15] Identifier (xm)
+         ||  `> [15, 31] Assign
+         ||     +> [15, 22] ElementTable (ddd[DDD])
+         ||     |  +> [15, 22] Identifier (ddd)
+         ||     |  `> [15, 26] Identifier (DDD)
+         ||     `> [15, 33] Int (5)
+         []> [16, 78] Assign
+             +> [16, 4] ElementTable (t[(-false+7.5*$2)!=!true&&(jg_8<=-5>los_6)%"je suis un chat"])
+             |  +> [16, 4] Identifier (t)
+             |  `> [16, 35] And
+             |     +> [16, 26] NotEquals
+             |     |  +> [16, 14] Plus
+             |     |  |  +> [16, 7] UnaryMinus
+             |     |  |  |  `> [16, 8] BooleanLiteral (false)
+             |     |  |  `> [16, 20] Multiply
+             |     |  |     +> [16, 16] Float (7.5)
+             |     |  |     `> [16, 22] Identifier ($2)
+             |     |  `> [16, 29] Not
+             |     |     `> [16, 30] BooleanLiteral (true)
+             |     `> [16, 58] Modulo
+             |        +> [16, 50] Greater
+             |        |  +> [16, 44] LowerOrEqual
+             |        |  |  +> [16, 39] Identifier (jg_8)
+             |        |  |  `> [16, 47] UnaryMinus
+             |        |  |     `> [16, 48] Int (5)
+             |        |  `> [16, 52] Identifier (los_6)
+             |        `> [16, 60] StringLiteral (je suis un chat)
+             `> [16, 80] Identifier (oui)

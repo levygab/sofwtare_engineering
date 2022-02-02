@@ -1,0 +1,84 @@
+`> [10, 0] Program
+   +> ListDeclClass [List with 0 elements]
+   `> [10, 0] Main
+      +> ListDeclVar [List with 4 elements]
+      |  []> [11, 8] DeclVar
+      |  ||  +> [11, 4] Identifier (int)
+      |  ||  |  definition: type (builtin), type=int
+      |  ||  +> [11, 8] Identifier (x)
+      |  ||  |  definition: variable defined at [11, 8], type=int
+      |  ||  `> [11, 12] Initialization
+      |  ||     `> [11, 12] Int (0)
+      |  ||        type: int
+      |  []> [12, 8] DeclVar
+      |  ||  +> [12, 4] Identifier (int)
+      |  ||  |  definition: type (builtin), type=int
+      |  ||  +> [12, 8] Identifier (y)
+      |  ||  |  definition: variable defined at [12, 8], type=int
+      |  ||  `> [12, 12] Initialization
+      |  ||     `> [12, 12] Int (5)
+      |  ||        type: int
+      |  []> [13, 10] DeclVar
+      |  ||  +> [13, 4] Identifier (float)
+      |  ||  |  definition: type (builtin), type=float
+      |  ||  +> [13, 10] Identifier (a)
+      |  ||  |  definition: variable defined at [13, 10], type=float
+      |  ||  `> [13, 14] Initialization
+      |  ||     `> [13, 14] Float (5.0)
+      |  ||        type: float
+      |  []> [14, 10] DeclVar
+      |      +> [14, 4] Identifier (float)
+      |      |  definition: type (builtin), type=float
+      |      +> [14, 10] Identifier (b)
+      |      |  definition: variable defined at [14, 10], type=float
+      |      `> [14, 14] Initialization
+      |         `> [14, 14] Float (4.0)
+      |            type: float
+      `> ListInst [List with 4 elements]
+         []> [15, 4] NoOperation
+         []> [16, 4] While
+         ||  +> [16, 13] NotEquals
+         ||  |  type: boolean
+         ||  |  +> [16, 11] Identifier (x)
+         ||  |  |  definition: variable defined at [11, 8], type=int
+         ||  |  `> [16, 16] Int (10)
+         ||  |     type: int
+         ||  `> ListInst [List with 1 elements]
+         ||     []> [17, 10] Assign
+         ||         type: int
+         ||         +> [17, 8] Identifier (x)
+         ||         |  definition: variable defined at [11, 8], type=int
+         ||         `> [17, 14] Plus
+         ||            type: int
+         ||            +> [17, 12] Identifier (x)
+         ||            |  definition: variable defined at [11, 8], type=int
+         ||            `> [17, 16] Int (1)
+         ||               type: int
+         []> [19, 6] Assign
+         ||  type: int
+         ||  +> [19, 4] Identifier (y)
+         ||  |  definition: variable defined at [12, 8], type=int
+         ||  `> [19, 10] Plus
+         ||     type: int
+         ||     +> [19, 8] Identifier (y)
+         ||     |  definition: variable defined at [12, 8], type=int
+         ||     `> [19, 12] Identifier (x)
+         ||        definition: variable defined at [11, 8], type=int
+         []> [21, 4] While
+             +> [21, 13] LowerOrEqual
+             |  type: boolean
+             |  +> [21, 11] Identifier (a)
+             |  |  definition: variable defined at [13, 10], type=float
+             |  `> [21, 16] Float (34.5)
+             |     type: float
+             `> ListInst [List with 1 elements]
+                []> [22, 10] Assign
+                    type: float
+                    +> [22, 8] Identifier (a)
+                    |  definition: variable defined at [13, 10], type=float
+                    `> [22, 14] Plus
+                       type: float
+                       +> [22, 12] Identifier (a)
+                       |  definition: variable defined at [13, 10], type=float
+                       `> [22, 16] Identifier (b)
+                          definition: variable defined at [14, 10], type=float

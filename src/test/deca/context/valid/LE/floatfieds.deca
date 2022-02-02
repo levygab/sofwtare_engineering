@@ -1,0 +1,13 @@
+// Description:
+//    test les attributs float
+//
+// Resultats:
+//    
+//
+// Historique:
+//    cree le 19/01/2022
+
+class A {
+    float x;
+    float y = 15;
+}

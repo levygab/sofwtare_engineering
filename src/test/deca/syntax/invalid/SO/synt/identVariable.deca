@@ -1,0 +1,10 @@
+// Description:
+//    Programme pour vérifier la validité d'un identificateur
+//
+// Resultats:
+//    Erreur ligne 10 : un identificateur ne peut pas commencer par un chiffre
+//
+// Historique:
+//    cree le 13/01/2022
+
+int 3_x = 12;

@@ -1,0 +1,95 @@
+// Description:
+//    Test complet pour vérifier la sémantique : on va verifier des egalites
+//
+//
+// Historique:
+//    cree le 15/01/2022
+
+{
+
+    int x ;
+    float y ;
+    int z ;
+    int xy ;
+
+    x = 5 ;
+    y = 5 ;
+    z = 10 ;
+    xy = 25 ;
+
+
+
+    if ( x == y) {
+        println("ok1") ;
+    }
+    else {
+        println("c'est pas bien 1") ;
+    }
+
+    if (x != z) {
+        println("ok2") ;
+    }
+        else {
+        println("c'est pas bien 2") ;
+    }
+
+    if ( (x+y) == z ) {
+        println("ok3") ;
+    }
+    else {
+        println("c'est pas bien 3") ;
+    }
+
+    if ( (x*y) == xy ) {
+        println("ok4") ;
+    }
+    else {
+        println("c'est pas bien 4") ;
+    }
+
+    if (z > x) {
+        println("ok5") ;
+    }
+    else {
+        println("c'est pas bien 5") ;
+    }
+
+    if (z >= y) {
+        println("ok6") ;
+    }
+    else {
+        println("c'est pas bien 6") ;
+    }
+
+    if (z < x) {
+        println("c'est pas bien 7") ;
+    }
+    else {
+        println("ok7") ;
+    }
+
+    if (z <= y) {
+        println("c'est pas bien 8") ;
+    }
+    else {
+        println("ok8") ;
+    }
+
+    if ( (xy / 5) == x ) {
+        println("ok9") ;
+    }
+    else {
+        println("c'est pas bien 9") ;
+    }
+
+    if ( (xy % 5) == 0 ) {
+        println("ok10") ;
+    }
+    else {
+        println("c'est pas bien 10") ;
+    }
+
+
+
+
+}

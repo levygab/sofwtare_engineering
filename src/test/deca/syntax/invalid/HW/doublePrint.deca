@@ -1,0 +1,11 @@
+// Description:
+//    Programme minimaliste oubliant les accollades
+//
+// Resultats:
+//    Hello
+//
+// Historique:
+//    cree le 07/01/2022
+{
+        println(println("Hello"));
+}

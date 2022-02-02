@@ -1,0 +1,7 @@
+//test pour la presentation 
+//entier a qui on assigne un float 
+
+{
+    int x ;
+    x = 3.5 ;
+}

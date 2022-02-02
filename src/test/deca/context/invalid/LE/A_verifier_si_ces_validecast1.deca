@@ -1,0 +1,15 @@
+// Historique:
+//    cree le 19/01/2022
+
+class c1 {
+
+}
+
+class c2 extends c1{
+
+}
+
+{
+    c2 variable ;
+    c1 var = (c1) (variable) ;
+}

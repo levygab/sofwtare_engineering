@@ -1,0 +1,12 @@
+// Description:
+//    Programme pour vérifier la déclaration de variable avec un enchainement de mots de lexique
+//
+// Resultats:
+//    
+//
+// Historique:
+//    cree le 13/01/2022
+
+{
+    a = (c);
+}

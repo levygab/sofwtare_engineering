@@ -1,0 +1,19 @@
+// Description:
+//    test les methods dans le main
+//
+// Resultats:
+//    
+//
+// Historique:
+//    cree le 19/01/2022
+
+class A {
+
+    int ajoute(int x){
+        return x+1;
+    }
+
+    float ajoute(int x){
+        return x + 0.1;
+    }
+}

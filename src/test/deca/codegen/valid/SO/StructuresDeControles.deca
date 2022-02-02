@@ -1,0 +1,30 @@
+// Description:
+//    Test pour vérifier la sémantique : structure de contrôle (while else if)
+//
+// Resultats:
+//    10013
+//
+// Historique:
+//    cree le 15/01/2022
+
+{
+    int x = -8;
+    int y = 10000;
+    float f = -1.5;
+
+    while (x < f) {
+        x = x + 1;
+        while (x < y) {
+            if (x % 4 == 0) {
+                x = x + 10;
+            } else if (x % 4 == 1) {
+                x = x + 20;
+            } else if (x % 4 == 2) {
+                x = x + 30;
+            } else {
+                x = x + 40;
+            }
+        }
+    }
+    println(x);
+}

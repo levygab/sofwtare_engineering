@@ -1,0 +1,37 @@
+`> [9, 0] Program
+   +> ListDeclClass [List with 0 elements]
+   `> [9, 0] Main
+      +> ListDeclVar [List with 3 elements]
+      |  []> [10, 8] DeclVar
+      |  ||  +> [10, 4] Identifier (int)
+      |  ||  |  definition: type (builtin), type=int
+      |  ||  +> [10, 8] Identifier (x)
+      |  ||  |  definition: variable defined at [10, 8], type=int
+      |  ||  `> NoInitialization
+      |  []> [11, 8] DeclVar
+      |  ||  +> [11, 4] Identifier (int)
+      |  ||  |  definition: type (builtin), type=int
+      |  ||  +> [11, 8] Identifier (tab)
+      |  ||  |  definition: variable defined at [11, 8], type=int
+      |  ||  `> [11, 13] Initialization
+      |  ||     `> [11, 15] Assign
+      |  ||        type: int
+      |  ||        +> [11, 14] Identifier (x)
+      |  ||        |  definition: variable defined at [10, 8], type=int
+      |  ||        `> [11, 16] Int (12)
+      |  ||           type: int
+      |  []> [12, 10] DeclVar
+      |      +> [12, 4] Identifier (float)
+      |      |  definition: type (builtin), type=float
+      |      +> [12, 10] Identifier (y)
+      |      |  definition: variable defined at [12, 10], type=float
+      |      `> [12, 14] Initialization
+      |         `> ConvFloat
+      |            type: float
+      |            `> [12, 16] Assign
+      |               type: int
+      |               +> [12, 15] Identifier (x)
+      |               |  definition: variable defined at [10, 8], type=int
+      |               `> [12, 17] Int (13)
+      |                  type: int
+      `> ListInst [List with 0 elements]

@@ -1,0 +1,9 @@
+#include "MathArray.decah"
+
+{
+    MathArray calc = new MathArray();
+    int[] A = {1, 2};
+    int[] B = {3, 1};
+    int[] C = calc.addIntTable(A, B);
+    println(C[0], " ", C[1]);
+}

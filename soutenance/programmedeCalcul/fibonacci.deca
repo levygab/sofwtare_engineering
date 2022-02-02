@@ -1,0 +1,15 @@
+//suite de fibonnaci
+{
+    int nb1 = 0 , nb2 = 1 , nb3 , i = 2   ;
+
+    println("les termes de la suite de fibonnaci sont : ") ;
+    println("i = 0, u = 0") ;
+    println("i = 1, u = 1") ;
+    while (i < 40) {
+        nb3 = nb2 + nb1 ;
+        nb1 = nb2 ;
+        nb2 = nb3 ;
+        println( "i = " , i , ", u = " , nb3) ;
+        i = i +1 ;
+    }
+}

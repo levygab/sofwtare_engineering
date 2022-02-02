@@ -1,0 +1,44 @@
+// Description:
+//    Programme utilisant des ifthenelse
+//
+// Resultats:
+//    
+//
+// Historique:
+//    cree le 14/01/2022
+
+{
+    int a = 3;
+    int b = a+1;
+    boolean c = true;
+    boolean d = false;
+    if (b >= a){
+        println("ok");
+    }
+    if (b == a){
+        print("Pas ok");
+    }
+    else if(b == 4){
+        print("Ok");
+    }
+    if (b!=4){
+        print("Pas ok");
+    }
+    else if (a !=3){
+        print("Pas ok");
+    }
+    else {
+        print("ok");
+    }
+        if(c){
+        println("C'est ok");
+    }
+    if(c || d){
+        println("C'est niquel");
+    }if(true){
+        println("C'est ok");
+    }
+    if(false || true){
+        println("C'est niquel");
+    }
+}

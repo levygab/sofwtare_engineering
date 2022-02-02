@@ -1,0 +1,7 @@
+////test invalide
+//oublie du mot class 
+
+C1 {
+    int a ;
+    float b ;
+}

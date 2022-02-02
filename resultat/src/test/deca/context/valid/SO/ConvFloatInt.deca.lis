@@ -1,0 +1,49 @@
+`> [10, 0] Program
+   +> ListDeclClass [List with 0 elements]
+   `> [10, 0] Main
+      +> ListDeclVar [List with 3 elements]
+      |  []> [11, 14] DeclVar
+      |  ||  +> [11, 8] Identifier (float)
+      |  ||  |  definition: type (builtin), type=float
+      |  ||  +> [11, 14] Identifier (f)
+      |  ||  |  definition: variable defined at [11, 14], type=float
+      |  ||  `> NoInitialization
+      |  []> [12, 14] DeclVar
+      |  ||  +> [12, 8] Identifier (float)
+      |  ||  |  definition: type (builtin), type=float
+      |  ||  +> [12, 14] Identifier (g)
+      |  ||  |  definition: variable defined at [12, 14], type=float
+      |  ||  `> NoInitialization
+      |  []> [13, 12] DeclVar
+      |      +> [13, 8] Identifier (int)
+      |      |  definition: type (builtin), type=int
+      |      +> [13, 12] Identifier (i)
+      |      |  definition: variable defined at [13, 12], type=int
+      |      `> [13, 16] Initialization
+      |         `> [13, 16] Int (12)
+      |            type: int
+      `> ListInst [List with 4 elements]
+         []> [15, 10] Assign
+         ||  type: float
+         ||  +> [15, 8] Identifier (f)
+         ||  |  definition: variable defined at [11, 14], type=float
+         ||  `> ConvFloat
+         ||     type: float
+         ||     `> [15, 12] Int (4)
+         ||        type: int
+         []> [16, 10] Assign
+         ||  type: float
+         ||  +> [16, 8] Identifier (g)
+         ||  |  definition: variable defined at [12, 14], type=float
+         ||  `> ConvFloat
+         ||     type: float
+         ||     `> [16, 12] Identifier (i)
+         ||        definition: variable defined at [13, 12], type=int
+         []> [17, 8] Print
+         ||  `> ListExpr [List with 1 elements]
+         ||     []> [17, 14] StringLiteral (12.0=)
+         ||         type: string
+         []> [18, 8] Println
+             `> ListExpr [List with 1 elements]
+                []> [18, 16] Identifier (g)
+                    definition: variable defined at [12, 14], type=float

@@ -1,0 +1,14 @@
+// Description:
+//    Affectation et typage
+//
+// Resultats:
+//    Ligne 13: Affectation de types incompatibles.
+// 
+// Historique:
+//    cree le 12/01/2022
+
+{
+    float f = 5.0;
+    int x = 12;
+    x = f;
+}

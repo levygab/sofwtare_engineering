@@ -1,0 +1,14 @@
+// Historique:
+//    cree le 19/01/2022
+
+class A {
+    int x;
+
+    int ajoute(int x){
+        return x+1;
+    }
+}
+{
+    A y = new A();
+    boolean x = y.ajoute(5);
+}

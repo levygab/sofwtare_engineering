@@ -1,0 +1,16 @@
+// Description:
+//    Test pour vérifier l'étape B de l'extension
+//
+// Resultats:
+//    
+//
+// Historique:
+//    cree le 21/01/2022
+
+{
+    int[][] tab = new int[][10];
+    tab[3] = new int[12];
+    tab[3][15] = 5;
+    //int[] tab = new int[3];
+    //tab[1] = 0;
+}

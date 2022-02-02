@@ -1,0 +1,13 @@
+class C1 {
+
+    int methode (int a) {
+        return a ;
+    }
+}
+
+{   
+    int bjr = 2 ;
+    C1 var = new C1() ;
+    int retour = var.methode(1) ;
+    println(retour) ;
+}

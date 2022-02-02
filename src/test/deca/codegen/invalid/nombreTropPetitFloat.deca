@@ -1,0 +1,12 @@
+// Description:
+//    Calcul un nombre trop grand
+//
+// Resultats: "Debordement flottant nombre trop grand" 
+// Resultats avec decac - n 10^47 = 1.00000e+36
+//
+// Historique:
+//    cree le 14/01/2022
+
+{
+    float x = 0.0000000000000000000000000000000000000000000000001;
+}

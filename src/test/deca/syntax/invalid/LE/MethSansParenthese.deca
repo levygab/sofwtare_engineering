@@ -1,0 +1,14 @@
+//test invalide
+//methode sans parenthese 
+
+class c1 {
+    int a ;
+
+    void c1 (int b) {
+        a = b ;
+    }
+
+    void affichage {
+        println("j'aime manger") ;
+    }
+}

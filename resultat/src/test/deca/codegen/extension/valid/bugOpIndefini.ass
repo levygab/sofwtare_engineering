@@ -1,0 +1,130 @@
+; start main program
+	TSTO #3
+	BOV pile_pleine
+	BRA DebutMain
+code.Object.equals:
+init.Object:
+	RTS
+	LOAD #null, R0
+	STORE R0, 1(GB)
+	LOAD code.Object.equals, R0
+	STORE R0, 2(GB)
+; Main program
+DebutMain:
+; Beginning of main declarations
+	LOAD #0, R3
+	STORE R3, 1(LB)
+	ADDSP #1
+	LOAD #0, R3
+	STORE R3, 2(LB)
+	ADDSP #1
+	LOAD #2, R4
+	LOAD #1, R3
+	ADD R4, R3
+	NEW R3, R3
+	STORE R4, 0(R3)
+	LOAD #2, R5
+	LOAD #1, R4
+	ADD R5, R4
+	NEW R4, R4
+	STORE R5, 0(R4)
+	LOAD #1, R5
+	STORE R5, 1(R4)
+	LOAD #2, R5
+	STORE R5, 2(R4)
+	STORE R4, 1(R3)
+	LOAD #2, R5
+	LOAD #1, R4
+	ADD R5, R4
+	NEW R4, R4
+	STORE R5, 0(R4)
+	LOAD #6, R5
+	STORE R5, 1(R4)
+	LOAD #3, R5
+	STORE R5, 2(R4)
+	STORE R4, 2(R3)
+	STORE R3, 3(LB)
+	ADDSP #1
+; Beginning of main instructions:
+	LOAD 3(LB), R4
+	LOAD 1(LB), R6
+	CMP #0, R6
+	BLT io_error_index_out_of_range
+	CMP 0(R4), R6
+	BGE io_error_index_out_of_range
+	ADD #1, R6
+	LOAD 0(R4, R6), R4
+	LOAD 2(LB), R5
+	CMP #0, R5
+	BLT io_error_index_out_of_range
+	CMP 0(R4), R5
+	BGE io_error_index_out_of_range
+	ADD #1, R5
+	LOAD 0(R4, R5), R4
+	LOAD 3(LB), R3
+	LOAD 1(LB), R6
+	CMP #0, R6
+	BLT io_error_index_out_of_range
+	CMP 0(R3), R6
+	BGE io_error_index_out_of_range
+	ADD #1, R6
+	LOAD 0(R3, R6), R3
+	LOAD 2(LB), R6
+	LOAD #1, R5
+	ADD R6, R5
+	CMP #0, R5
+	BLT io_error_index_out_of_range
+	CMP 0(R3), R5
+	BGE io_error_index_out_of_range
+	ADD #1, R5
+	LOAD 0(R3, R5), R3
+	ADD R4, R3
+	LOAD 3(LB), R5
+	LOAD 1(LB), R6
+	CMP #0, R6
+	BLT io_error_index_out_of_range
+	CMP 0(R5), R6
+	BGE io_error_index_out_of_range
+	ADD #1, R6
+	LOAD 0(R5, R6), R5
+	LOAD 2(LB), R4
+	CMP #0, R4
+	BLT io_error_index_out_of_range
+	CMP 0(R5), R4
+	BGE io_error_index_out_of_range
+	ADD #1, R4
+	STORE R3, 0(R5, R4)
+	HALT
+; end main program
+io_error:
+	WSTR "Error: Input/Output error"
+	WNL
+	ERROR
+io_error_div_O:
+	WSTR "Division par 0 interdite"
+	WNL
+	ERROR
+io_debordement_valeur:
+	WSTR "Error: Debordement flottant nombre trop grand"
+	WNL
+	ERROR
+pile_pleine:
+	WSTR "Erreur : la pile est pleine"
+	WNL
+	ERROR
+tas_plein:
+	WSTR "Erreur : le tas est plein"
+	WNL
+	ERROR
+Deferencement_de_null:
+	WSTR "L'identifier est null"
+	WNL
+	ERROR
+io_error_index_out_of_range:
+	WSTR "Erreur : Index out of range"
+	WNL
+	ERROR
+io_incorrect_sizes:
+	WSTR "Erreur : Les tableaux passées en paramètres doivent être de bonnes tailles"
+	WNL
+	ERROR

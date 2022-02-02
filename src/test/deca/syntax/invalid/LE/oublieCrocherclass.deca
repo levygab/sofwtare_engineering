@@ -1,0 +1,9 @@
+//test invalide
+//classe sans crochet de fin 
+
+class c1 {
+    int a  ;
+
+    void meth1() {
+        a = 5 ;
+    }

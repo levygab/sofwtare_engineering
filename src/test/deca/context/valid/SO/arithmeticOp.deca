@@ -1,0 +1,32 @@
+// Description:
+//    Opérations arithmétiques : +, -, /, * et %
+//
+// Resultats:
+//    
+//
+// Historique:
+//    cree le 12/01/2022
+
+{
+        int a = -12;
+        int b = 5;
+        int c, d, e, f, g;
+        float z = -2.0;
+
+
+        float r = 1.4;
+        float s = 5.7;
+        float t, u, v, w, x;
+
+        c = a + b;
+        d = a - b;
+        e = a / b;
+        f = a * b;
+        g = a % b;
+        println(g);
+
+        t = r + s;
+        u = r - s;
+        v = r / s;
+        w = r * s;
+}

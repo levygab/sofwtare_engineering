@@ -1,0 +1,6 @@
+
+{
+    int[] tab = new int[23];
+    tab = new int[23];
+    tab[0] = 2;
+}

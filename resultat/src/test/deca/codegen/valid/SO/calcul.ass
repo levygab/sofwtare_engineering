@@ -1,0 +1,199 @@
+; start main program
+	TSTO #4
+	BOV pile_pleine
+	BRA DebutMain
+code.Object.equals:
+init.Object:
+	RTS
+	LOAD #null, R0
+	STORE R0, 1(GB)
+	LOAD code.Object.equals, R0
+	STORE R0, 2(GB)
+; Main program
+DebutMain:
+; Beginning of main declarations
+	LOAD #0, R0
+	STORE R0, 1(LB)
+	ADDSP #1
+	LOAD #0, R0
+	STORE R0, 2(LB)
+	ADDSP #1
+	LOAD #0, R0
+	STORE R0, 3(LB)
+	ADDSP #1
+	LOAD #0, R0
+	STORE R0, 4(LB)
+	ADDSP #1
+; Beginning of main instructions:
+	LOAD #5, R3
+	STORE R3, 1(LB)
+	LOAD #5, R3
+	FLOAT R3, R3
+	STORE R3, 2(LB)
+	LOAD #10, R3
+	STORE R3, 3(LB)
+	LOAD #25, R3
+	STORE R3, 4(LB)
+	LOAD 1(LB), R3
+	FLOAT R3, R3
+	LOAD 2(LB), R4
+	CMP R4, R3
+	BNE else0
+	WSTR "ok1"
+	WNL
+	BRA if_fin0
+else0:
+	WSTR "c'est pas bien 1"
+	WNL
+if_fin0:
+	LOAD 1(LB), R3
+	LOAD 3(LB), R4
+	CMP R4, R3
+	BEQ else1
+	WSTR "ok2"
+	WNL
+	BRA if_fin1
+else1:
+	WSTR "c'est pas bien 2"
+	WNL
+if_fin1:
+	LOAD 1(LB), R5
+	FLOAT R5, R5
+	LOAD 2(LB), R3
+	ADD R5, R3
+	BOV io_debordement_valeur
+	LOAD 3(LB), R4
+	FLOAT R4, R4
+	CMP R4, R3
+	BNE else2
+	WSTR "ok3"
+	WNL
+	BRA if_fin2
+else2:
+	WSTR "c'est pas bien 3"
+	WNL
+if_fin2:
+	LOAD 2(LB), R5
+	LOAD 1(LB), R3
+	FLOAT R3, R3
+	MUL R5, R3
+	BOV io_debordement_valeur
+	LOAD 4(LB), R4
+	FLOAT R4, R4
+	CMP R4, R3
+	BNE else3
+	WSTR "ok4"
+	WNL
+	BRA if_fin3
+else3:
+	WSTR "c'est pas bien 4"
+	WNL
+if_fin3:
+	LOAD 3(LB), R3
+	LOAD 1(LB), R4
+	CMP R4, R3
+	BLE else4
+	WSTR "ok5"
+	WNL
+	BRA if_fin4
+else4:
+	WSTR "c'est pas bien 5"
+	WNL
+if_fin4:
+	LOAD 3(LB), R3
+	FLOAT R3, R3
+	LOAD 2(LB), R4
+	CMP R4, R3
+	BLT else5
+	WSTR "ok6"
+	WNL
+	BRA if_fin5
+else5:
+	WSTR "c'est pas bien 6"
+	WNL
+if_fin5:
+	LOAD 3(LB), R3
+	LOAD 1(LB), R4
+	CMP R4, R3
+	BGE else6
+	WSTR "c'est pas bien 7"
+	WNL
+	BRA if_fin6
+else6:
+	WSTR "ok7"
+	WNL
+if_fin6:
+	LOAD 3(LB), R3
+	FLOAT R3, R3
+	LOAD 2(LB), R4
+	CMP R4, R3
+	BGT else7
+	WSTR "c'est pas bien 8"
+	WNL
+	BRA if_fin7
+else7:
+	WSTR "ok8"
+	WNL
+if_fin7:
+	LOAD #5, R5
+	LOAD 4(LB), R3
+	QUO R5, R3
+	BOV io_error_div_O
+	LOAD 1(LB), R4
+	CMP R4, R3
+	BNE else8
+	WSTR "ok9"
+	WNL
+	BRA if_fin8
+else8:
+	WSTR "c'est pas bien 9"
+	WNL
+if_fin8:
+	LOAD #5, R5
+	LOAD 4(LB), R3
+	REM R5, R3
+	BOV io_error_div_O
+	LOAD #0, R4
+	CMP R4, R3
+	BNE else9
+	WSTR "ok10"
+	WNL
+	BRA if_fin9
+else9:
+	WSTR "c'est pas bien 10"
+	WNL
+if_fin9:
+	HALT
+; end main program
+io_error:
+	WSTR "Error: Input/Output error"
+	WNL
+	ERROR
+io_error_div_O:
+	WSTR "Division par 0 interdite"
+	WNL
+	ERROR
+io_debordement_valeur:
+	WSTR "Error: Debordement flottant nombre trop grand"
+	WNL
+	ERROR
+pile_pleine:
+	WSTR "Erreur : la pile est pleine"
+	WNL
+	ERROR
+tas_plein:
+	WSTR "Erreur : le tas est plein"
+	WNL
+	ERROR
+Deferencement_de_null:
+	WSTR "L'identifier est null"
+	WNL
+	ERROR
+io_error_index_out_of_range:
+	WSTR "Erreur : Index out of range"
+	WNL
+	ERROR
+io_incorrect_sizes:
+	WSTR "Erreur : Les tableaux passées en paramètres doivent être de bonnes tailles"
+	WNL
+	ERROR

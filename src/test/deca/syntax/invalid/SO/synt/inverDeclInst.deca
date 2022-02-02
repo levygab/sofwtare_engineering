@@ -1,0 +1,12 @@
+// Description:
+//    Programme pour vérifier les erreurs en cas d'inversion de déclaration et instructions
+//
+// Resultats:
+//    
+//
+// Historique:
+//    cree le 10/01/2022
+{
+    a = 2;
+    float b;
+}

@@ -1,0 +1,6 @@
+//test invalide
+//class avec une parenthese au lieu des crochets
+
+class c1 (
+    int a ;
+) 

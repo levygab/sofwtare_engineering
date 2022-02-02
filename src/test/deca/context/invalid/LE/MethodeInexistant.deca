@@ -1,0 +1,16 @@
+// Historique:
+//    cree le 19/01/2022
+
+class C1 {
+    int a ;
+
+    void methode (int valeur ) {
+        this.a = valeur ;
+    }
+}
+
+{
+    C1 variable = new C1() ;
+    variable.inexistant(valeur) ;
+}
+

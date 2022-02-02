@@ -1,0 +1,14 @@
+//test pour les classes
+
+class Constructeur {
+    protected int a; 
+
+    void Constructeur (int valeur) {
+        a = valeur ;
+    }
+}
+
+{
+    Constructeur a ;
+    a.Constructeur(5) ;
+}

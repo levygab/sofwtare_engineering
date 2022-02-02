@@ -1,0 +1,23 @@
+// Description:
+//    Test pour vérifier la sémantique : jeu du tout pile
+//
+// Resultats:
+//    
+//
+// Historique:
+//    cree le 14/01/2022
+
+{
+    int chiffre = 67;
+    int proposition;
+    println("Vous devez trouver un chiffre entre 1 et 100");
+    while (proposition != chiffre) {
+        proposition = readInt();
+        if (proposition < chiffre) {
+            println("C'est plus !");
+        } else if (proposition > chiffre) {
+            println("C'est moins !");
+        }
+    }
+    println("Bravo, vous avez proposé ", proposition, " et le résultat est bien ", chiffre);
+}

@@ -1,0 +1,85 @@
+// Description:
+//    Test complet pour vérifier la sémantique : on va verifier les operateurs de conditions
+//
+//
+// Historique:
+//    cree le 15/01/2022
+
+
+//erreur ligne 42 : le not ne marche pas
+
+{
+    int x = 5;
+    float y = 2 + 3;
+    int z = 10 ;
+    int xy =25;
+    boolean monBool1 = false ;
+    boolean monBool2 = false ;
+    boolean monBool3 = false ;
+    boolean monBool4 = false ;
+    boolean monBool5 = false ;
+    boolean monBool6 = false ;
+
+    //test sur &&
+    if (x == 5 && y == 5) {
+        monBool1 = true ;
+    }
+
+    if (x == 5 && y == 6) {
+        println("pas normale 1") ;
+    }
+
+    if (x == 6 && y == 5) {
+        println("pas normale 2") ;
+    }
+
+    if (x == 6 && y == 6) {
+        println("pas normale 3") ;
+    }
+
+    //test sur !
+    if ( !(x == 5)) {
+        println("pas normal 4") ;
+    }
+
+    if (! (x == 6)) {
+        println("bjr") ;
+        monBool2 = true ;
+    }
+
+    //test sur ||
+    if (x == 5 || y == 5) {
+        monBool3 = true ;
+    }
+
+    if (x == 5 || y == 6) {
+        monBool4 = true ;
+    }
+
+    if (x == 6 || y == 5) {
+        monBool5 = true ;
+    }
+
+    if (x == 6 || y == 6) {
+        println("pas normal 5") ;
+    }
+
+
+    //test sur !=
+    if (x != 5) {
+        println("pas normal 6") ;
+    }
+
+    if (x != 10) {
+        monBool6 = true ;
+    }
+
+    if (monBool6 ) {
+        println("les test sont bien passes") ;
+    }
+    else {
+        println("probleme dans les test") ;
+    }
+
+
+}

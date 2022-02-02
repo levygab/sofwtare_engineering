@@ -1,0 +1,13 @@
+// Description:
+//    Programme pour vérifier le typage des floats
+//
+// Resultats:
+//    
+//
+// Historique:
+//    cree le 07/01/2022
+{
+    float f1 = 0x3aa.A5eP-59;
+    print("0x3aa.A5eP-59 = ");
+    printlnx(f1);
+}

@@ -1,0 +1,13 @@
+// Description:
+//    tests de programme incorrect contextuellement
+//
+// Resultats:
+//    ligne 12 : Erreur, variable déjà utilisé
+//
+// Historique:
+//    cree le 10/01/2022
+
+{
+    int x = 12;
+    boolean x = true;
+}

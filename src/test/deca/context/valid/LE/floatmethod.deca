@@ -1,0 +1,16 @@
+// Description:
+//    test les methods float
+//
+// Resultats:
+//    
+//
+// Historique:
+//    cree le 19/01/2022
+
+class A {
+    
+    float ajoute(float x){
+        x = x +1.0;
+        return x;
+    }
+}

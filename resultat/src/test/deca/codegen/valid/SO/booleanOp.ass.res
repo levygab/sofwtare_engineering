@@ -1,0 +1,2 @@
+ok pour &&
+Ok pour ||
